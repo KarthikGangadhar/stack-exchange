@@ -89,6 +89,7 @@ stack_badges.badges_by_id(id, badges_options, (response) => {
 ```
 #### badges_by_name
  ```js
+ 
 // name of the badge
 let name = "fanatic"
 
@@ -102,20 +103,13 @@ stack_badges.badges_by_name(name, badges_options, (response) => {
 
 #### badge_recipients
  ```js
+//  options fields are as follows 
+ let options = {
+        "site": "stackoverflow"
+    }
 
  // using badge_recipients endpoint 
-stack_badges.badge_recipients( badges_options, (response) => {
-    // response will be json        
-    console.log(response);
-});
-
-```
-
-#### badge_by_tags
- ```js
-
- // using badge_by_tags endpoint 
-stack_badges.badge_by_tags(badges_options, (response) => {
+stack_badges.badge_recipients( options, (response) => {
     // response will be json        
     console.log(response);
 });
@@ -124,6 +118,11 @@ stack_badges.badge_by_tags(badges_options, (response) => {
 
 #### badge_recipients_by_id
  ```js
+ //  options fields are as follows 
+ let options = {
+        "site": "stackoverflow"
+    }
+
 // id of the badge
 let id = "222"
  // using badge_recipients_by_id endpoint 
@@ -133,6 +132,25 @@ stack_badges.badge_recipients_by_id(id,  badges_options, (response) => {
 });
 
 ```
+
+
+#### badge_by_tags
+ ```js
+//  options fields are as follows 
+ let options = {
+        "order": "desc",
+        "sort": "popular",
+        "site": "stackoverflow"
+    }
+
+ // using badge_by_tags endpoint 
+stack_badges.badge_by_tags(options, (response) => {
+    // response will be json        
+    console.log(response);
+});
+
+```
+
 
 
 ## info section
