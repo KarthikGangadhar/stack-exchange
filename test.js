@@ -74,17 +74,17 @@ var stackexchange = require("./server");
 //     console.log(response);
 // });
 
-// To test revisions
+// To test badges
 
-let badges_options = {
-    "site": "stackoverflow",
-    "key": "U4DMV*8nvpm3EOpvf69Rxw(("
-}
+// let badges_options = {
+//     "site": "stackoverflow",
+//     "key": "U4DMV*8nvpm3EOpvf69Rxw(("
+// }
 
 
-stack_badges = new stackexchange.badges();
+// stack_badges = new stackexchange.badges();
 
-// stack_revisions.badges(badges_options, (response) => {
+// stack_badges.badges(badges_options, (response) => {
 //     console.log(response);
 // });
 
@@ -107,7 +107,7 @@ stack_badges = new stackexchange.badges();
 //     console.log(response);
 // });
 
-// let id = "222"
+//  id = "222"
 
 // stack_badges.badge_recipients_by_id(id,  badges_options, (response) => {
 //     console.log(response);

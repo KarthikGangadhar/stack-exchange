@@ -32,6 +32,11 @@
         "sort": "rank",
         "site": "stackoverflow"
     },
+    "BADGES_BY_TAGS": {
+        "order": "desc",
+        "sort": "rank",
+        "site": "stackoverflow"
+    },
     "BADGES_BY_NAME": {
         "order": "desc",
         "sort": "rank",
