@@ -1,5 +1,4 @@
-var stackexchange  = require("./server");
-var promise = require("bluebird");
+var stackexchange = require("./server");
 
 // To test questions
 
@@ -74,6 +73,3 @@ var promise = require("bluebird");
 // stack_revisions.revisions( ids , revisions_options, (response) => {
 //     console.log(response);
 // });
-
-
- 
