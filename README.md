@@ -44,6 +44,15 @@ stack_questions.questions( options , (response) => {
     console.log(response);
  });
 ``` 
+#### questions by ids
+ ```js
+ ids = "47559184"
+ // using questions_by_ids endpoint 
+ stack_questions.questions_by_ids(ids , {} , (response) => {
+    // response will be json 
+    console.log(response);
+ });
+``` 
 
 ## info section
 
