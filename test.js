@@ -1,4 +1,5 @@
 var stackexchange  = require("./server");
+var promise = require("bluebird");
 
 // To test questions
 
@@ -10,15 +11,13 @@ var stackexchange  = require("./server");
 
 // stack_questions = new stackexchange.questions();
 
-// stack_questions.questions({}, (response) => {
+// stack_questions.questions(options, (response) => {
 //     console.log(response);
 //  });
 
-//  stack_questions.questions_by_ids("47559184", {} , (response) => {
+//  stack_questions.questions_by_ids("47559184", options , (response) => {
 //     console.log(response);
 //  });
-
-
 
 // To test events
 
