@@ -73,3 +73,46 @@ var stackexchange = require("./server");
 // stack_revisions.revisions( ids , revisions_options, (response) => {
 //     console.log(response);
 // });
+
+// To test revisions
+
+let badges_options = {
+    "site": "stackoverflow",
+    "key": "U4DMV*8nvpm3EOpvf69Rxw(("
+}
+
+
+stack_badges = new stackexchange.badges();
+
+// stack_revisions.badges(badges_options, (response) => {
+//     console.log(response);
+// });
+
+// let id = "222"
+
+
+
+// stack_badges.badges_by_id(id, badges_options, (response) => {
+//     console.log(response);
+// });
+
+// let name = "fanatic"
+
+// stack_badges.badges_by_name(name, badges_options, (response) => {
+//     console.log(response);
+// });
+
+
+// stack_badges.badge_recipients( badges_options, (response) => {
+//     console.log(response);
+// });
+
+// let id = "222"
+
+// stack_badges.badge_recipients_by_id(id,  badges_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_badges.badge_by_tags(badges_options, (response) => {
+//     console.log(response);
+// });
