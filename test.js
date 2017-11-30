@@ -116,3 +116,17 @@ var stackexchange = require("./server");
 // stack_badges.badge_by_tags(badges_options, (response) => {
 //     console.log(response);
 // });
+
+
+// To test tags
+
+// let tags_options = {
+//     "site": "stackoverflow",
+//     "key" : "U4DMV*8nvpm3EOpvf69Rxw(("
+// }
+
+// stack_tags = new stackexchange.tags();
+
+// stack_tags.tags(tags_options, (response) => {
+//     console.log(response);
+// });
