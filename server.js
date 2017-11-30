@@ -7,6 +7,7 @@ const info = require("./lib/info");
 const privilages = require("./lib/privilages");
 const revisions = require("./lib/revisions");
 const badges = require("./lib/badges");
+const tags = require("./lib/tags");
 
 module.exports = {
     questions: questions,
@@ -15,5 +16,6 @@ module.exports = {
     info: info,
     privilages: privilages,
     revisions: revisions,
-    badges: badges
+    badges: badges,
+    tags: tags
 };
