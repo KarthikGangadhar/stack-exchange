@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/KarthikGangadhar/stack-exchange#readme",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "request": "latest",
     "util": "^0.10.3"
   },
