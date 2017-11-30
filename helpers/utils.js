@@ -2,7 +2,10 @@
 
 const httpRequest = require("request");
 const zlib = require("zlib");
+const querystring = require("querystring");
 const promise = require("bluebird");
+const defaults  = require("../config/defaults");
+const _ = require("lodash");
 
 var GetResponse = (url) => {
     return new Promise(function (resolve, reject) {
@@ -25,6 +28,13 @@ var GetResponse = (url) => {
     })
 };
 
+var GetEndpoint = (options, calltype) => {
+    let url =  defaults.endpoints.BASE_URL
+    _.defaults(options, defaults[calltype])        
+    return url + defaults.endpoints[calltype] + querystring.stringify(options);
+}
+
 module.exports = {
     getResponse: GetResponse,
+    getEndpoint: GetEndpoint
 };

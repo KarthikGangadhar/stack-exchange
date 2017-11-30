@@ -1,0 +1,68 @@
+{
+    "EVENTS": {
+        "site": "stackoverflow",
+        "filter": "default"
+    },
+    "QUESTIONS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "QUESTIONS_BY_ID": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "INFO": {
+        "site": "stackoverflow"
+    },
+    "PRIVILEGES": {
+        "site": "stackoverflow"
+    },
+    "REVISIONS": {
+        "site": "stackoverflow"
+    },
+    "BADGES": {
+        "order": "desc",
+        "sort": "rank",
+        "site": "stackoverflow"
+    },
+    "BADGES_BY_ID": {
+        "order": "desc",
+        "sort": "rank",
+        "site": "stackoverflow"
+    },
+    "BADGES_BY_NAME": {
+        "order": "desc",
+        "sort": "rank",
+        "site": "stackoverflow"
+    },
+    "BADGES_RECIPIENTS": {
+        "site": "stackoverflow"
+    },
+    "BADGES_RECIPIENTS_BY_ID": {
+        "site": "stackoverflow"
+    },
+    "TAGS": {
+        "order": "desc",
+        "sort": "popular",
+        "site": "stackoverflow"
+    },
+    "endpoints": {
+        "BASE_URL": "https://api.stackexchange.com",
+        "EVENTS": "/2.2/events?",
+        "QUESTIONS": "/2.2/questions?",
+        "QUESTIONS_BY_ID": "/2.2/questions/%s?",
+        "INFO": "/2.2/info?",
+        "PRIVILEGES": "/2.2/privileges?",
+        "REVISIONS": "/2.2/revisions/%s?",
+        "BADGES": "/2.2/badges?",
+        "BADGES_BY_ID": "/2.2/badges/%s?",
+        "BADGES_BY_NAME": "/2.2/badges/name?",
+        "BADGES_RECIPIENTS": "/2.2/badges/recipients?",
+        "BADGES_RECIPIENTS_BY_ID": "/2.2/badges/%s/recipients?",
+        "BADGES_BY_TAGS": "/2.2/badges/tags?",
+        "TAGS": "/2.2/tags?"
+    }
+
+}
