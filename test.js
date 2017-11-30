@@ -14,7 +14,7 @@ var stackexchange  = require("./server");
 //     console.log(response);
 //  });
 
-//  stack_questions.questions_by_ids({}, "47559184" , (response) => {
+//  stack_questions.questions_by_ids("47559184", {} , (response) => {
 //     console.log(response);
 //  });
 
