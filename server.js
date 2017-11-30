@@ -1,10 +1,19 @@
 'use strict'
 
-const question = require("./lib/question");
-const answer = require("./lib/answer");
+const questions = require("./lib/questions");
+const answers = require("./lib/answers");
+const events = require("./lib/events");
+const info  = require("./lib/info");
+const privilages = require("./lib/privilages");
+const revisions = require("./lib/revisions");
+
 
 module.exports = {
-    question: question,
-    answer: answer
+    questions: questions,
+    answers: answers,
+    events: events,
+    info: info,
+    privilages: privilages,
+    revisions: revisions
 };
 
