@@ -53,6 +53,87 @@ stack_questions.questions( options , (response) => {
     console.log(response);
  });
 ``` 
+## badges section
+
+```js
+let badges_options = {
+    "site": "stackoverflow",
+    "key": "U4DMV*8nvpm3EOpvf69Rxw(("
+}
+
+// creating badges object
+stack_badges = new stackexchange.badges();
+
+```
+
+#### badges
+ ```js
+ // using badges endpoint 
+stack_badges.badges(badges_options, (response) => {
+    // response will be json     
+    console.log(response);
+});
+
+```
+
+#### badges_by_id
+ ```js
+// id of the badge
+let id = "222"
+ // using badges_by_id endpoint 
+stack_badges.badges_by_id(id, badges_options, (response) => {
+    // response will be json    
+    console.log(response);
+});
+
+```
+#### badges_by_name
+ ```js
+// name of the badge
+let name = "fanatic"
+
+ // using badges_by_name endpoint 
+stack_badges.badges_by_name(name, badges_options, (response) => {
+    // response will be json    
+    console.log(response);
+});
+
+```
+
+#### badge_recipients
+ ```js
+
+ // using badge_recipients endpoint 
+stack_badges.badge_recipients( badges_options, (response) => {
+    // response will be json        
+    console.log(response);
+});
+
+```
+
+#### badge_by_tags
+ ```js
+
+ // using badge_by_tags endpoint 
+stack_badges.badge_by_tags(badges_options, (response) => {
+    // response will be json        
+    console.log(response);
+});
+
+```
+
+#### badge_recipients_by_id
+ ```js
+// id of the badge
+let id = "222"
+ // using badge_recipients_by_id endpoint 
+stack_badges.badge_recipients_by_id(id,  badges_options, (response) => {
+    // response will be json        
+    console.log(response);
+});
+
+```
+
 
 ## info section
 
