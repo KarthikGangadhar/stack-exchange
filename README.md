@@ -16,7 +16,7 @@ $ npm install stack-exchange
 You can make 300 requests without a key per day, with a key you can make 10,000 requests. To generate key visit [here](https://api.stackexchange.com/docs/authentication). The module exposes following endpoints of stackexchange api:
 
 
-* [Qusetions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
+* [Questions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
     * [questions](https://github.com/KarthikGangadhar/stack-exchange#questions)
     * [quetions_by_id](https://github.com/KarthikGangadhar/stack-exchange#questions-by-ids)
 
@@ -76,7 +76,7 @@ stack_questions = new stackexchange.questions();
 #### questions
  ```js
  // using questions endpoint 
-stack_questions.questions( options , (response) => {
+stack_questions.questions(options , (response) => {
     // response will be json 
     console.log(response);
  });
@@ -85,11 +85,180 @@ stack_questions.questions( options , (response) => {
  ```js
  ids = "47559184"
  // using questions_by_ids endpoint 
- stack_questions.questions_by_ids(ids , {} , (response) => {
+ stack_questions.questions_by_ids(ids , options , (response) => {
     // response will be json 
     console.log(response);
  });
 ``` 
+
+
+#### answers on questions
+ ```js
+ id = "47596027"
+ // using answers_on_questions endpoint 
+ stack_questions.answers_on_questions(id, options , (response) => {
+    // response will be json 
+    console.log(response);
+ });
+``` 
+
+#### render answers
+
+ This is a post endpoints, the options section looks like this, both fields are required.
+ ```js
+  let options = {
+    "body": "hello",
+    "site": "stackoverflow"
+}
+
+// id of the question
+ let id = "47596027"
+ 
+ // using render_answer endpoint 
+stack_questions.render_answer("47596027", options , (response) => {
+   // response returns hypothetical solution
+    console.log(response);
+});
+``` 
+
+#### linked questions
+ ```js
+ // id of the question
+ let id = "1884724";
+ 
+ // using answers_on_questions endpoint 
+ stack_questions.linked_questions(id, options , (response) => {
+    console.log(response);
+ });
+ 
+``` 
+
+#### related questions
+ ```js
+ // id of the question
+ let id = "37878662";
+ 
+ // using related_questions endpoint 
+ stack_questions.related_questions(id, options , (response) => {
+        console.log(response);
+ });
+ 
+``` 
+
+
+#### questions timeline
+ ```js
+ // id of the question
+ let id = "37878662";
+ 
+ // using questions_timeline endpoint 
+stack_questions.questions_timeline(id, options, (response) => {
+    console.log(response);
+});
+ 
+```
+
+#### featured questions
+ ```js
+ 
+ // using featured_questions endpoint 
+stack_questions.featured_questions(options, (response) => {
+      //will return featured questions
+    console.log(response);
+});
+
+```
+
+#### no answer questions
+ ```js
+ 
+ // using no_answer_questions endpoint 
+stack_questions.no_answer_questions( options , (response) => {
+   // will return no-answer questions
+    console.log(response);
+ });
+```
+
+
+
+#### unanswered questions
+ ```js
+ 
+ // using unanswered_questions endpoint 
+stack_questions.unanswered_questions( options , (response) => {
+    //returns unanswered questions details
+    console.log(response);
+ });
+```
+
+
+
+#### unanswered questions my tags
+
+This endpoint required access_token and key in options. 
+ ```js
+
+ // using unanswered_questions_my_tags endpoint 
+stack_questions.unanswered_questions_my_tags( options , (response) => {
+    console.log(response);
+ });
+```
+
+#### question flag options
+
+This endpoint required access_token and key in options. 
+ ```js
+let options = {
+    "key": "your_key",
+    "access_token": "your_token",
+    "site": "stackoverflow"
+}
+
+let question_id = "37878662";
+
+ // using question_flag_options endpoint 
+stack_questions.question_flag_options(question_id, options, (response) => {
+    console.log(response);
+});
+```
+
+#### question close options
+
+This endpoint required access_token and key in options. 
+ ```js
+let options = {
+    "key": "your_key",
+    "access_token": "your_token",
+    "site": "stackoverflow"
+}
+
+let question_id = "37878662";
+
+ // using question_close_options endpoint 
+stack_questions.question_close_options(question_id, options, (response) => {
+    console.log(response);
+});
+```
+
+#### comments on questions
+
+This endpoint required access_token and key in options. 
+ ```js
+let options = {
+    "key": "your_key",
+    "access_token": "your_token",
+    "site": "stackoverflow"
+}
+
+let question_id = "45934757";
+
+ // using comments_on_questions endpoint 
+stack_questions.comments_on_questions(question_id, options, (response) => {
+    console.log(response);
+});
+
+```
+
 ## badges section
 
 ```js
