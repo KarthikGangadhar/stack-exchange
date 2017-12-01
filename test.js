@@ -122,7 +122,7 @@ var stackexchange = require("./server");
 
 // let tags_options = {
 //     "site": "stackoverflow",
-//     "key" : "U4DMV*8nvpm3EOpvf69Rxw(("
+//     "key": "U4DMV*8nvpm3EOpvf69Rxw(("
 // }
 
 // stack_tags = new stackexchange.tags();
@@ -130,3 +130,48 @@ var stackexchange = require("./server");
 // stack_tags.tags(tags_options, (response) => {
 //     console.log(response);
 // });
+
+// stack_tags.tags_by_name("nodejs", tags_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_tags.moderator_only_tags(tags_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_tags.require_tags(tags_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_tags.tag_synonyms(tags_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_tags.faqs_by_tags("nodejs", tags_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_tags.related_tags("nodejs", tags_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_tags.synonyms_by_tags("nodejs", tags_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_tags.top_answerers_on_tags("java", tags_options, (response) => {
+//     console.log(response);
+// });
+
+
+// stack_tags.top_askers_on_tags("java", tags_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_tags.wikis_by_tags("java", tags_options, (response) => {
+//     console.log(response);
+// });
+
+stack_tags.wikis_by_tags("java", tags_options, (response) => {
+    console.log(response);
+});

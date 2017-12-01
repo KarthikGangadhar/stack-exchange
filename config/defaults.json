@@ -53,6 +53,48 @@
         "sort": "popular",
         "site": "stackoverflow"
     },
+    "TAGS_BY_NAME": {
+        "order": "desc",
+        "sort": "popular",
+        "site": "stackoverflow"
+    },
+    "MODERATOR_ONLY_TAGS": {
+        "order": "desc",
+        "sort": "popular",
+        "site": "stackoverflow"
+    },
+    "REQUIRE_TAGS": {
+        "order": "desc",
+        "sort": "popular",
+        "site": "stackoverflow"
+    },
+    "TAG_SYNONYMS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+    "FAQS_BY_TAGS": {
+        "site": "stackoverflow"
+    },
+    "RELATED_TAGS": {
+        "site": "stackoverflow"
+    },
+    "SYNONYMS_BY_TAGS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+    "TOP_ANSWERS_ON_TAGS": {
+        "site": "stackoverflow",
+        "period": "all_time"
+    },
+    "TOP_ASKERS_ON_TAGS": {
+        "site": "stackoverflow",
+        "period": "all_time"
+    },
+    "WIKIS_BY_TAGS": {
+        "site": "stackoverflow"
+    },
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -67,7 +109,17 @@
         "BADGES_RECIPIENTS": "/2.2/badges/recipients?",
         "BADGES_RECIPIENTS_BY_ID": "/2.2/badges/%s/recipients?",
         "BADGES_BY_TAGS": "/2.2/badges/tags?",
-        "TAGS": "/2.2/tags?"
+        "TAGS": "/2.2/tags?",
+        "TAGS_BY_NAME": "/2.2/tags/%s/info?",
+        "MODERATOR_ONLY_TAGS": "/2.2/tags/moderator-only?",
+        "REQUIRE_TAGS": "/2.2/tags/required?",
+        "TAG_SYNONYMS": "/2.2/tags/synonyms?",
+        "FAQS_BY_TAGS": "/2.2/tags/%s/faq?",
+        "RELATED_TAGS": "/2.2/tags/%s/related?",
+        "SYNONYMS_BY_TAGS": "/2.2/tags/%s/synonyms?",
+        "TOP_ANSWERS_ON_TAGS": "/2.2/tags/%s/top-answerers/%s?",
+        "TOP_ASKERS_ON_TAGS": "/2.2/tags/%s/top-askers/%s?",
+        "WIKIS_BY_TAGS": "/2.2/tags/%s/wikis?"
     }
 
 }
