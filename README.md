@@ -13,7 +13,33 @@ $ npm install stack-exchange
 ## Quick Start
 
 
-You can make 300 requests without a key per day, with a key you can make 10,000 requests. To generate key visit [here](https://api.stackexchange.com/docs/authentication)
+You can make 300 requests without a key per day, with a key you can make 10,000 requests. To generate key visit [here](https://api.stackexchange.com/docs/authentication). The module exposes following endpoints of stackexchange api:
+
+
+* [Qusetions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
+    * [questions](https://github.com/KarthikGangadhar/stack-exchange#questions)
+    * [quetions_by_id](https://github.com/KarthikGangadhar/stack-exchange#questions-by-ids)
+
+* [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
+    * [badges](https://github.com/KarthikGangadhar/stack-exchange#questions)
+    * [badges_by_id](https://github.com/KarthikGangadhar/stack-exchange#badges_by_id)
+    * [badges_by_name](https://github.com/KarthikGangadhar/stack-exchange#badges_by_name)
+    * [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients)
+    * [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id)
+    * [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags)
+
+* [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
+    * [info](https://github.com/KarthikGangadhar/stack-exchange#info)
+
+* [Privilages section](https://github.com/KarthikGangadhar/stack-exchange#privilages-section)
+    * [privilages](https://github.com/KarthikGangadhar/stack-exchange#info)
+
+* [Revisions section](https://github.com/KarthikGangadhar/stack-exchange#revisions-section)
+    * [revisions](https://github.com/KarthikGangadhar/stack-exchange#revisions)
+
+* [Events section](https://github.com/KarthikGangadhar/stack-exchange#events-section)
+    * [events](https://github.com/KarthikGangadhar/stack-exchange#events) 
+
 
 ```javascript
 var stackexchange  = require("stack-exchange");
