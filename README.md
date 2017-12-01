@@ -41,8 +41,19 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
     * [events](https://github.com/KarthikGangadhar/stack-exchange#events) 
 
 
+To use above mentioned endpoints you need to create their respective sections objects as follows:
+
 ```javascript
-var stackexchange  = require("stack-exchange");
+const stackexchange  = require("stack-exchange");
+
+
+const stack_questions = new stackexchange.questions(); //for questions sections endpoints
+const stack_badges = new stackexchange.badges(); //for badges sections endpoints
+const stack_info = new stackexchange.info(); //for info sections endpoints
+const stack_privilages = new stackexchange.privilages(); //for privilages sections endpoints
+const stack_revisions = new stackexchange.revisions(); //for revisions sections endpoints
+const stack_events = new stackexchange.events(); //for events sections endpoints
+
 ```
 
 
