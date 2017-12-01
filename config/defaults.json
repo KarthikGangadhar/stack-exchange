@@ -95,6 +95,59 @@
     "WIKIS_BY_TAGS": {
         "site": "stackoverflow"
     },
+    "ANSWERS_ON_QUESTIONS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "LIKED_QUESTIONS": {
+        "order": "desc",
+        "sort": "votes",
+        "site": "stackoverflow"
+    },
+    "RELATED_QUESTIONS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "FEATURED_QUESTIONS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "NO_ANSWER_QUESTIONS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "UNANSWERED_QUESTIONS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "QUESTIONS_TIMELINE": {
+        "site": "stackoverflow"
+    },
+    "UNANSWERED_QUESTIONS_BY_MY_TAGS": {
+        "filter": "default",
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "QUESTION_FLAG_OPTIONS": {
+        "filter": "default",
+        "site": "stackoverflow"
+    },
+    "QUESTION_CLOSE_OPTIONS": {
+        "filter": "default",
+        "site": "stackoverflow"
+    },
+    "COMMENTS_ON_QUESTIONS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -119,7 +172,19 @@
         "SYNONYMS_BY_TAGS": "/2.2/tags/%s/synonyms?",
         "TOP_ANSWERS_ON_TAGS": "/2.2/tags/%s/top-answerers/%s?",
         "TOP_ASKERS_ON_TAGS": "/2.2/tags/%s/top-askers/%s?",
-        "WIKIS_BY_TAGS": "/2.2/tags/%s/wikis?"
+        "WIKIS_BY_TAGS": "/2.2/tags/%s/wikis?",
+        "ANSWERS_ON_QUESTIONS": "/2.2/questions/%s/answers?",
+        "RENDER_ANSWER": "/2.2/questions/%s/answers/render",
+        "LIKED_QUESTIONS": "/2.2/questions/%s/linked?",
+        "RELATED_QUESTIONS": "/2.2/questions/%s/related?",
+        "QUESTIONS_TIMELINE": "/2.2/questions/%s/timeline?",
+        "FEATURED_QUESTIONS": "/2.2/questions/featured?",
+        "NO_ANSWER_QUESTIONS": "/2.2/questions/no-answers?",
+        "UNANSWERED_QUESTIONS": "/2.2/questions/unanswered?",
+        "UNANSWERED_QUESTIONS_BY_MY_TAGS": "/2.2/questions/unanswered/my-tags?",
+        "QUESTION_FLAG_OPTIONS": "/2.2/questions/%s/flags/options?",
+        "QUESTION_CLOSE_OPTIONS": "/2.2/questions/%s/close/options?",
+        "COMMENTS_ON_QUESTIONS": "/2.2/questions/%s/comments?"
     }
 
 }

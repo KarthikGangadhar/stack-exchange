@@ -2,13 +2,15 @@ var stackexchange = require("./server");
 
 // To test questions
 
-// let options  = {
-//     "order": "desc",
-//     "sort": "activity",
-//     "site": "stackoverflow"
-// }
+let options = {
+    "order": "desc",
+    "sort": "activity",
+    "site": "stackoverflow",
+    "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
+}
 
-// stack_questions = new stackexchange.questions();
+stack_questions = new stackexchange.questions();
 
 // stack_questions.questions(options, (response) => {
 //     console.log(response);
@@ -18,12 +20,74 @@ var stackexchange = require("./server");
 //     console.log(response);
 //  });
 
+
+//  stack_questions.answers_on_questions("47596027", options , (response) => {
+//     console.log(response);
+//  });
+
+// stack_questions.render_answer("47596027", {
+//     "body": "hello",
+//     "site": "stackoverflow"
+// }, (response) => {
+//     console.log(response);
+// });
+
+//  stack_questions.linked_questions("1884724", options , (response) => {
+//     console.log(response);
+//  });
+
+// stack_questions.related_questions("37878662", options , (response) => {
+//         console.log(response);
+//      });
+
+// stack_questions.questions_timeline("37878662", options , (response) => {
+//         console.log(response);
+//      });
+
+// stack_questions.featured_questions( options , (response) => {
+//         console.log(response);
+//      });
+
+// stack_questions.no_answer_questions( options , (response) => {
+//     console.log(response);
+//  });
+
+
+// stack_questions.unanswered_questions( options , (response) => {
+//     console.log(response);
+//  });
+
+// stack_questions.unanswered_questions_my_tags( options , (response) => {
+//     console.log(response);
+//  });
+
+flag_options = {
+    "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))",
+    "site":"stackoverflow"
+}
+// stack_questions.question_flag_options("37878662", flag_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_questions.question_close_options("37878662", flag_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_questions.comments_on_questions("45934757", flag_options, (response) => {
+//     console.log(response);
+// });
+
+stack_questions.comments_on_questions("45934757", flag_options, (response) => {
+    console.log(response);
+});
+
 // To test events
 
 // let event_options = {
 //     "site": "stackoverflow",
-//     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-//     "access_token": "B194CquqSNCf25adHix3Dw))"
+//     "access_token": "TzAfXCF6PjvW5dkOCbiEyw))",
+//     "key": "U4DMV*8nvpm3EOpvf69Rxw((" 
 // }
 
 // stack_events = new stackexchange.events();
@@ -171,7 +235,3 @@ var stackexchange = require("./server");
 // stack_tags.wikis_by_tags("java", tags_options, (response) => {
 //     console.log(response);
 // });
-
-stack_tags.wikis_by_tags("java", tags_options, (response) => {
-    console.log(response);
-});
