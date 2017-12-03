@@ -39,6 +39,19 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
     * [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients)
     * [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id)
     * [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags)
+    
+* [Tags section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
+    * [tags](https://github.com/KarthikGangadhar/stack-exchange#tags)
+    * [tags_by_name](https://github.com/KarthikGangadhar/stack-exchange#tags-by-name)
+    * [moderator_only_tags](https://github.com/KarthikGangadhar/stack-exchange#moderator-only-tags)
+    * [require_tags](https://github.com/KarthikGangadhar/stack-exchange#require-tags)
+    * [tag_synonyms](https://github.com/KarthikGangadhar/stack-exchange#tag-synonyms)
+    * [faqs_by_tags](https://github.com/KarthikGangadhar/stack-exchange#faqs-by-tags)
+    * [related_tags](https://github.com/KarthikGangadhar/stack-exchange#related-tags)
+    * [synonyms_by_tags](https://github.com/KarthikGangadhar/stack-exchange#synonyms-by-tags)
+    * [top_answerers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-answerers-on-tags)
+    * [top_askers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-askers-on-tags)
+    * [wikis_by_tags](https://github.com/KarthikGangadhar/stack-exchange#wikis-by-tags)     
 
 * [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
     * [info](https://github.com/KarthikGangadhar/stack-exchange#info)
@@ -65,6 +78,7 @@ const stack_info = new stackexchange.info(); //for info sections endpoints
 const stack_privilages = new stackexchange.privilages(); //for privilages sections endpoints
 const stack_revisions = new stackexchange.revisions(); //for revisions sections endpoints
 const stack_events = new stackexchange.events(); //for events sections endpoints
+const stack_events = new stackexchange.tags(); //for tags sections endpoints
 
 ```
 
@@ -401,7 +415,7 @@ stack_badges.badge_by_tags(options, (response) => {
 ```js
 let tags_options = {
     "site": "stackoverflow",
-    "key": "U4DMV*8nvpm3EOpvf69Rxw(("
+    "key": "your_key"
 }
 
 
