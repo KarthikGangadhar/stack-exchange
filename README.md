@@ -397,6 +397,134 @@ stack_badges.badge_by_tags(options, (response) => {
 });
 
 ```
+## tags section
+```js
+let tags_options = {
+    "site": "stackoverflow",
+    "key": "U4DMV*8nvpm3EOpvf69Rxw(("
+}
+
+
+// creating tags object
+stack_tags = new stackexchange.tags();
+```
+
+#### tags
+Get the tags on the site.
+
+ ```js
+ // using tags endpoint 
+stack_tags.tags(tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### tags by name
+Get tags on the site by their names.
+
+ ```js
+ //tag name for search
+ let tag_name = "nodejs"
+ // using tags_by_name endpoint 
+stack_tags.tags_by_name(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### require tags
+Get the tags on the site that fulfill required tag constraints.
+
+ ```js
+ // using require_tags endpoint 
+stack_tags.require_tags(tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### tag synonyms
+Get all the tag synonyms on the site.
+
+ ```js
+ // using tag_synonyms endpoint 
+stack_tags.tag_synonyms(tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### faqs by tags
+Get frequently asked questions in a set of tags.
+
+ ```js
+ //tag name for search
+ let tag_name = "nodejs"
+ // using faqs_by_tags endpoint 
+stack_tags.faqs_by_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### related tags
+Get related tags, based on common tag pairings.
+
+ ```js
+ //tag name for search
+ let tag_name = "nodejs"
+ // using related_tags endpoint 
+stack_tags.related_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### synonyms by tags
+Get the synonyms for a specific set of tags.
+
+ ```js
+ //tag name for search
+ let tag_name = "nodejs"
+ // using synonyms_by_tags endpoint 
+stack_tags.synonyms_by_tags("nodejs", tags_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### top answerers on tags
+Get the top answer posters in a specific tag, either in the last month or for all time.
+
+ ```js
+ //tag name for search
+ let tag_name = "java"
+ // using top_answerers_on_tags endpoint 
+stack_tags.top_answerers_on_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### top askers on tags
+Get the top question askers in a specific tag, either in the last month or for all time.
+
+ ```js
+ //tag name for search
+ let tag_name = "java"
+ // using top_askers_on_tags endpoint 
+stack_tags.top_askers_on_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### wikis by tags
+Get the wiki entries for a set of tags.
+
+ ```js
+ //tag name for search
+ let tag_name = "java"
+ // using wikis_by_tags endpoint 
+stack_tags.wikis_by_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+
 
 
 
