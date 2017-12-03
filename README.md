@@ -17,40 +17,40 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
 
 
 * [Questions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
-    * [questions](https://github.com/KarthikGangadhar/stack-exchange#questions)
-    * [quetions_by_id](https://github.com/KarthikGangadhar/stack-exchange#questions-by-ids)
-    * [answers_on_questions](https://github.com/KarthikGangadhar/stack-exchange#answers-on-questions)
-    * [render_answers](https://github.com/KarthikGangadhar/stack-exchange#render-answers)
-    * [linked_questions](https://github.com/KarthikGangadhar/stack-exchange#linked-questions)
-    * [related_questions](https://github.com/KarthikGangadhar/stack-exchange#related-questions)
-    * [questions_timeline](https://github.com/KarthikGangadhar/stack-exchange#questions-timeline)
-    * [featured_questions](https://github.com/KarthikGangadhar/stack-exchange#featured-questions)
-    * [no-answer-questions](https://github.com/KarthikGangadhar/stack-exchange#no-answer-questions)
-    * [unanswered_questions](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions)
-    * [unanswered_questions_my_tags](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions-my-tags)
-    * [question_flag_options](https://github.com/KarthikGangadhar/stack-exchange#question-flag-options)
-    * [question_close_options](https://github.com/KarthikGangadhar/stack-exchange#question-close-options)
-    * [comments_on_questions](https://github.com/KarthikGangadhar/stack-exchange#comments-on-questions)
+    * [questions](https://github.com/KarthikGangadhar/stack-exchange#questions) - Get all questions on the site.
+    * [quetions_by_id](https://github.com/KarthikGangadhar/stack-exchange#questions-by-ids) - Get the questions identified by a set of ids.
+    * [answers_on_questions](https://github.com/KarthikGangadhar/stack-exchange#answers-on-questions) - Get the answers to the questions identified by a set of ids.
+    * [render_answers](https://github.com/KarthikGangadhar/stack-exchange#render-answers) - Renders a hypothetical answer to a question.
+    * [linked_questions](https://github.com/KarthikGangadhar/stack-exchange#linked-questions) - Get the questions that link to the questions identified by a set of ids.
+    * [related_questions](https://github.com/KarthikGangadhar/stack-exchange#related-questions) - Get the questions that are related to the questions identified by a set of ids.
+    * [questions_timeline](https://github.com/KarthikGangadhar/stack-exchange#questions-timeline) - Get the timelines of the questions identified by a set of ids.
+    * [featured_questions](https://github.com/KarthikGangadhar/stack-exchange#featured-questions) - Get all questions on the site with active bounties.
+    * [no-answer-questions](https://github.com/KarthikGangadhar/stack-exchange#no-answer-questions) - Get all questions on the site with no answers.
+    * [unanswered_questions](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions) - Get all questions the site considers unanswered.
+    * [unanswered_questions_my_tags](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions-my-tags) - Get questions the site considers unanswered within a user's favorite or interesting tags. ####auth required
+    * [question_flag_options](https://github.com/KarthikGangadhar/stack-exchange#question-flag-options) - Returns valid flag options for the given question. #### auth required
+    * [question_close_options](https://github.com/KarthikGangadhar/stack-exchange#question-close-options) - Returns valid flag options which are also close reasons for the given question. #### auth required
+    * [comments_on_questions](https://github.com/KarthikGangadhar/stack-exchange#comments-on-questions) - Get the comments on the questions identified by a set of ids.
 
 * [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
-    * [badges](https://github.com/KarthikGangadhar/stack-exchange#questions)
-    * [badges_by_id](https://github.com/KarthikGangadhar/stack-exchange#badges_by_id)
-    * [badges_by_name](https://github.com/KarthikGangadhar/stack-exchange#badges_by_name)
-    * [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients)
-    * [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id)
-    * [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags)
+    * [badges](https://github.com/KarthikGangadhar/stack-exchange#questions) - Get all badges on the site, in alphabetical order.
+    * [badges_by_id](https://github.com/KarthikGangadhar/stack-exchange#badges_by_id) - Get the badges identified by ids.
+    * [badges_by_name](https://github.com/KarthikGangadhar/stack-exchange#badges_by_name) - Get all non-tagged-based badges in alphabetical order.
+    * [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients) - Get badges recently awarded on the site.
+    * [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id) - Get the recent recipients of the given badges.
+    * [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags) - Get all tagged-based badges in alphabetical order.
 
 * [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
-    * [info](https://github.com/KarthikGangadhar/stack-exchange#info)
+    * [info](https://github.com/KarthikGangadhar/stack-exchange#info) - Get information about the entire site.
 
 * [Privilages section](https://github.com/KarthikGangadhar/stack-exchange#privilages-section)
-    * [privilages](https://github.com/KarthikGangadhar/stack-exchange#info)
+    * [privilages](https://github.com/KarthikGangadhar/stack-exchange#info) - Get all the privileges available on the site.
 
 * [Revisions section](https://github.com/KarthikGangadhar/stack-exchange#revisions-section)
-    * [revisions](https://github.com/KarthikGangadhar/stack-exchange#revisions)
+    * [revisions](https://github.com/KarthikGangadhar/stack-exchange#revisions) - Get all revisions identified by a set of ids.
 
 * [Events section](https://github.com/KarthikGangadhar/stack-exchange#events-section)
-    * [events](https://github.com/KarthikGangadhar/stack-exchange#events) 
+    * [events](https://github.com/KarthikGangadhar/stack-exchange#events) - Get recent events that have occurred on the site. Effectively a stream of new users and content. ####auth required
 
 
 To use above mentioned endpoints you need to create their respective sections objects as follows:
