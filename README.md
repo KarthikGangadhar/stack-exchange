@@ -430,6 +430,15 @@ stack_tags.tags_by_name(tag_name, tags_options, (response) => {
     console.log(response);
 });
 ```
+#### moderator only tags
+Get the tags on the site that only moderators can use.
+
+ ```js
+ // using moderator_only_tags endpoint 
+stack_tags.moderator_only_tags(tags_options, (response) => {
+    console.log(response);
+});
+```
 
 #### require tags
 Get the tags on the site that fulfill required tag constraints.

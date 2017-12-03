@@ -147,7 +147,11 @@
         "sort": "creation",
         "site": "stackoverflow"
     },
-
+    "MODERATORS_ONLY_TAGS":{
+        "order": "desc",
+        "sort": "popular",
+        "site": "stackoverflow"
+    },
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -184,7 +188,8 @@
         "UNANSWERED_QUESTIONS_BY_MY_TAGS": "/2.2/questions/unanswered/my-tags?",
         "QUESTION_FLAG_OPTIONS": "/2.2/questions/%s/flags/options?",
         "QUESTION_CLOSE_OPTIONS": "/2.2/questions/%s/close/options?",
-        "COMMENTS_ON_QUESTIONS": "/2.2/questions/%s/comments?"
+        "COMMENTS_ON_QUESTIONS": "/2.2/questions/%s/comments?",
+        "MODERATORS_ONLY_TAGS": "/2.2/tags/moderator-only?"
     }
 
 }

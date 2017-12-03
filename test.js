@@ -78,10 +78,6 @@ flag_options = {
 //     console.log(response);
 // });
 
-stack_questions.comments_on_questions("45934757", flag_options, (response) => {
-    console.log(response);
-});
-
 // To test events
 
 // let event_options = {
@@ -184,12 +180,16 @@ stack_questions.comments_on_questions("45934757", flag_options, (response) => {
 
 // To test tags
 
-// let tags_options = {
-//     "site": "stackoverflow",
-//     "key": "U4DMV*8nvpm3EOpvf69Rxw(("
-// }
+let tags_options = {
+    "site": "stackoverflow",
+    "key": "U4DMV*8nvpm3EOpvf69Rxw(("
+}
 
-// stack_tags = new stackexchange.tags();
+// "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+// "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
+
+
+stack_tags = new stackexchange.tags();
 
 // stack_tags.tags(tags_options, (response) => {
 //     console.log(response);
@@ -199,9 +199,9 @@ stack_questions.comments_on_questions("45934757", flag_options, (response) => {
 //     console.log(response);
 // });
 
-// stack_tags.moderator_only_tags(tags_options, (response) => {
-//     console.log(response);
-// });
+stack_tags.moderator_only_tags(tags_options, (response) => {
+    console.log(response);
+});
 
 // stack_tags.require_tags(tags_options, (response) => {
 //     console.log(response);
