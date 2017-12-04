@@ -147,9 +147,19 @@
         "sort": "creation",
         "site": "stackoverflow"
     },
-    "MODERATORS_ONLY_TAGS":{
+    "MODERATORS_ONLY_TAGS": {
         "order": "desc",
         "sort": "popular",
+        "site": "stackoverflow"
+    },
+    "SUGGESTED_EDITS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+    "SUGGESTED_EDITS_BY_IDS": {
+        "order": "desc",
+        "sort": "creation",
         "site": "stackoverflow"
     },
     "endpoints": {
@@ -189,7 +199,9 @@
         "QUESTION_FLAG_OPTIONS": "/2.2/questions/%s/flags/options?",
         "QUESTION_CLOSE_OPTIONS": "/2.2/questions/%s/close/options?",
         "COMMENTS_ON_QUESTIONS": "/2.2/questions/%s/comments?",
-        "MODERATORS_ONLY_TAGS": "/2.2/tags/moderator-only?"
+        "MODERATORS_ONLY_TAGS": "/2.2/tags/moderator-only?",
+        "SUGGESTED_EDITS": "/2.2/suggested-edits?",
+        "SUGGESTED_EDITS_BY_IDS": "/2.2/suggested-edits/%s?"
     }
 
 }

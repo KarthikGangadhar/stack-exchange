@@ -2,15 +2,15 @@ var stackexchange = require("./server");
 
 // To test questions
 
-let options = {
-    "order": "desc",
-    "sort": "activity",
-    "site": "stackoverflow",
-    "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-    "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
-}
+// let options = {
+//     "order": "desc",
+//     "sort": "activity",
+//     "site": "stackoverflow",
+//     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+//     "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
+// }
 
-stack_questions = new stackexchange.questions();
+// stack_questions = new stackexchange.questions();
 
 // stack_questions.questions(options, (response) => {
 //     console.log(response);
@@ -61,11 +61,11 @@ stack_questions = new stackexchange.questions();
 //     console.log(response);
 //  });
 
-flag_options = {
-    "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-    "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))",
-    "site":"stackoverflow"
-}
+// flag_options = {
+//     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+//     "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))",
+//     "site":"stackoverflow"
+// }
 // stack_questions.question_flag_options("37878662", flag_options, (response) => {
 //     console.log(response);
 // });
@@ -199,9 +199,9 @@ stack_tags = new stackexchange.tags();
 //     console.log(response);
 // });
 
-stack_tags.moderator_only_tags(tags_options, (response) => {
-    console.log(response);
-});
+// stack_tags.moderator_only_tags(tags_options, (response) => {
+//     console.log(response);
+// });
 
 // stack_tags.require_tags(tags_options, (response) => {
 //     console.log(response);
@@ -233,5 +233,25 @@ stack_tags.moderator_only_tags(tags_options, (response) => {
 // });
 
 // stack_tags.wikis_by_tags("java", tags_options, (response) => {
+//     console.log(response);
+// });
+
+stack_suggested_edits = new stackexchange.suggested_edits();
+
+
+let options = {
+    // "order": "desc",
+    // "sort": "activity",
+    // "site": "stackoverflow",
+    // "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+    // "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
+}
+
+// stack_suggested_edits.suggested_edits(options, (response) => {
+//         console.log(response);
+// });
+
+// let suggested_edit_id = "3445738"
+// stack_suggested_edits.suggested_edits_by_ids(suggested_edit_id, options, (response) => {
 //     console.log(response);
 // });
