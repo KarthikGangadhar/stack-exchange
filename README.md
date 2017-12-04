@@ -39,7 +39,19 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
     * [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients)
     * [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id)
     * [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags)
-    
+
+* [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
+
+| Endpoints | Description | StackExchange              |
+|-------------|------|--------------------|
+| [badges](https://github.com/KarthikGangadhar/stack-exchange#questions) | Get all badges on the site, in alphabetical order. | [badges](https://api.stackexchange.com/docs/badges) |
+| [badges_by_id](https://github.com/KarthikGangadhar/stack-exchange#badges_by_id) | Get the badges identified by ids. | [badges/{ids}](https://api.stackexchange.com/docs/badges-by-ids) |
+| [badges_by_name](https://github.com/KarthikGangadhar/stack-exchange#badges_by_name) | Get all non-tagged-based badges in alphabetical order. | [badges/name](https://api.stackexchange.com/docs/badges-by-name) |
+| [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients) | Get badges recently awarded on the site. | [badges/recipients](https://api.stackexchange.com/docs/badge-recipients)  |
+| [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id) | Get the recent recipients of the given badges. | [badges/{ids}/recipients](https://api.stackexchange.com/docs/badge-recipients-by-ids)  |
+| [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags) | Get all tagged-based badges in alphabetical order. | [badges/tags](https://api.stackexchange.com/docs/badges-by-tag)  |
+
+
 * [Tags section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
     * [tags](https://github.com/KarthikGangadhar/stack-exchange#tags)
     * [tags_by_name](https://github.com/KarthikGangadhar/stack-exchange#tags-by-name)
