@@ -17,34 +17,30 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
 
 
 * [Questions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
-    * [questions](https://github.com/KarthikGangadhar/stack-exchange#questions)
-    * [quetions_by_id](https://github.com/KarthikGangadhar/stack-exchange#questions-by-ids)
-    * [answers_on_questions](https://github.com/KarthikGangadhar/stack-exchange#answers-on-questions)
-    * [render_answers](https://github.com/KarthikGangadhar/stack-exchange#render-answers)
-    * [linked_questions](https://github.com/KarthikGangadhar/stack-exchange#linked-questions)
-    * [related_questions](https://github.com/KarthikGangadhar/stack-exchange#related-questions) 
-    * [questions_timeline](https://github.com/KarthikGangadhar/stack-exchange#questions-timeline)
-    * [featured_questions](https://github.com/KarthikGangadhar/stack-exchange#featured-questions)
-    * [no-answer-questions](https://github.com/KarthikGangadhar/stack-exchange#no-answer-questions)
-    * [unanswered_questions](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions)
-    * [unanswered_questions_my_tags](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions-my-tags)
-    * [question_flag_options](https://github.com/KarthikGangadhar/stack-exchange#question-flag-options)
-    * [question_close_options](https://github.com/KarthikGangadhar/stack-exchange#question-close-options)
-    * [comments_on_questions](https://github.com/KarthikGangadhar/stack-exchange#comments-on-questions)
 
-* [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
-    * [badges](https://github.com/KarthikGangadhar/stack-exchange#questions) 
-    * [badges_by_id](https://github.com/KarthikGangadhar/stack-exchange#badges_by_id)
-    * [badges_by_name](https://github.com/KarthikGangadhar/stack-exchange#badges_by_name)
-    * [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients)
-    * [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id)
-    * [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags)
-
-* [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
-
-| Endpoints | Description | StackExchange              |
+| Endpoints | Description | See in StackExchange              |
 |-------------|------|--------------------|
-| [badges](https://github.com/KarthikGangadhar/stack-exchange#questions) | Get all badges on the site, in alphabetical order. | [badges](https://api.stackexchange.com/docs/badges) |
+| [questions](https://github.com/KarthikGangadhar/stack-exchange#questions) | Get all questions on the site. | [questions](https://api.stackexchange.com/docs/questions) |
+| [quetions_by_id](https://github.com/KarthikGangadhar/stack-exchange#questions-by-ids) | Get the questions identified by a set of ids. | [questions/{ids}](https://api.stackexchange.com/docs/questions-by-ids) |
+| [answers_on_questions](https://github.com/KarthikGangadhar/stack-exchange#answers-on-questions) | Get the answers to the questions identified by a set of ids. | [questions/{ids}/answers](https://api.stackexchange.com/docs/answers-on-questions) |
+| [render_answers](https://github.com/KarthikGangadhar/stack-exchange#render-answers) | Renders a hypothetical answer to a question. This is a post endpoints, the options section looks like this, both fields are required.  | [questions/{id}/answers/render](https://api.stackexchange.com/docs/render-answer) |
+| [linked_questions](https://github.com/KarthikGangadhar/stack-exchange#linked-questions) | Get the questions that link to the questions identified by a set of ids.  | [questions/{ids}/linked](https://api.stackexchange.com/docs/linked-questions) |
+| [related_questions](https://github.com/KarthikGangadhar/stack-exchange#related-questions)  | Get the questions that are related to the questions identified by a set of ids. | [questions/{ids}/related](https://api.stackexchange.com/docs/related-questions) |
+| [questions_timeline](https://github.com/KarthikGangadhar/stack-exchange#questions-timeline) | Get the timelines of the questions identified by a set of ids.  | [questions/{ids}/timeline](https://api.stackexchange.com/docs/questions-timeline) |
+| [featured_questions](https://github.com/KarthikGangadhar/stack-exchange#featured-questions) | Get all questions on the site with active bounties. | [questions/featured](https://api.stackexchange.com/docs/featured-questions) |
+| [no-answer-questions](https://github.com/KarthikGangadhar/stack-exchange#no-answer-questions) | Get all questions on the site with no answers. | [questions/no-answers](https://api.stackexchange.com/docs/no-answer-questions) |
+| [unanswered_questions](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions) | Get all questions the site considers unanswered. | [questions/unanswered](https://api.stackexchange.com/docs/unanswered-questions) |
+| [unanswered_questions_my_tags](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions-my-tags) | Get questions the site considers unanswered within a user's favorite or interesting tags. **auth required**. | [questions/unanswered/my-tags](https://api.stackexchange.com/docs/unanswered-questions-my-tags) |
+| [question_flag_options](https://github.com/KarthikGangadhar/stack-exchange#question-flag-options) | Returns valid flag options for the given question. **auth** required. | [questions/{id}/flags/options](https://api.stackexchange.com/docs/question-flag-options) |
+| [question_close_options](https://github.com/KarthikGangadhar/stack-exchange#question-close-options) | Returns valid flag options which are also close reasons for the given question. **auth required.**  | [questions/{id}/close/options](https://api.stackexchange.com/docs/question-close-options) |
+| [comments_on_questions](https://github.com/KarthikGangadhar/stack-exchange#comments-on-questions) | Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options. | [questions/{ids}/comments](https://api.stackexchange.com/docs/comments-on-questions) |
+
+
+* [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [badges](https://github.com/KarthikGangadhar/stack-exchange#badges) | Get all badges on the site, in alphabetical order. | [badges](https://api.stackexchange.com/docs/badges) |
 | [badges_by_id](https://github.com/KarthikGangadhar/stack-exchange#badges_by_id) | Get the badges identified by ids. | [badges/{ids}](https://api.stackexchange.com/docs/badges-by-ids) |
 | [badges_by_name](https://github.com/KarthikGangadhar/stack-exchange#badges_by_name) | Get all non-tagged-based badges in alphabetical order. | [badges/name](https://api.stackexchange.com/docs/badges-by-name) |
 | [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients) | Get badges recently awarded on the site. | [badges/recipients](https://api.stackexchange.com/docs/badge-recipients)  |
@@ -53,29 +49,47 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
 
 
 * [Tags section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
-    * [tags](https://github.com/KarthikGangadhar/stack-exchange#tags)
-    * [tags_by_name](https://github.com/KarthikGangadhar/stack-exchange#tags-by-name)
-    * [moderator_only_tags](https://github.com/KarthikGangadhar/stack-exchange#moderator-only-tags)
-    * [require_tags](https://github.com/KarthikGangadhar/stack-exchange#require-tags)
-    * [tag_synonyms](https://github.com/KarthikGangadhar/stack-exchange#tag-synonyms)
-    * [faqs_by_tags](https://github.com/KarthikGangadhar/stack-exchange#faqs-by-tags)
-    * [related_tags](https://github.com/KarthikGangadhar/stack-exchange#related-tags)
-    * [synonyms_by_tags](https://github.com/KarthikGangadhar/stack-exchange#synonyms-by-tags)
-    * [top_answerers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-answerers-on-tags)
-    * [top_askers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-askers-on-tags)
-    * [wikis_by_tags](https://github.com/KarthikGangadhar/stack-exchange#wikis-by-tags)     
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [tags](https://github.com/KarthikGangadhar/stack-exchange#tags) | Get the tags on the site. | [tags](https://api.stackexchange.com/docs/tags) |
+| [tags_by_name](https://github.com/KarthikGangadhar/stack-exchange#tags-by-name) | Get tags on the site by their names. | [tags/{tags}/info](https://api.stackexchange.com/docs/tags-by-name) |
+| [moderator_only_tags](https://github.com/KarthikGangadhar/stack-exchange#moderator-only-tags) | Get the tags on the site that only moderators can use. | [tags/moderator-only](https://api.stackexchange.com/docs/moderator-only-tags) |
+| [require_tags](https://github.com/KarthikGangadhar/stack-exchange#require-tags) | Get the tags on the site that fulfill required tag constraints. | [tags/required](https://api.stackexchange.com/docs/required-tags) |
+| [tag_synonyms](https://github.com/KarthikGangadhar/stack-exchange#tag-synonyms) | Get all the tag synonyms on the site. | [tags/synonyms](https://api.stackexchange.com/docs/tag-synonyms) |
+| [faqs_by_tags](https://github.com/KarthikGangadhar/stack-exchange#faqs-by-tags) | Get frequently asked questions in a set of tags. | [tags/{tags}/faq](https://api.stackexchange.com/docs/faqs-by-tags) |
+| [related_tags](https://github.com/KarthikGangadhar/stack-exchange#related-tags) | Get related tags, based on common tag pairings. | [tags/{tags}/related](https://api.stackexchange.com/docs/related-tags) |
+| [synonyms_by_tags](https://github.com/KarthikGangadhar/stack-exchange#synonyms-by-tags) | Get the synonyms for a specific set of tags. | [tags/{tags}/synonyms](https://api.stackexchange.com/docs/synonyms-by-tags) |
+| [top_answerers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-answerers-on-tags) | Get the top answer posters in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-answerers/{period}](https://api.stackexchange.com/docs/top-answerers-on-tags) |
+| [top_askers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-askers-on-tags) | Get the top question askers in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-askers/{period}](https://api.stackexchange.com/docs/top-askers-on-tags) |
+| [wikis_by_tags](https://github.com/KarthikGangadhar/stack-exchange#wikis-by-tags) | Get the wiki entries for a set of tags. | [tags/{tags}/wikis](https://api.stackexchange.com/docs/wikis-by-tags) |
+     
 
 * [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
-    * [info](https://github.com/KarthikGangadhar/stack-exchange#info)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [info](https://github.com/KarthikGangadhar/stack-exchange#info) | Get information about the entire site. | [info](https://api.stackexchange.com/docs/info) |
 
 * [Privilages section](https://github.com/KarthikGangadhar/stack-exchange#privilages-section)
-    * [privilages](https://github.com/KarthikGangadhar/stack-exchange#info) 
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [privilages](https://github.com/KarthikGangadhar/stack-exchange#info) | Get all the privileges available on the site. | [privileges](https://api.stackexchange.com/docs/privileges) |
+
     
 * [Revisions section](https://github.com/KarthikGangadhar/stack-exchange#revisions-section)
-    * [revisions](https://github.com/KarthikGangadhar/stack-exchange#revisions)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [revisions](https://github.com/KarthikGangadhar/stack-exchange#revisions) | Get all revisions identified by a set of ids. | [revisions/{ids}](https://api.stackexchange.com/docs/revisions-by-guids) |
+
 
 * [Events section](https://github.com/KarthikGangadhar/stack-exchange#events-section)
-    * [events](https://github.com/KarthikGangadhar/stack-exchange#events)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [events](https://github.com/KarthikGangadhar/stack-exchange#events) | Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required** | [events](https://api.stackexchange.com/docs/events) |
 
 
 To use above mentioned endpoints you need to create their respective sections objects as follows:
