@@ -182,6 +182,31 @@
         "sort": "activity",
         "site": "stackoverflow"
     },
+    "POSTS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "POSTS_BY_IDS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "COMMENTS_ON_POSTS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+    "CREATE_COMMENT": {},
+    "RENDER_COMMENT": {},
+    "REVISIONS_BY_IDS": {
+        "site": "stackoverflow"
+    },
+    "POSTS_ON_SUGGESTED_EDITS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -225,7 +250,14 @@
         "SEARCH": "/2.2/search?",
         "ADVANCED_SEARCH": "/2.2/search/advanced?",
         "SIMILAR": "/2.2/similar?",
-        "EXCERPT_SEARCH": "/2.2/search/excerpts?"
+        "EXCERPT_SEARCH": "/2.2/search/excerpts?",
+        "POSTS": "/2.2/posts?",
+        "POSTS_BY_IDS": "/2.2/posts/%s?",
+        "COMMENTS_ON_POSTS": "/2.2/posts/%s/comments?",
+        "CREATE_COMMENT": "/2.2/posts/%s/comments/add",
+        "RENDER_COMMENT": "/2.2/posts/%s/comments/render",
+        "REVISIONS_BY_IDS": "/2.2/posts/%s/revisions?",
+        "POSTS_ON_SUGGESTED_EDITS": "/2.2/posts/%s/suggested-edits?"
     }
 
 }

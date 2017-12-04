@@ -258,11 +258,11 @@ let options = {
 
 //testing search endpoints
 
-const stack_search = new stackexchange.search();
+// const stack_search = new stackexchange.search();
 
-let search_options = {
-    "title": "npm install error"
-}
+// let search_options = {
+//     "title": "npm install error"
+// }
 
 // stack_search.search(search_options, (response) => {
 //     console.log(response);
@@ -279,5 +279,48 @@ let search_options = {
 
 
 // stack_search.excerpt_search(search_options, (response) => {
+//     console.log(response);
+// });
+
+//tests for posts endpoints
+
+const stack_posts = new stackexchange.posts();
+
+let posts_options = {
+    // "body": "npm install error",
+    "site": "stackoverflow",
+    //  "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+    // "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
+}
+
+// stack_posts.posts(posts_options, (response) => {
+//     console.log(response);
+// });
+let post_id = "45934757";
+
+// stack_posts.posts_by_ids(post_id, posts_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_posts.comments_on_posts(post_id, posts_options, (response) => {
+//     console.log(response);
+// });
+    
+// stack_posts.create_comment(post_id, posts_options, (response) => {
+//     console.log(response);
+// });
+
+
+// stack_posts.render_comment(post_id, posts_options, (response) => {
+//     console.log(response);
+// });
+
+// post_id= 39892422
+
+// stack_posts.revisions_by_ids(post_id, posts_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_posts.posts_on_suggested_edits(post_id, posts_options, (response) => {
 //     console.log(response);
 // });
