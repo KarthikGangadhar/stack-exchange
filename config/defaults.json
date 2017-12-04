@@ -162,6 +162,26 @@
         "sort": "creation",
         "site": "stackoverflow"
     },
+    "SEARCH": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "ADVANCED_SEARCH": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "SIMILAR": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "EXCERPT_SEARCH": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -201,7 +221,11 @@
         "COMMENTS_ON_QUESTIONS": "/2.2/questions/%s/comments?",
         "MODERATORS_ONLY_TAGS": "/2.2/tags/moderator-only?",
         "SUGGESTED_EDITS": "/2.2/suggested-edits?",
-        "SUGGESTED_EDITS_BY_IDS": "/2.2/suggested-edits/%s?"
+        "SUGGESTED_EDITS_BY_IDS": "/2.2/suggested-edits/%s?",
+        "SEARCH": "/2.2/search?",
+        "ADVANCED_SEARCH": "/2.2/search/advanced?",
+        "SIMILAR": "/2.2/similar?",
+        "EXCERPT_SEARCH": "/2.2/search/excerpts?"
     }
 
 }

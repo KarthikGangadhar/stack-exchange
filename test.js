@@ -255,3 +255,29 @@ let options = {
 // stack_suggested_edits.suggested_edits_by_ids(suggested_edit_id, options, (response) => {
 //     console.log(response);
 // });
+
+//testing search endpoints
+
+const stack_search = new stackexchange.search();
+
+let search_options = {
+    "title": "npm install error"
+}
+
+// stack_search.search(search_options, (response) => {
+//     console.log(response);
+// });
+
+
+// stack_search.advanced_search(search_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_search.similar(search_options, (response) => {
+//     console.log(response);
+// });
+
+
+// stack_search.excerpt_search(search_options, (response) => {
+//     console.log(response);
+// });
