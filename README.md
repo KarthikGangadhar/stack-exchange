@@ -78,7 +78,7 @@ const stack_info = new stackexchange.info(); //for info sections endpoints
 const stack_privilages = new stackexchange.privilages(); //for privilages sections endpoints
 const stack_revisions = new stackexchange.revisions(); //for revisions sections endpoints
 const stack_events = new stackexchange.events(); //for events sections endpoints
-const stack_events = new stackexchange.tags(); //for tags sections endpoints
+const stack_tags = new stackexchange.tags(); //for tags sections endpoints
 
 ```
 
