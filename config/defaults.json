@@ -207,6 +207,16 @@
         "sort": "creation",
         "site": "stackoverflow"
     },
+    "COMMENTS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+    "COMMENTS_BY_IDS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -257,7 +267,9 @@
         "CREATE_COMMENT": "/2.2/posts/%s/comments/add",
         "RENDER_COMMENT": "/2.2/posts/%s/comments/render",
         "REVISIONS_BY_IDS": "/2.2/posts/%s/revisions?",
-        "POSTS_ON_SUGGESTED_EDITS": "/2.2/posts/%s/suggested-edits?"
+        "POSTS_ON_SUGGESTED_EDITS": "/2.2/posts/%s/suggested-edits?",
+        "COMMENTS": "/2.2/comments?",
+        "COMMENTS_BY_IDS": "/2.2/comments/%s?"
     }
 
 }

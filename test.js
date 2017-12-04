@@ -305,7 +305,7 @@ let post_id = "45934757";
 // stack_posts.comments_on_posts(post_id, posts_options, (response) => {
 //     console.log(response);
 // });
-    
+
 // stack_posts.create_comment(post_id, posts_options, (response) => {
 //     console.log(response);
 // });
@@ -324,3 +324,19 @@ let post_id = "45934757";
 // stack_posts.posts_on_suggested_edits(post_id, posts_options, (response) => {
 //     console.log(response);
 // });
+
+//tests for comments endpoints
+
+const stack_comments = new stackexchange.comments();
+let comments_options = {};
+
+// stack_comments.comments(comments_options, (response) => {
+//     console.log(response);
+// });
+
+let comment_id = "82236358";
+
+// stack_comments.comments_by_ids(comment_id, comments_options, (response) => {
+//     console.log(response);
+// });
+
