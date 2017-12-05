@@ -217,6 +217,15 @@
         "sort": "creation",
         "site": "stackoverflow"
     },
+    "DELETE_COMMENT": {},
+    "EDIT_COMMENT": {},
+    "CREATE_COMMENT_FLAG": {},
+    "COMMENTS_FLAG_OPTIONS": {
+        "site": "stackoverflow",
+        "filter": "default"
+    },
+    "UPVOTE_COMMENT": {},    
+    "UNDO_UPVOTE_COMMENT": {},    
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -269,7 +278,13 @@
         "REVISIONS_BY_IDS": "/2.2/posts/%s/revisions?",
         "POSTS_ON_SUGGESTED_EDITS": "/2.2/posts/%s/suggested-edits?",
         "COMMENTS": "/2.2/comments?",
-        "COMMENTS_BY_IDS": "/2.2/comments/%s?"
+        "COMMENTS_BY_IDS": "/2.2/comments/%s?",
+        "DELETE_COMMENT": "/2.2/comments/%s/delete",
+        "EDIT_COMMENT": "/2.2/comments/%s/edit",
+        "CREATE_COMMENT_FLAG": "/2.2/comments/%s/flags/add",
+        "COMMENTS_FLAG_OPTIONS": "/2.2/comments/%s/flags/options?",
+        "UPVOTE_COMMENT": "/2.2/comments/%s/upvote",
+        "UNDO_UPVOTE_COMMENT": "/2.2/comments/%s/upvote/undo"
     }
 
 }

@@ -328,7 +328,10 @@ let post_id = "45934757";
 //tests for comments endpoints
 
 const stack_comments = new stackexchange.comments();
-let comments_options = {};
+let comments_options = {
+    access_token: "VvGwnS49NbZKImZYu5ylJA))",
+    key: "U4DMV*8nvpm3EOpvf69Rxw(("
+};
 
 // stack_comments.comments(comments_options, (response) => {
 //     console.log(response);
@@ -337,6 +340,35 @@ let comments_options = {};
 let comment_id = "82236358";
 
 // stack_comments.comments_by_ids(comment_id, comments_options, (response) => {
+//     console.log(response);
+// });
+
+// delete_comment
+
+// stack_comments.delete_comment(comment_id, comments_options, (response) => {
+//     console.log(response);
+// });
+
+// edit_comment
+
+//body is required in options
+// stack_comments.edit_comment(comment_id, comments_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_comments.create_comment_flag(comment_id, comments_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_comments.comment_flag_options(comment_id, comments_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_comments.upvote_comment(comment_id, comments_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_comments.undo_upvote_comment(comment_id, comments_options, (response) => {
 //     console.log(response);
 // });
 
