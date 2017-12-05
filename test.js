@@ -378,7 +378,7 @@ let comment_id = "82236358";
 const stack_users = new stackexchange.users();
 let users_options = {
     key: "U4DMV*8nvpm3EOpvf69Rxw((",
-    access_token: "3QPOq7oCgt7RcUylK121NQ))"
+    access_token: "obK0oR346xNv7hZENM8sZw))"
 };
 // users
 let user_ids = "6414102";
@@ -512,3 +512,143 @@ let tags = "nodejs";
 // stack_users.user_unread_inbox(user_ids, users_options, (response) => {
 //     console.log(response);
 // });
+
+// testing me section 
+
+
+const stack_me = new stackexchange.me();
+// users_options = {
+//     key: "U4DMV*8nvpm3EOpvf69Rxw((",
+//     access_token: "QfbROTOhsIYYN6GwBEVfkw))"
+// };
+// users
+user_ids = "6414102";
+
+// stack_me.me( users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_answers( users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_badges( users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_comments( users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_comments_to(toid, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_favorites(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_mentioned(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_network_activity(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_notifications(users_options, (response) => {
+//     console.log(response);
+// });    
+
+// stack_me.me_unread_notifications(users_options, (response) => {
+//     console.log(response);
+// });    
+
+// stack_me.me_unread_notifications(users_options, (response) => {
+//     console.log(response);
+// });    
+
+// stack_me.me_posts(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_privileges(users_options, (response) => {
+//     console.log(response);
+// });
+
+
+// stack_me.me_questions(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_featured_questions(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_no_answer_questions(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_no_answer_questions(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_unaccepted_questions(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_unanswered_questions(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_reputation(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_reputation_history(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_full_reputation_history(users_options, (response) => {
+//     console.log(response);
+// });
+
+
+// stack_me.me_suggested_edits(users_options, (response) => {
+//     console.log(response);
+// });
+
+
+// stack_me.me_tags(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_tags_top_answers(tags, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_top_answer_tags( users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_top_question_tags( users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_top_tags( users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_inbox( users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_unread_inbox( users_options, (response) => {
+//     console.log(response);
+// });
+
+
+
+
+
+

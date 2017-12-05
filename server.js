@@ -13,6 +13,7 @@ const search = require("./lib/search");
 const suggested_edits = require("./lib/suggested_edits");
 const users = require("./lib/users");
 const comments = require("./lib/comments");
+const me = require("./lib/me");
 
 module.exports = {
     questions: questions,
@@ -27,5 +28,6 @@ module.exports = {
     search: search,
     suggested_edits: suggested_edits,
     users: users,
-    comments: comments
+    comments: comments,
+    me: me
 };
