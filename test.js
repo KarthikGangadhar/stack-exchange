@@ -377,8 +377,8 @@ let comment_id = "82236358";
 
 const stack_users = new stackexchange.users();
 let users_options = {
-    access_token: "0glCUdiYHhrWXu9z1RSZhQ))",
-    key: "U4DMV*8nvpm3EOpvf69Rxw(("
+    key: "U4DMV*8nvpm3EOpvf69Rxw((",
+    access_token: "3QPOq7oCgt7RcUylK121NQ))"
 };
 // users
 let user_ids = "6414102";
@@ -409,7 +409,7 @@ let toid = 1427878;
 //     console.log(response);
 // });
 
-    // favorites_on_users FAVORITES_ON_USERS /2.2/users/6414102/favorites?order=desc&sort=activity&site=stackoverflow
+// favorites_on_users FAVORITES_ON_USERS /2.2/users/6414102/favorites?order=desc&sort=activity&site=stackoverflow
 
 // stack_users.favorites_on_users(user_ids, users_options, (response) => {
 //     console.log(response);
@@ -427,11 +427,88 @@ let toid = 1427878;
 //     console.log(response);
 // });
 
-stack_users.user_notifications(user_ids, users_options, (response) => {
-    console.log(response);
-});
+// stack_users.user_unread_notifications(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
 
+// stack_users.posts_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
 
+// stack_users.privileges_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
 
+// stack_users.questions_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
 
+// stack_users.featured_questions_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
 
+// stack_users.no_answer_questions_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.unaccepted_questions_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.unanswered_questions_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.reputation_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.reputation_history(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.full_reputation_history(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.suggested_edits_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+let tags = "nodejs";
+
+// stack_users.top_user_answers_in_tags(user_ids, tags,  users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.top_user_questions_in_tags(user_ids, tags,  users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.timeline_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.top_answer_tags_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.top_tags_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.moderators(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.elected_moderators(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.user_inbox(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.user_unread_inbox(user_ids, users_options, (response) => {
+//     console.log(response);
+// });

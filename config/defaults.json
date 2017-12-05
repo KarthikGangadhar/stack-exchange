@@ -270,9 +270,106 @@
         "types": "posts"
     },
     "USER_NOTIFICATIONS": {
+        "filter": "default",
+        "site": "stackoverflow"
+    },
+    "USER_UNREAD_NOTIFICATIONS": {
+        "filter": "default",
+        "site": "stackoverflow"
+    },
+    "POSTS_ON_USERS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "PRIVILEGES_ON_USERS": {
+        "site": "stackoverflow"
+    },
+    "QUESTIONS_ON_USERS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "FEATURED_QUESTIONS_ON_USERS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "NO_ANSWER_QUESTIONS_ON_USERS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "UNACCEPTED_QUESTIONS_ON_USERS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "UNANSWERED_QUESTIONS_ON_USERS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "REPUTATION_ON_USERS": {
+        "site": "stackoverflow"
+    },
+    "REPUTATION_HISTORY": {
+        "site": "stackoverflow"
+    },
+    "FULL_REPUTATION_HISTORY": {
+        "site": "stackoverflow",
+        "filter": "default"
+    },
+    "SUGGESTED_EDITS_ON_USERS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+    "TAGS_ON_USERS": {
+        "order": "desc",
+        "sort": "popular",
+        "site": "stackoverflow"
+    },
+    "TOP_USER_ANSWERS_IN_TAGS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "TOP_USER_QUESTIONS_IN_TAGS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "TIMELINE_ON_USERS": {
+        "site": "stackoverflow"
+    },
+    "TOP_ANSWER_TAGS_ON_USERS": {
+        "site": "stackoverflow"
+    },
+    "TOP_QUESTION_TAGS_ON_USERS": {
+        "site": "stackoverflow"
+    }, 
+    "TOP_TAGS_ON_USERS": {
+        "site": "stackoverflow"
+    },    
+    "MODERATORS": {
+        "order": "desc",
+        "sort": "reputation",
+        "site": "stackoverflow"
+    },
+    "ELECTED_MODERATORS": {
+        "order": "desc",
+        "sort": "reputation",
+        "site": "stackoverflow"
+    },
+    "USER_INBOX": {
         "filter":"default",
-        "site": "stackoverflow"        
-    },        
+        "site": "stackoverflow"
+    },
+    "USER_UNREAD_INBOX": {
+        "filter":"default",
+        "site": "stackoverflow"
+    },     
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -340,9 +437,30 @@
         "COMMENTS_BY_USERS_TO_USER": "/2.2/users/%s/comments/%s?",
         "FAVORITES_ON_USERS": "/2.2/users/%s/favorites?",
         "MENTIONS_ON_USERS": "/2.2/users/%s/mentioned?",
-        "USERES_NETWORK_ACTIVITY" : "/2.2/users/%s/network-activity?",
-        "USER_NOTIFICATIONS" : "/2.2/users/%s/notifications?"
-    }
-        //user-unread-notifications USER_UNREAD_NOTIFICATIONS /2.2/users/6414102/notifications/unread?key=U4DMV*8nvpm3EOpvf69Rxw((&site=stackoverflow&access_token=IJiHH1PsMCAO*N4*32cJyg))&filter=default
-
+        "USERES_NETWORK_ACTIVITY": "/2.2/users/%s/network-activity?",
+        "USER_NOTIFICATIONS": "/2.2/users/%s/notifications?",
+        "USER_UNREAD_NOTIFICATIONS": "/2.2/users/%s/notifications/unread?",
+        "POSTS_ON_USERS": "/2.2/users/%s/posts?",
+        "PRIVILEGES_ON_USERS": "/2.2/users/%s/privileges?",
+        "QUESTIONS_ON_USERS": "/2.2/users/%s/questions?",
+        "FEATURED_QUESTIONS_ON_USERS": "/2.2/users/%s/questions/featured?",
+        "NO_ANSWER_QUESTIONS_ON_USERS": "/2.2/users/%s/questions/no-answers?",
+        "UNACCEPTED_QUESTIONS_ON_USERS": "/2.2/users/%s/questions/unaccepted?",
+        "UNANSWERED_QUESTIONS_ON_USERS": "/2.2/users/%s/questions/unanswered?",
+        "REPUTATION_ON_USERS": "/2.2/users/%s/reputation?",
+        "REPUTATION_HISTORY": "/2.2/users/%s/reputation-history?",
+        "FULL_REPUTATION_HISTORY": "/2.2/users/%s/reputation-history/full?",
+        "SUGGESTED_EDITS_ON_USERS": "/2.2/users/%s/suggested-edits?",
+        "TAGS_ON_USERS": "/2.2/users/%s/tags?",
+        "TOP_USER_ANSWERS_IN_TAGS":"/2.2/users/%s/tags/%s/top-answers?",
+        "TOP_USER_QUESTIONS_IN_TAGS":"/2.2/users/%s/tags/%s/top-questions?",
+        "TIMELINE_ON_USERS": "/2.2/users/%s/timeline?",
+        "TOP_ANSWER_TAGS_ON_USERS": "/2.2/users/%s/top-answer-tags?",
+        "TOP_QUESTION_TAGS_ON_USERS": "/2.2/users/%s/top-question-tags?",
+        "TOP_TAGS_ON_USERS": "/2.2/users/%s/top-tags?",
+        "MODERATORS": "/2.2/users/moderators?",
+        "ELECTED_MODERATORS": "/2.2/users/moderators/elected?",
+        "USER_INBOX" : "/2.2/users/%s/inbox?",
+        "USER_UNREAD_INBOX" : "/2.2/users/%s/inbox/unread?"
+    }    
 }
