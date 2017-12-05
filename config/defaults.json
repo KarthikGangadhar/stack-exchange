@@ -246,6 +246,33 @@
         "sort": "rank",
         "site": "stackoverflow"
     },
+    "COMMENTS_ON_USERS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+    "COMMENTS_BY_USERS_TO_USER": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+    "FAVORITES_ON_USERS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "MENTIONS_ON_USERS": {
+        "order": "desc",
+        "sort": "creation",
+        "site": "stackoverflow"
+    },
+    "USERES_NETWORK_ACTIVITY": {
+        "types": "posts"
+    },
+    "USER_NOTIFICATIONS": {
+        "filter":"default",
+        "site": "stackoverflow"        
+    },        
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -308,6 +335,14 @@
         "USERS": "/2.2/users?",
         "USERS_BY_IDS": "/2.2/users/%s?",
         "ANSWERS_ON_USERS": "/2.2/users/%s/answers?",
-        "BADGES_ON_USERS": "/2.2/users/%s/badges?"
+        "BADGES_ON_USERS": "/2.2/users/%s/badges?",
+        "COMMENTS_ON_USERS": "/2.2/users/%s/comments?",
+        "COMMENTS_BY_USERS_TO_USER": "/2.2/users/%s/comments/%s?",
+        "FAVORITES_ON_USERS": "/2.2/users/%s/favorites?",
+        "MENTIONS_ON_USERS": "/2.2/users/%s/mentioned?",
+        "USERES_NETWORK_ACTIVITY" : "/2.2/users/%s/network-activity?",
+        "USER_NOTIFICATIONS" : "/2.2/users/%s/notifications?"
     }
+        //user-unread-notifications USER_UNREAD_NOTIFICATIONS /2.2/users/6414102/notifications/unread?key=U4DMV*8nvpm3EOpvf69Rxw((&site=stackoverflow&access_token=IJiHH1PsMCAO*N4*32cJyg))&filter=default
+
 }
