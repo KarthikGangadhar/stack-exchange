@@ -10,8 +10,7 @@ Installation is done using the npm install command:
 $ npm install stack-exchange
 ```
 
-## Quick Start
-
+## Table of Content
 
 You can make 300 requests without a key per day, with a key you can make 10,000 requests. To generate key visit [here](https://api.stackexchange.com/docs/authentication). The module exposes following endpoints of stackexchange api:
 
@@ -91,6 +90,8 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
 |-------------|------|--------------------|
 | [events](https://github.com/KarthikGangadhar/stack-exchange#events) | Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required** | [events](https://api.stackexchange.com/docs/events) |
 
+
+## Quick Start
 
 To use above mentioned endpoints you need to create their respective sections objects as follows:
 
