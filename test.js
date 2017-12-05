@@ -327,11 +327,11 @@ let post_id = "45934757";
 
 //tests for comments endpoints
 
-const stack_comments = new stackexchange.comments();
-let comments_options = {
-    access_token: "VvGwnS49NbZKImZYu5ylJA))",
-    key: "U4DMV*8nvpm3EOpvf69Rxw(("
-};
+// const stack_comments = new stackexchange.comments();
+// let comments_options = {
+//     access_token: "VvGwnS49NbZKImZYu5ylJA))",
+//     key: "U4DMV*8nvpm3EOpvf69Rxw(("
+// };
 
 // stack_comments.comments(comments_options, (response) => {
 //     console.log(response);
@@ -371,4 +371,29 @@ let comment_id = "82236358";
 // stack_comments.undo_upvote_comment(comment_id, comments_options, (response) => {
 //     console.log(response);
 // });
+
+
+//for testing users endpoints
+
+const stack_users = new stackexchange.users();
+let users_options = {
+    access_token: "VvGwnS49NbZKImZYu5ylJA))",
+    key: "U4DMV*8nvpm3EOpvf69Rxw(("
+};
+// users
+let user_ids = "6414102";
+
+// stack_users.users(users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.users_by_ids(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.answers_on_users(user_ids, users_options, (response) => {
+//     console.log(response);
+// });
+
+
 

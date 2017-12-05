@@ -224,8 +224,28 @@
         "site": "stackoverflow",
         "filter": "default"
     },
-    "UPVOTE_COMMENT": {},    
-    "UNDO_UPVOTE_COMMENT": {},    
+    "UPVOTE_COMMENT": {},
+    "UNDO_UPVOTE_COMMENT": {},
+    "USERS": {
+        "order": "desc",
+        "sort": "reputation",
+        "site": "stackoverflow"
+    },
+    "USERS_BY_IDS": {
+        "order": "desc",
+        "sort": "reputation",
+        "site": "stackoverflow"
+    },
+    "ANSWERS_ON_USERS": {
+        "order": "desc",
+        "sort": "activity",
+        "site": "stackoverflow"
+    },
+    "BADGES_ON_USERS": {
+        "order": "desc",
+        "sort": "rank",
+        "site": "stackoverflow"
+    },
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -284,7 +304,10 @@
         "CREATE_COMMENT_FLAG": "/2.2/comments/%s/flags/add",
         "COMMENTS_FLAG_OPTIONS": "/2.2/comments/%s/flags/options?",
         "UPVOTE_COMMENT": "/2.2/comments/%s/upvote",
-        "UNDO_UPVOTE_COMMENT": "/2.2/comments/%s/upvote/undo"
+        "UNDO_UPVOTE_COMMENT": "/2.2/comments/%s/upvote/undo",
+        "USERS": "/2.2/users?",
+        "USERS_BY_IDS": "/2.2/users/%s?",
+        "ANSWERS_ON_USERS": "/2.2/users/%s/answers?",
+        "BADGES_ON_USERS": "/2.2/users/%s/badges?"
     }
-
 }
