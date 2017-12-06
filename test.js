@@ -648,7 +648,28 @@ user_ids = "6414102";
 // });
 
 
+// to test network endpoints
 
+// invalidate-access-tokens INVALIDATE_ACCESS_TOKENS /2.2/access-tokens/obK0oR346xNv7hZENM8sZw))/invalidate
+const stack_network = new stackexchange.network();
 
+let invalidate_options = {
 
+}
+
+let access_token = "obK0oR346xNv7hZENM8sZw))"
+
+stack_network.invalidate_access_tokens(access_token, invalidate_options, (response) => {
+    console.log(response);
+});
+
+read_options = {
+    key: "U4DMV*8nvpm3EOpvf69Rxw((",
+    access_token: "obK0oR346xNv7hZENM8sZw))"  
+}
+stack_network.read_access_tokens(access_token, invalidate_options, (response) => {
+    console.log(response);
+});
+
+// read-access-tokens https://api.stackexchange.com/2.2/access-tokens/obK0oR346xNv7hZENM8sZw))
 

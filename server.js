@@ -14,6 +14,7 @@ const suggested_edits = require("./lib/suggested_edits");
 const users = require("./lib/users");
 const comments = require("./lib/comments");
 const me = require("./lib/me");
+const network = require("./lib/network");
 
 module.exports = {
     questions: questions,
@@ -29,5 +30,6 @@ module.exports = {
     suggested_edits: suggested_edits,
     users: users,
     comments: comments,
-    me: me
+    me: me,
+    network: network
 };

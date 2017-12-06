@@ -514,7 +514,7 @@
     "ME_TOP_TAGS": {
         "site": "stackoverflow",
         "filter": "default"
-    }, 
+    },
     "ME_INBOX": {
         "site": "stackoverflow",
         "filter": "default"
@@ -522,7 +522,8 @@
     "ME_UNREAD_INBOX": {
         "site": "stackoverflow",
         "filter": "default"
-    },                  
+    },
+    "INVALIDATE_ACCESS_TOKENS": {},
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -644,6 +645,8 @@
         "ME_TOP_QUESTION_TAGS": "/2.2/me/top-question-tags?",
         "ME_TOP_TAGS": "/2.2/me/top-tags?",
         "ME_INBOX": "/2.2/me/inbox?",
-        "ME_UNREAD_INBOX" : "/2.2/me/inbox/unread?"
+        "ME_UNREAD_INBOX": "/2.2/me/inbox/unread?",
+        "INVALIDATE_ACCESS_TOKENS": "/2.2/access-tokens/%s/invalidate"
     }
+    
 }
