@@ -524,6 +524,35 @@
         "filter": "default"
     },
     "INVALIDATE_ACCESS_TOKENS": {},
+    "READ_ACCESS_TOKENS": {},
+    "APPLICATION_DE_AUTHENTICATE": {},
+    "ERRORS": {},
+    "SIMULATE_ERRORS": {},
+    "CREATE_FILTER": {
+        "unsafe": false
+    },
+    "READ_FILTER": {},
+    "INBOX": {
+        "filter": "default"
+    },
+    "INDOX_UNREAD": {
+        "filter": "default"
+    },
+    "NOTIFICATIONS": {
+        "filter": "default"
+    },
+    "UNREAD_NOTIFICATIONS": {
+        "filter": "default"
+    },
+    "SITES": {},
+    "ASSOCIATED_USERS": {},
+    "ME_ASSOCIATED_USERS": {},
+    "MERGE_HISTORY": {
+        "filter": "default"
+    },
+    "ME_MERGE_HISTORY": {
+        "filter": "default"
+    },
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -646,7 +675,22 @@
         "ME_TOP_TAGS": "/2.2/me/top-tags?",
         "ME_INBOX": "/2.2/me/inbox?",
         "ME_UNREAD_INBOX": "/2.2/me/inbox/unread?",
-        "INVALIDATE_ACCESS_TOKENS": "/2.2/access-tokens/%s/invalidate"
+        "INVALIDATE_ACCESS_TOKENS": "/2.2/access-tokens/%s/invalidate?",
+        "READ_ACCESS_TOKENS": "/2.2/access-tokens/%s?",
+        "APPLICATION_DE_AUTHENTICATE": "/2.2/apps/%s/de-authenticate?",
+        "ERRORS": "/2.2/errors?",
+        "SIMULATE_ERRORS": "/2.2/errors/%s?",
+        "CREATE_FILTER": "/2.2/filters/create?",
+        "READ_FILTER": "/2.2/filters/%s?",
+        "INDOX": "/2.2/inbox?",
+        "INDOX_UNREAD": "/2.2/inbox/unread?",
+        "NOTIFICATIONS": "/2.2/notifications?",
+        "UNREAD_NOTIFICATIONS": "/2.2/notifications/unread?",
+        "SITES": "/2.2/sites?",
+        "ASSOCIATED_USERS": "/2.2/users/%s/associated?",
+        "MERGE_HISTORY": "/2.2/users/%s/merges?",
+        "ME_ASSOCIATED_USERS": "/2.2/me/associated?",
+        "ME_MERGE_HISTORY": "/2.2/me/merges?"
     }
-    
+
 }

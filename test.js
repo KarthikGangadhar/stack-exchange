@@ -650,26 +650,94 @@ user_ids = "6414102";
 
 // to test network endpoints
 
-// invalidate-access-tokens INVALIDATE_ACCESS_TOKENS /2.2/access-tokens/obK0oR346xNv7hZENM8sZw))/invalidate
 const stack_network = new stackexchange.network();
 
 let invalidate_options = {
-
+    key: "U4DMV*8nvpm3EOpvf69Rxw((",
+    access_token: "ySHeOxbEL0j8IWW2Hlg0zw))"
 }
 
-let access_token = "obK0oR346xNv7hZENM8sZw))"
+let access_token = "U4DMV*8nvpm3EOpvf69Rxw(("
 
-stack_network.invalidate_access_tokens(access_token, invalidate_options, (response) => {
-    console.log(response);
-});
+// stack_network.invalidate_access_tokens(invalidate_options, (response) => {
+//     console.log(response);
+// });
 
 read_options = {
     key: "U4DMV*8nvpm3EOpvf69Rxw((",
-    access_token: "obK0oR346xNv7hZENM8sZw))"  
+    access_token: "bU0bMrtbr33nVjMdwjBf*Q))"
 }
-stack_network.read_access_tokens(access_token, invalidate_options, (response) => {
-    console.log(response);
-});
 
-// read-access-tokens https://api.stackexchange.com/2.2/access-tokens/obK0oR346xNv7hZENM8sZw))
+// stack_network.read_access_tokens( read_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_network.application_de_authenticate( read_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_network.errors( read_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_network.simulate_errors("401", read_options, (response) => {
+//     console.log(response);
+// });
+
+create_filter_options = {
+    "include": ".quota_max",
+    "exclude": ".quota_remaining",
+    "unsafe": false
+}
+// stack_network.create_filter(create_filter_options, (response) => {
+//     console.log(response);
+// });
+
+filter = ".quota_max"
+
+// stack_network.read_filter(filter, read_options, (response) => {
+//     console.log(response);
+// });
+
+// inbox INDOX /2.2/inbox?key=U4DMV*8nvpm3EOpvf69Rxw((&access_token=S8Irmb83HARHUwZ1CXGvwg))&filter=default
+inbox_options = {
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"S8Irmb83HARHUwZ1CXGvwg))"  
+}
+// stack_network.inbox(inbox_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_network.inbox_unread(inbox_options, (response) => {
+//     console.log(response);
+// });
+
+
+// stack_network.notifications(inbox_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_network.unread_notifications(inbox_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_network.sites(inbox_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.associated_users(user_ids, inbox_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_users.merge_history(user_ids, inbox_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_associated_users(inbox_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_me.me_merge_history(inbox_options, (response) => {
+//     console.log(response);
+// });
 
