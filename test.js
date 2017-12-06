@@ -701,8 +701,8 @@ filter = ".quota_max"
 
 // inbox INDOX /2.2/inbox?key=U4DMV*8nvpm3EOpvf69Rxw((&access_token=S8Irmb83HARHUwZ1CXGvwg))&filter=default
 inbox_options = {
-    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
-    "access_token":"S8Irmb83HARHUwZ1CXGvwg))"  
+    "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token": "S8Irmb83HARHUwZ1CXGvwg))"
 }
 // stack_network.inbox(inbox_options, (response) => {
 //     console.log(response);
@@ -741,3 +741,30 @@ inbox_options = {
 //     console.log(response);
 // });
 
+
+// tests for answers endpoints
+
+// answers /2.2/answers?order=desc&sort=activity&site=stackoverflow
+const stack_answers = new stackexchange.answers();
+
+answers_options = {
+    "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token": "S8Irmb83HARHUwZ1CXGvwg))"
+}
+// stack_answers.answers(answers_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_answers.answers_by_ids("6414102", answers_options, (response) => {
+//     console.log(response);
+// });
+
+// stack_answers.accept_answer("6414102", answers_options, (response) => {
+//     console.log(response);
+// });
+
+stack_answers.undo_accept_answer("47451356", answers_options, (response) => {
+    console.log(response);
+});
+
+// undo-accept-answer /2.2/answers/47451356/accept/undo

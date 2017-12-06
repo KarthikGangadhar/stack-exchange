@@ -553,6 +553,18 @@
     "ME_MERGE_HISTORY": {
         "filter": "default"
     },
+    "ANSWERS": {
+        "site": "stackoverflow",
+        "order": "desc",
+        "sort": "activity"
+    },
+    "ANSWERS_BY_IDS": {
+        "site": "stackoverflow",
+        "order": "desc",
+        "sort": "activity"
+    },
+    "ACCEPT_ANSWER": {},
+    "UNDO_ACCEPT_ANSWER": {},
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -690,7 +702,11 @@
         "ASSOCIATED_USERS": "/2.2/users/%s/associated?",
         "MERGE_HISTORY": "/2.2/users/%s/merges?",
         "ME_ASSOCIATED_USERS": "/2.2/me/associated?",
-        "ME_MERGE_HISTORY": "/2.2/me/merges?"
+        "ME_MERGE_HISTORY": "/2.2/me/merges?",
+        "ANSWERS": "/2.2/answers?",
+        "ANSWERS_BY_IDS": "/2.2/answers/%s?",
+        "ACCEPT_ANSWER": "/2.2/answers/%s/accept",
+        "UNDO_ACCEPT_ANSWER": "/2.2/answers/%s/accept/undo"
     }
-
+    
 }
