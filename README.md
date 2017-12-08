@@ -2646,100 +2646,100 @@ The module exposes following endpoints of stackexchange api:
 | [associated_users](https://github.com/KarthikGangadhar/stack-exchange#associated_users) | Get a user's associated accounts. | [users/{ids}/associated](https://api.stackexchange.com/docs/associated-users) |
 | [merge_history](https://github.com/KarthikGangadhar/stack-exchange#merge_history) | Get the merges a user's accounts has undergone. | [users/{ids}/merges](https://api.stackexchange.com/docs/merge-history) |
 
-* [me section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
+* [Me section](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| []() | Get the users identified by a set of ids. | [me](https://api.stackexchange.com/docs/me) |
-| []() | Get the answers posted by the users identified by a set of ids. | [me/answers](https://api.stackexchange.com/docs/me-answers) |
-| []() | Get the badges earned by the users identified by a set of ids. | [me/badges](https://api.stackexchange.com/docs/me-badges) |
-| []() | Get the comments posted by the users identified by a set of ids. | [me/comments](https://api.stackexchange.com/docs/me-comments) |
-| []() | Get the comments posted by a set of users in reply to another user. | [me/comments/{toId}](https://api.stackexchange.com/docs/me-comments-to) |
-| []() | Get the questions favorited by users identified by a set of ids. | [me/favorites](https://api.stackexchange.com/docs/me-favorites) |
-| []() | Get the comments that mention one of the users identified by a set of ids. | [me/mentioned](https://api.stackexchange.com/docs/me-mentioned) |
-| []() | Gets a user's activity across the Stack Exchange network. | [me/network-activity](https://api.stackexchange.com/docs/me-network-activity) |
-| []() | Get a user's notifications. | [me/notifications](https://api.stackexchange.com/docs/me-notifications) |
-| []() | Get a user's unread notifications. | [me/notifications/unread](https://api.stackexchange.com/docs/me-unread-notifications) |
-| []() | Get all posts (questions and answers) owned by a set of users. | [me/posts](https://api.stackexchange.com/docs/me-posts) |
-| []() | Get the privileges the given user has on the site. | [me/privileges](https://api.stackexchange.com/docs/me-privileges) |
-| []() | Get the questions asked by the users identified by a set of ids. | [me/questions](https://api.stackexchange.com/docs/me-questions) |
-| []() | Get the questions on which a set of users, have active bounties. | [me/questions/featured](https://api.stackexchange.com/docs/me-featured-questions) |
-| []() | Get the questions asked by a set of users, which have **no** answers. | [me/questions/no-answers](https://api.stackexchange.com/docs/me-no-answer-questions) |
-| []() | Get the questions asked by a set of users, which have at least one answer but no accepted answer. | [me/questions/unaccepted](https://api.stackexchange.com/docs/me-unaccepted-questions) |
-| []() | Get the questions asked by a set of users, which are not considered to be adequately answered. | [me/questions/unanswered](https://api.stackexchange.com/docs/me-unanswered-questions) |
-| []() | Get a subset of the reputation changes experienced by the users identified by a set of ids. | [me/reputation](https://api.stackexchange.com/docs/me-reputation) |
-| []() | Get a history of a user's reputation, excluding private events. | [me/reputation-history](https://api.stackexchange.com/docs/me-reputation-history) |
-| []() | Get a full history of a user's reputation. **auth required** | [me/reputation-history/full](https://api.stackexchange.com/docs/me-full-reputation-history) |
-| []() | Get the suggested edits provided by users identified by a set of ids. | [me/suggested-edits](https://api.stackexchange.com/docs/me-suggested-edits) |
-| []() | Get the tags that the users (identified by a set of ids) have been active in. | [me/tags](https://api.stackexchange.com/docs/me-tags) |
-| []() | Get the top answers a user has posted on questions with a set of tags. | [me/tags/{tags}/top-answers](https://api.stackexchange.com/docs/me-tags-top-answers) |
-| []() | Get the top questions a user has posted with a set of tags. | [me/tags/{tags}/top-questions](https://api.stackexchange.com/docs/me-tags-top-questions) |
-| []() | Get a subset of the actions of that have been taken by the users identified by a set of ids. | [me/timeline](https://api.stackexchange.com/docs/me-timeline) |
-| []() | Get the top tags (by score) a single user has posted answers in. | [me/top-answer-tags](https://api.stackexchange.com/docs/me-top-answer-tags) |
-| []() | Get the top tags (by score) a single user has asked questions in. | [me/top-question-tags](https://api.stackexchange.com/docs/me-top-question-tags) |
-| []() | Get the top tags (by score) a single user has posted in. | [me/top-tags](https://api.stackexchange.com/docs/me-top-tags) |
-| []() | Get a user's inbox. auth required | [me/inbox](https://api.stackexchange.com/docs/me-inbox) |
-| []() | Get the unread items in a user's inbox. auth required | [me/inbox/unread](https://api.stackexchange.com/docs/me-unread-inbox) |
-| []() | Get a user's associated accounts. | [me/associated](https://api.stackexchange.com/docs/me-associated-users) |
-| []() | Get the merges a user's accounts has undergone. | [me/merges](https://api.stackexchange.com/docs/me-merge-history) |
+| [me](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me) | Get the users identified by a set of ids. | [me](https://api.stackexchange.com/docs/me) |
+| [me_answers](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_answers) | Get the answers posted by the users identified by a set of ids. | [me/answers](https://api.stackexchange.com/docs/me-answers) |
+| [me_badges](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_badges) | Get the badges earned by the users identified by a set of ids. | [me/badges](https://api.stackexchange.com/docs/me-badges) |
+| [me_comments](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_comments) | Get the comments posted by the users identified by a set of ids. | [me/comments](https://api.stackexchange.com/docs/me-comments) |
+| [me_comments_to](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_comments_to) | Get the comments posted by a set of users in reply to another user. | [me/comments/{toId}](https://api.stackexchange.com/docs/me-comments-to) |
+| [me_favorites](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_favorites) | Get the questions favorited by users identified by a set of ids. | [me/favorites](https://api.stackexchange.com/docs/me-favorites) |
+| [me_mentioned](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_mentioned) | Get the comments that mention one of the users identified by a set of ids. | [me/mentioned](https://api.stackexchange.com/docs/me-mentioned) |
+| [me_network_activity](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_network_activity) | Gets a user's activity across the Stack Exchange network. | [me/network-activity](https://api.stackexchange.com/docs/me-network-activity) |
+| [me_notifications](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_notifications) | Get a user's notifications. | [me/notifications](https://api.stackexchange.com/docs/me-notifications) |
+| [me_unread_notifications](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_unread_notifications) | Get a user's unread notifications. | [me/notifications/unread](https://api.stackexchange.com/docs/me-unread-notifications) |
+| [me_posts](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_posts) | Get all posts (questions and answers) owned by a set of users. | [me/posts](https://api.stackexchange.com/docs/me-posts) |
+| [me_privileges](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_privileges) | Get the privileges the given user has on the site. | [me/privileges](https://api.stackexchange.com/docs/me-privileges) |
+| [me_questions](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_questions) | Get the questions asked by the users identified by a set of ids. | [me/questions](https://api.stackexchange.com/docs/me-questions) |
+| [me_featured_questions](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_featured_questions) | Get the questions on which a set of users, have active bounties. | [me/questions/featured](https://api.stackexchange.com/docs/me-featured-questions) |
+| [me_no_answer_questions](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_no_answer_questions) | Get the questions asked by a set of users, which have **no** answers. | [me/questions/no-answers](https://api.stackexchange.com/docs/me-no-answer-questions) |
+| [me_unaccepted_questions](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_unaccepted_questions) | Get the questions asked by a set of users, which have at least one answer but no accepted answer. | [me/questions/unaccepted](https://api.stackexchange.com/docs/me-unaccepted-questions) |
+| [me_unanswered_questions](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_unanswered_questions) | Get the questions asked by a set of users, which are not considered to be adequately answered. | [me/questions/unanswered](https://api.stackexchange.com/docs/me-unanswered-questions) |
+| [me_reputation](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_reputation) | Get a subset of the reputation changes experienced by the users identified by a set of ids. | [me/reputation](https://api.stackexchange.com/docs/me-reputation) |
+| [me_reputation_history](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_reputation_history) | Get a history of a user's reputation, excluding private events. | [me/reputation-history](https://api.stackexchange.com/docs/me-reputation-history) |
+| [me_full_reputation_history](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_full_reputation_history) | Get a full history of a user's reputation. **auth required** | [me/reputation-history/full](https://api.stackexchange.com/docs/me-full-reputation-history) |
+| [me_suggested_edits](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_suggested_edits) | Get the suggested edits provided by users identified by a set of ids. | [me/suggested-edits](https://api.stackexchange.com/docs/me-suggested-edits) |
+| [me_tags](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_tags) | Get the tags that the users (identified by a set of ids) have been active in. | [me/tags](https://api.stackexchange.com/docs/me-tags) |
+| [me_tags_top_questions](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_tags_top_questions) | Get the top answers a user has posted on questions with a set of tags. | [me/tags/{tags}/top-answers](https://api.stackexchange.com/docs/me-tags-top-answers) |
+| [me_tags_top_answers](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_top_answer_tags) | Get the top questions a user has posted with a set of tags. | [me/tags/{tags}/top-questions](https://api.stackexchange.com/docs/me-tags-top-questions) |
+| [me_timeline](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_timeline) | Get a subset of the actions of that have been taken by the users identified by a set of ids. | [me/timeline](https://api.stackexchange.com/docs/me-timeline) |
+| [me_top_answer_tags]() | Get the top tags (by score) a single user has posted answers in. | [me/top-answer-tags](https://api.stackexchange.com/docs/me-top-answer-tags) |
+| [me_top_question_tags](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_top_question_tags) | Get the top tags (by score) a single user has asked questions in. | [me/top-question-tags](https://api.stackexchange.com/docs/me-top-question-tags) |
+| [me_top_tags](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_top_tags) | Get the top tags (by score) a single user has posted in. | [me/top-tags](https://api.stackexchange.com/docs/me-top-tags) |
+| [me_inbox](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_inbox) | Get a user's inbox. auth required | [me/inbox](https://api.stackexchange.com/docs/me-inbox) |
+| [me_unread_inbox](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_unread_inbox) | Get the unread items in a user's inbox. auth required | [me/inbox/unread](https://api.stackexchange.com/docs/me-unread-inbox) |
+| [me_associated_users](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_associated_users) | Get a user's associated accounts. | [me/associated](https://api.stackexchange.com/docs/me-associated-users) |
+| [me_merge_history](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_merge_history) | Get the merges a user's accounts has undergone. | [me/merges](https://api.stackexchange.com/docs/me-merge-history) |
 
 
-* [Posts section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
-
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| []() | Get all posts (questions and answers) in the system. | [posts](https://api.stackexchange.com/docs/posts) |
-| []() | Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known. | [posts/{ids}](https://api.stackexchange.com/docs/posts-by-ids) |
-| []() | Get comments on the posts (question or answer) identified by a set of ids. | [posts/{ids}/comments](https://api.stackexchange.com/docs/comments-on-posts) |
-| []() | Create a new comment on the post identified by id. **auth required**  | [posts/{id}/comments/add](https://api.stackexchange.com/docs/create-comment) |
-| []() | Renders a hypothetical comment on the given post. | [posts/{id}/comments/render](https://api.stackexchange.com/docs/render-comment) |
-| []() | Get revisions on the set of posts in ids. | [posts/{ids}/revisions](https://api.stackexchange.com/docs/revisions-by-ids) |
-| []() | Get suggested edits on the set of posts in ids. | [posts/{ids}/suggested-edits](https://api.stackexchange.com/docs/posts-on-suggested-edits) |
-
-
-* [Comments section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
+* [Posts section](https://github.com/KarthikGangadhar/stack-exchange#posts-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| []() | Get all comments on the site. | [comments](https://api.stackexchange.com/docs/comments) |
-| []() | Get comments identified by a set of ids. | [comments/{ids}](https://api.stackexchange.com/docs/comments-by-ids) |
-| []() | Delete a comment identified by its id. **auth required** | [comments/{id}/delete](https://api.stackexchange.com/docs/delete-comment) |
-| []() | Edit a comment identified by its id. **auth required** | [comments/{id}/edit](https://api.stackexchange.com/docs/edit-comment) |
-| []() | Casts a flag on the given comment. **auth required** | [comments/{id}/flags/add](https://api.stackexchange.com/docs/create-comment-flag) |
-| []() | Returns valid flag options for the given comment. **auth required** | [comments/{id}/flags/options](https://api.stackexchange.com/docs/comment-flag-options) |
-| []() | Casts an upvote on the given comment. **auth required** | [comments/{id}/upvote](https://api.stackexchange.com/docs/upvote-comment) |
-| []() | Undoes an upvote on the given comment. **auth required** | [comments/{id}/upvote/undo](https://api.stackexchange.com/docs/undo-upvote-comment) |
+| [posts](https://github.com/KarthikGangadhar/stack-exchange#posts) | Get all posts (questions and answers) in the system. | [posts](https://api.stackexchange.com/docs/posts) |
+| [posts_by_ids](https://github.com/KarthikGangadhar/stack-exchange#posts_by_ids) | Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known. | [posts/{ids}](https://api.stackexchange.com/docs/posts-by-ids) |
+| [comments_on_posts](https://github.com/KarthikGangadhar/stack-exchange#comments_on_posts) | Get comments on the posts (question or answer) identified by a set of ids. | [posts/{ids}/comments](https://api.stackexchange.com/docs/comments-on-posts) |
+| [create_comment](https://github.com/KarthikGangadhar/stack-exchange#create_comment) | Create a new comment on the post identified by id. **auth required**  | [posts/{id}/comments/add](https://api.stackexchange.com/docs/create-comment) |
+| [render_comment](https://github.com/KarthikGangadhar/stack-exchange#render_comment) | Renders a hypothetical comment on the given post. | [posts/{id}/comments/render](https://api.stackexchange.com/docs/render-comment) |
+| [revisions_by_ids](https://github.com/KarthikGangadhar/stack-exchange#revisions_by_ids) | Get revisions on the set of posts in ids. | [posts/{ids}/revisions](https://api.stackexchange.com/docs/revisions-by-ids) |
+| [posts_on_suggested_edits](https://github.com/KarthikGangadhar/stack-exchange#posts_on_suggested_edits) | Get suggested edits on the set of posts in ids. | [posts/{ids}/suggested-edits](https://api.stackexchange.com/docs/posts-on-suggested-edits) |
 
-* [Search section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
+
+* [Comments section](https://github.com/KarthikGangadhar/stack-exchange#comments-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| []() | Search the site for questions meeting certain criteria. | [search](https://api.stackexchange.com/docs/search) |
-| []() | Search the site for questions using most of the on-site search options. | [search/advanced](https://api.stackexchange.com/docs/advanced-search) |
-| []() | Search the site based on similarity to a title. | [similar](https://api.stackexchange.com/docs/similar) |
-| []() | Searches a site. | [search/excerpts](https://api.stackexchange.com/docs/excerpt-search) |
+| [comments](https://github.com/KarthikGangadhar/stack-exchange#comments) | Get all comments on the site. | [comments](https://api.stackexchange.com/docs/comments) |
+| [comments_by_ids](https://github.com/KarthikGangadhar/stack-exchange#comments_by_ids) | Get comments identified by a set of ids. | [comments/{ids}](https://api.stackexchange.com/docs/comments-by-ids) |
+| [delete_comment](https://github.com/KarthikGangadhar/stack-exchange#delete_comment) | Delete a comment identified by its id. **auth required** | [comments/{id}/delete](https://api.stackexchange.com/docs/delete-comment) |
+| [edit_comment](https://github.com/KarthikGangadhar/stack-exchange#edit_comment) | Edit a comment identified by its id. **auth required** | [comments/{id}/edit](https://api.stackexchange.com/docs/edit-comment) |
+| [create_comment_flag](https://github.com/KarthikGangadhar/stack-exchange#create_comment_flag) | Casts a flag on the given comment. **auth required** | [comments/{id}/flags/add](https://api.stackexchange.com/docs/create-comment-flag) |
+| [comment_flag_options](https://github.com/KarthikGangadhar/stack-exchange#comment_flag_options) | Returns valid flag options for the given comment. **auth required** | [comments/{id}/flags/options](https://api.stackexchange.com/docs/comment-flag-options) |
+| [upvote_comment](https://github.com/KarthikGangadhar/stack-exchange#upvote_comment) | Casts an upvote on the given comment. **auth required** | [comments/{id}/upvote](https://api.stackexchange.com/docs/upvote-comment) |
+| [undo_upvote_comment](https://github.com/KarthikGangadhar/stack-exchange#undo_upvote_comment) | Undoes an upvote on the given comment. **auth required** | [comments/{id}/upvote/undo](https://api.stackexchange.com/docs/undo-upvote-comment) |
+
+* [Search section](https://github.com/KarthikGangadhar/stack-exchange#search-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [search](https://github.com/KarthikGangadhar/stack-exchange#search) | Search the site for questions meeting certain criteria. | [search](https://api.stackexchange.com/docs/search) |
+| [advanced_search](https://github.com/KarthikGangadhar/stack-exchange#advanced_search) | Search the site for questions using most of the on-site search options. | [search/advanced](https://api.stackexchange.com/docs/advanced-search) |
+| [similar](https://github.com/KarthikGangadhar/stack-exchange#similar) | Search the site based on similarity to a title. | [similar](https://api.stackexchange.com/docs/similar) |
+| [excerpt_search](https://github.com/KarthikGangadhar/stack-exchange#excerpt_search) | Searches a site. | [search/excerpts](https://api.stackexchange.com/docs/excerpt-search) |
 
 * [Suggested Edits section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| []() | Get all the suggested edits on the site. | [suggested-edits](https://api.stackexchange.com/docs/suggested-edits) |
-| []() | Get the suggested edits identified by a set of ids. | [suggested-edits/{ids}](https://api.stackexchange.com/docs/suggested-edits-by-ids) |
+| [suggested_edits](https://github.com/KarthikGangadhar/stack-exchange#suggested_edits) | Get all the suggested edits on the site. | [suggested-edits](https://api.stackexchange.com/docs/suggested-edits) |
+| [suggested_edits_by_ids](https://github.com/KarthikGangadhar/stack-exchange#suggested_edits_by_ids) | Get the suggested edits identified by a set of ids. | [suggested-edits/{ids}](https://api.stackexchange.com/docs/suggested-edits-by-ids) |
 
-* [Network section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
+* [Network section](https://github.com/KarthikGangadhar/stack-exchange#network-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| []() | Allows an application to dispose of access_tokens when it is done with them. | [access-tokens/{accessTokens}/invalidate](https://api.stackexchange.com/docs/invalidate-access-tokens) |
-| []() | Allows an application to inspect access_tokens it has, useful for debugging. | [access-tokens/{accessTokens}](https://api.stackexchange.com/docs/read-access-tokens) |
-| []() | Allows an application to de-authorize itself for a set of users. | [apps/{accessTokens}/de-authenticate](https://api.stackexchange.com/docs/application-de-authenticate) |
-| []() | Get descriptions of all the errors that the API could return. | [errors](https://api.stackexchange.com/docs/errors) |
-| []() | Simulate an API error for testing purposes.  | [errors/{id}](https://api.stackexchange.com/docs/simulate-error) |
-| []() | Create a new [filter](https://api.stackexchange.com/docs/filters). | [filters/create](https://api.stackexchange.com/docs/create-filter) |
-| []() | Decode a set of filters, useful for debugging purposes. | [filters/{filters}](https://api.stackexchange.com/docs/read-filter) |
-| []() | Get a user's inbox, outside of the context of a site. **auth required** | [inbox](https://api.stackexchange.com/docs/inbox) |
-| []() | Get the unread items in a user's inbox, outside of the context of a site. **auth required** | [inbox/unread](https://api.stackexchange.com/docs/inbox-unread) |
-| []() | Get a user's notifications, outside of the context of a site. **auth required** | [notifications](https://api.stackexchange.com/docs/notifications) |
-| []() | Get a user's unread notifications, outside of the context of a site. **auth required** | [notifications/unread](https://api.stackexchange.com/docs/unread-notifications) |
-| []() | Get all the sites in the Stack Exchange network. | [sites](https://api.stackexchange.com/docs/sites) |
+| [invalidate_access_tokens](https://github.com/KarthikGangadhar/stack-exchange#invalidate_access_tokens) | Allows an application to dispose of access_tokens when it is done with them. | [access-tokens/{accessTokens}/invalidate](https://api.stackexchange.com/docs/invalidate-access-tokens) |
+| [read_access_tokens](https://github.com/KarthikGangadhar/stack-exchange#read_access_tokens) | Allows an application to inspect access_tokens it has, useful for debugging. | [access-tokens/{accessTokens}](https://api.stackexchange.com/docs/read-access-tokens) |
+| [application_de_authenticate](https://github.com/KarthikGangadhar/stack-exchange#application_de_authenticate) | Allows an application to de-authorize itself for a set of users. | [apps/{accessTokens}/de-authenticate](https://api.stackexchange.com/docs/application-de-authenticate) |
+| [errors](https://github.com/KarthikGangadhar/stack-exchange#errors-1) | Get descriptions of all the errors that the API could return. | [errors](https://api.stackexchange.com/docs/errors) |
+| [simulate_errors](https://github.com/KarthikGangadhar/stack-exchange#simulate_errors) | Simulate an API error for testing purposes.  | [errors/{id}](https://api.stackexchange.com/docs/simulate-error) |
+| [create_filter](https://github.com/KarthikGangadhar/stack-exchange#create_filter) | Create a new [filter](https://api.stackexchange.com/docs/filters). | [filters/create](https://api.stackexchange.com/docs/create-filter) |
+| [read_filter](https://github.com/KarthikGangadhar/stack-exchange#read_filter) | Decode a set of filters, useful for debugging purposes. | [filters/{filters}](https://api.stackexchange.com/docs/read-filter) |
+| [Inbox](https://github.com/KarthikGangadhar/stack-exchange#inbox-1) | Get a user's inbox, outside of the context of a site. **auth required** | [inbox](https://api.stackexchange.com/docs/inbox) |
+| [inbox_unread](https://github.com/KarthikGangadhar/stack-exchange#inbox_unread) | Get the unread items in a user's inbox, outside of the context of a site. **auth required** | [inbox/unread](https://api.stackexchange.com/docs/inbox-unread) |
+| [notifications](https://github.com/KarthikGangadhar/stack-exchange#notifications-1) | Get a user's notifications, outside of the context of a site. **auth required** | [notifications](https://api.stackexchange.com/docs/notifications) |
+| [unread_notifications](https://github.com/KarthikGangadhar/stack-exchange#unread_notifications) | Get a user's unread notifications, outside of the context of a site. **auth required** | [notifications/unread](https://api.stackexchange.com/docs/unread-notifications) |
+| [sites](https://github.com/KarthikGangadhar/stack-exchange#sites-1) | Get all the sites in the Stack Exchange network. | [sites](https://api.stackexchange.com/docs/sites) |
 
