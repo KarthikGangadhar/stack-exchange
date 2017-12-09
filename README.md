@@ -24,6 +24,7 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
 * [Posts section](https://github.com/KarthikGangadhar/stack-exchange#posts-section)
 * [Search section](https://github.com/KarthikGangadhar/stack-exchange#search-section)
 * [Suggested Edits section](https://github.com/KarthikGangadhar/stack-exchange#suggested_edits-section)
+* [Network section](https://github.com/KarthikGangadhar/stack-exchange#network-section)
 * [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
 * [Privilages section](https://github.com/KarthikGangadhar/stack-exchange#privilages-section)
 * [Revisions section](https://github.com/KarthikGangadhar/stack-exchange#revisions-section)
@@ -34,15 +35,21 @@ For more details about the endpoints on each section visit [table-of-content](ht
 ```javascript
 const stackexchange  = require("stack-exchange");
 
-
+const stack_users = new stackexchange.users();//for users sections endpoints
+const stack_me = new stackexchange.me();//for me sections endpoints
 const stack_questions = new stackexchange.questions(); //for questions sections endpoints
+const stack_answers = new stackexchange.answers(); //for answers sections endpoints
 const stack_badges = new stackexchange.badges(); //for badges sections endpoints
+const stack_tags = new stackexchange.tags(); //for tags sections endpoints
+const stack_comments = new stackexchange.comments();//for comments sections endpoints
+const stack_posts = new stackexchange.posts();//for posts sections endpoints
+const stack_search = new stackexchange.search();//for search sections endpoints
+const stack_suggested_edits = new stackexchange.suggested_edits();//for suggested_edits sections endpoints
+const stack_network = new stackexchange.network();//for network sections endpoints
 const stack_info = new stackexchange.info(); //for info sections endpoints
 const stack_privilages = new stackexchange.privilages(); //for privilages sections endpoints
 const stack_revisions = new stackexchange.revisions(); //for revisions sections endpoints
 const stack_events = new stackexchange.events(); //for events sections endpoints
-const stack_tags = new stackexchange.tags(); //for tags sections endpoints
-
 ```
 
 
@@ -59,7 +66,7 @@ let options  = {
 }
 
 // creating questions object
-stack_questions = new stackexchange.questions();
+const stack_questions = new stackexchange.questions();
 ```
 
 #### questions
@@ -274,7 +281,7 @@ let badges_options = {
 }
 
 // creating badges object
-stack_badges = new stackexchange.badges();
+const stack_badges = new stackexchange.badges();
 
 ```
 
@@ -383,7 +390,7 @@ let tags_options = {
 
 
 // creating tags object
-stack_tags = new stackexchange.tags();
+const stack_tags = new stackexchange.tags();
 ```
 
 #### tags
@@ -521,7 +528,7 @@ let info_options = {
 }
 
 // creating info object
-stack_info = new stackexchange.info();
+const stack_info = new stackexchange.info();
 ```
 
 #### info
@@ -544,7 +551,7 @@ let privilages_options = {
 }
 
 // creating privilages object
-stack_privilages = new stackexchange.privilages();
+const stack_privilages = new stackexchange.privilages();
 ```
 
 #### privilages
@@ -567,7 +574,7 @@ let revisions_options = {
 }
 
 // creating privilages object
-stack_revisions = new stackexchange.revisions();
+const stack_revisions = new stackexchange.revisions();
 ```
 
 #### revisions
@@ -594,7 +601,7 @@ let event_options = {
 }
 
 // creating events object
-stack_events = new stackexchange.events();
+const stack_events = new stackexchange.events();
 ```
 
 #### events
@@ -646,8 +653,8 @@ stack_suggested_edits.suggested_edits_by_ids(suggested_edit_id, suggested_edits_
 
 ```js
 
-// creating suggested_edits object
-const stack_suggested_edits = new stackexchange.suggested_edits();
+// creating search object
+const stack_search = new stackexchange.search();
 ```
 
 #### search
@@ -1881,7 +1888,7 @@ stack_me.me_network_activity(users_options, (response) => {
 
 ```
 
-#### me_network_activity
+#### me_notifications
 Get a user's notifications.
 
  ```js
