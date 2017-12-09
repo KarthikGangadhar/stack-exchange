@@ -52,989 +52,6 @@ const stack_revisions = new stackexchange.revisions(); //for revisions sections 
 const stack_events = new stackexchange.events(); //for events sections endpoints
 ```
 
-
-## questions section
-
-The options object is optional, can be an empty object also. update all your query fields in it. supported query fields are as follows:
-
-```js
-let options  = {
-    "order": "desc",
-    "sort": "activity",
-    "site": "stackoverflow",
-    "key" : "your_key"
-}
-
-// creating questions object
-const stack_questions = new stackexchange.questions();
-```
-
-#### questions
- Get all questions on the site.
- 
- ```js
- // using questions endpoint 
-stack_questions.questions(options , (response) => {
-    // response will be json 
-    console.log(response);
- });
-``` 
-#### questions by ids
-Get the questions identified by a set of ids.
-
- ```js
- ids = "47559184"
- // using questions_by_ids endpoint 
- stack_questions.questions_by_ids(ids , options , (response) => {
-    // response will be json 
-    console.log(response);
- });
-``` 
-
-
-#### answers on questions
-Get the answers to the questions identified by a set of ids.
- ```js
- id = "47596027"
- // using answers_on_questions endpoint 
- stack_questions.answers_on_questions(id, options , (response) => {
-    // response will be json 
-    console.log(response);
- });
-``` 
-
-#### render answers
-
- Renders a hypothetical answer to a question. This is a post endpoints, the options section looks like this, both fields are required.
- ```js
-  let options = {
-    "body": "hello",
-    "site": "stackoverflow"
-}
-
-// id of the question
- let id = "47596027"
- 
- // using render_answer endpoint 
-stack_questions.render_answer("47596027", options , (response) => {
-   // response returns hypothetical solution
-    console.log(response);
-});
-``` 
-
-#### linked questions
-Get the questions that link to the questions identified by a set of ids.
-
- ```js
- // id of the question
- let id = "1884724";
- 
- // using answers_on_questions endpoint 
- stack_questions.linked_questions(id, options , (response) => {
-    console.log(response);
- });
- 
-``` 
-
-#### related questions
-Get the questions that are related to the questions identified by a set of ids.
-
- ```js
- // id of the question
- let id = "37878662";
- 
- // using related_questions endpoint 
- stack_questions.related_questions(id, options , (response) => {
-        console.log(response);
- });
- 
-``` 
-
-
-#### questions timeline
-Get the timelines of the questions identified by a set of ids.
-
- ```js
- // id of the question
- let id = "37878662";
- 
- // using questions_timeline endpoint 
-stack_questions.questions_timeline(id, options, (response) => {
-    console.log(response);
-});
- 
-```
-
-#### featured questions
-Get all questions on the site with active bounties.
-
- ```js
- 
- // using featured_questions endpoint 
-stack_questions.featured_questions(options, (response) => {
-      //will return featured questions
-    console.log(response);
-});
-
-```
-
-#### no answer questions
-Get all questions on the site with no answers.
-
- ```js
- 
- // using no_answer_questions endpoint 
-stack_questions.no_answer_questions( options , (response) => {
-   // will return no-answer questions
-    console.log(response);
- });
-```
-
-
-
-#### unanswered questions
-Get all questions the site considers unanswered.
-
- ```js
- 
- // using unanswered_questions endpoint 
-stack_questions.unanswered_questions( options , (response) => {
-    //returns unanswered questions details
-    console.log(response);
- });
-```
-
-
-
-#### unanswered questions my tags
-
-Get questions the site considers unanswered within a user's favorite or interesting tags. **auth required** This endpoint required access_token and key in options. 
- ```js
-
- // using unanswered_questions_my_tags endpoint 
-stack_questions.unanswered_questions_my_tags( options , (response) => {
-    console.log(response);
- });
-```
-
-#### question flag options
-
-Returns valid flag options for the given question. **auth required**. This endpoint required access_token and key in options. 
- ```js
-let options = {
-    "key": "your_key",
-    "access_token": "your_token",
-    "site": "stackoverflow"
-}
-
-let question_id = "37878662";
-
- // using question_flag_options endpoint 
-stack_questions.question_flag_options(question_id, options, (response) => {
-    console.log(response);
-});
-```
-
-#### question close options
-
-Returns valid flag options which are also close reasons for the given question. **auth required**. This endpoint required access_token and key in options. 
- ```js
-let options = {
-    "key": "your_key",
-    "access_token": "your_token",
-    "site": "stackoverflow"
-}
-
-let question_id = "37878662";
-
- // using question_close_options endpoint 
-stack_questions.question_close_options(question_id, options, (response) => {
-    console.log(response);
-});
-```
-
-#### comments on questions
-
-Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options. 
- ```js
-let options = {
-    "key": "your_key",
-    "access_token": "your_token",
-    "site": "stackoverflow"
-}
-
-let question_id = "45934757";
-
- // using comments_on_questions endpoint 
-stack_questions.comments_on_questions(question_id, options, (response) => {
-    console.log(response);
-});
-
-```
-
-## badges section
-
-```js
-let badges_options = {
-    "site": "stackoverflow",
-    "key": "U4DMV*8nvpm3EOpvf69Rxw(("
-}
-
-// creating badges object
-const stack_badges = new stackexchange.badges();
-
-```
-
-#### badges
-Get all badges on the site, in alphabetical order.
-
- ```js
- // using badges endpoint 
-stack_badges.badges(badges_options, (response) => {
-    // response will be json     
-    console.log(response);
-});
-
-```
-
-#### badges_by_id
-Get the badges identified by ids.
-
- ```js
-// id of the badge
-let id = "222"
- // using badges_by_id endpoint 
-stack_badges.badges_by_id(id, badges_options, (response) => {
-    // response will be json    
-    console.log(response);
-});
-
-```
-#### badges_by_name
- Get all non-tagged-based badges in alphabetical order.
- 
- ```js
- 
-// name of the badge
-let name = "fanatic"
-
- // using badges_by_name endpoint 
-stack_badges.badges_by_name(name, badges_options, (response) => {
-    // response will be json    
-    console.log(response);
-});
-
-```
-
-#### badge_recipients
-Get badges recently awarded on the site.
-
- ```js
-//  options fields are as follows 
- let options = {
-        "site": "stackoverflow"
-    }
-
- // using badge_recipients endpoint 
-stack_badges.badge_recipients( options, (response) => {
-    // response will be json        
-    console.log(response);
-});
-
-```
-
-#### badge_recipients_by_id
-Get the recent recipients of the given badges.
-
- ```js
- //  options fields are as follows 
- let options = {
-        "site": "stackoverflow"
-    }
-
-// id of the badge
-let id = "222"
- // using badge_recipients_by_id endpoint 
-stack_badges.badge_recipients_by_id(id,  badges_options, (response) => {
-    // response will be json        
-    console.log(response);
-});
-
-```
-
-
-#### badge_by_tags
-Get all tagged-based badges in alphabetical order.
-
- ```js
-//  options fields are as follows 
- let options = {
-        "order": "desc",
-        "sort": "popular",
-        "site": "stackoverflow"
-    }
-
- // using badge_by_tags endpoint 
-stack_badges.badge_by_tags(options, (response) => {
-    // response will be json        
-    console.log(response);
-});
-
-```
-## tags section
-```js
-let tags_options = {
-    "site": "stackoverflow",
-    "key": "your_key"
-}
-
-
-// creating tags object
-const stack_tags = new stackexchange.tags();
-```
-
-#### tags
-Get the tags on the site.
-
- ```js
- // using tags endpoint 
-stack_tags.tags(tags_options, (response) => {
-    console.log(response);
-});
-```
-
-#### tags by name
-Get tags on the site by their names.
-
- ```js
- //tag name for search
- let tag_name = "nodejs"
- // using tags_by_name endpoint 
-stack_tags.tags_by_name(tag_name, tags_options, (response) => {
-    console.log(response);
-});
-```
-#### moderator only tags
-Get the tags on the site that only moderators can use.
-
- ```js
- // using moderator_only_tags endpoint 
-stack_tags.moderator_only_tags(tags_options, (response) => {
-    console.log(response);
-});
-```
-
-#### require tags
-Get the tags on the site that fulfill required tag constraints.
-
- ```js
- // using require_tags endpoint 
-stack_tags.require_tags(tags_options, (response) => {
-    console.log(response);
-});
-```
-
-#### tag synonyms
-Get all the tag synonyms on the site.
-
- ```js
- // using tag_synonyms endpoint 
-stack_tags.tag_synonyms(tags_options, (response) => {
-    console.log(response);
-});
-```
-
-#### faqs by tags
-Get frequently asked questions in a set of tags.
-
- ```js
- //tag name for search
- let tag_name = "nodejs"
- // using faqs_by_tags endpoint 
-stack_tags.faqs_by_tags(tag_name, tags_options, (response) => {
-    console.log(response);
-});
-```
-
-#### related tags
-Get related tags, based on common tag pairings.
-
- ```js
- //tag name for search
- let tag_name = "nodejs"
- // using related_tags endpoint 
-stack_tags.related_tags(tag_name, tags_options, (response) => {
-    console.log(response);
-});
-
-```
-
-#### synonyms by tags
-Get the synonyms for a specific set of tags.
-
- ```js
- //tag name for search
- let tag_name = "nodejs"
- // using synonyms_by_tags endpoint 
-stack_tags.synonyms_by_tags("nodejs", tags_options, (response) => {
-    console.log(response);
-});
-
-```
-
-#### top answerers on tags
-Get the top answer posters in a specific tag, either in the last month or for all time.
-
- ```js
- //tag name for search
- let tag_name = "java"
- // using top_answerers_on_tags endpoint 
-stack_tags.top_answerers_on_tags(tag_name, tags_options, (response) => {
-    console.log(response);
-});
-```
-
-#### top askers on tags
-Get the top question askers in a specific tag, either in the last month or for all time.
-
- ```js
- //tag name for search
- let tag_name = "java"
- // using top_askers_on_tags endpoint 
-stack_tags.top_askers_on_tags(tag_name, tags_options, (response) => {
-    console.log(response);
-});
-```
-
-#### wikis by tags
-Get the wiki entries for a set of tags.
-
- ```js
- //tag name for search
- let tag_name = "java"
- // using wikis_by_tags endpoint 
-stack_tags.wikis_by_tags(tag_name, tags_options, (response) => {
-    console.log(response);
-});
-```
-
-
-
-
-## info section
-```js
-let info_options = {
-    "site": "stackoverflow"
-}
-
-// creating info object
-const stack_info = new stackexchange.info();
-```
-
-#### info
-Get information about the entire site.
-
- ```js
- // using info endpoint 
-stack_info.info(info_options, (response) => {
-    // response will be json 
-    console.log(response);
-});
-```
-
-## privilages section
-
-```js
-let privilages_options = {
-    "site": "stackoverflow",
-    "key" : "your_key"
-}
-
-// creating privilages object
-const stack_privilages = new stackexchange.privilages();
-```
-
-#### privilages
-Get all the privileges available on the site.
-
- ```js
- // using info endpoint 
-stack_privilages.privilages(privilages_options, (response) => {
-    // response will be json 
-    console.log(response);
-});
-```
-
-## revisions section
-
-```js
-let revisions_options = {
-    "site": "stackoverflow",
-    "key" : "your_key"
-}
-
-// creating privilages object
-const stack_revisions = new stackexchange.revisions();
-```
-
-#### revisions
-Get all revisions identified by a set of ids.
-
- ```js
- // ids will be available from posts_id endpoint, can be single or multiple seperated by comma. 
- let ids = "BCF73AEC-7F9D-4623-8C38-66E481B52513"
- // using info endpoint 
-stack_revisions.revisions( ids , revisions_options, (response) => {
-    // response will be json 
-    console.log(response);
-});
-```
-
-## events section
-
-To use events endpoint you need to have access_token and key, you can generate your access_token and key [here](https://api.stackexchange.com/docs/events).
-```js
-let event_options = {
-    "site": "stackoverflow",
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-// creating events object
-const stack_events = new stackexchange.events();
-```
-
-#### events
-Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required**
- ```js
- // using info endpoint 
-stack_events.events(event_options, (response) => {
-    // response will be json 
-    console.log(response);
-});
-```
-
-## suggested_edits section
-
-```js
-let suggested_edits_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-// creating suggested_edits object
-const stack_suggested_edits = new stackexchange.suggested_edits();
-```
-
-#### suggested_edits
-Get all the suggested edits on the site. options is optional, can be an empty object
-
- ```js
- // using suggested_edits endpoint 
-stack_suggested_edits.suggested_edits(suggested_edits_options, (response) => {
-        console.log(response);
-});
-```
-
-#### suggested_edits_by_ids
-Get the suggested edits identified by a set of ids. options is optional, can be an empty object
-
- ```js
- // id of the suggested_edit
-let suggested_edit_id = "3445738"
-
- // using suggested_edits_by_ids endpoint 
-stack_suggested_edits.suggested_edits_by_ids(suggested_edit_id, suggested_edits_options, (response) => {
-    console.log(response);
-});
-```
-
-## search section
-
-```js
-
-// creating search object
-const stack_search = new stackexchange.search();
-```
-
-#### search
-Search the site for questions meeting certain criteria. search_options must contain one of **tagged** or **intitle** field.
-
- ```js
-
- let search_options = {
-    "tagged": "nodejs",
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
- // using search endpoint 
-stack_search.search(search_options, (response) => {
-    console.log(response);
-});
-```
-
-#### advanced_search
-Search the site for questions using most of the on-site search options. for more search_options please visit [advanced_search](https://api.stackexchange.com/docs/advanced-search) endpoint of stackexchange.
-
- ```js
-
- let search_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
- // using advanced_search endpoint 
-stack_search.advanced_search(search_options, (response) => {
-    console.log(response);
-});
-```
-
-#### similar
-Search the site based on similarity to a title. title must be set in search_options. 
-
- ```js
-
- let search_options = {
-    "title": "npm install error",
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
- // using similar endpoint 
-stack_search.similar(search_options, (response) => {
-    console.log(response);
-});
-```
-
-#### excerpt_search
-Searches a site. For more search_options see [excerpt_search](https://api.stackexchange.com/docs/excerpt-search) endpoint of stackexchange. 
-
- ```js
-
- let search_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
- // using excerpt_search endpoint 
-stack_search.excerpt_search(search_options, (response) => {
-    console.log(response);
-});
-```
-
-
-## posts section
-
-```js
-
-// creating posts object
-const stack_posts = new stackexchange.posts();
-
-```
-
-#### posts
-Get all posts (questions and answers) in the system. posts_options can be empty object. 
-
- ```js
-
- let posts_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
- // using posts endpoint 
-stack_posts.posts(posts_options, (response) => {
-    console.log(response);
-});
-```
-
-#### posts_by_ids
-Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known. 
-
- ```js
-
- let posts_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the post
-let post_id = "45934757";
-
- // using posts_by_ids endpoint 
-stack_posts.posts_by_ids(post_id, posts_options, (response) => {
-    console.log(response);
-});
-```
-
-#### comments_on_posts
-Get comments on the posts (question or answer) identified by a set of ids. 
-
- ```js
-
- let posts_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the post
-let post_id = "45934757";
-
- // using comments_on_posts endpoint 
-stack_posts.comments_on_posts(post_id, posts_options, (response) => {
-    console.log(response);
-});
-```
-
-#### create_comment
-Create a new comment on the post identified by id. **auth required**. the comment should be included in options as body.
-
- ```js
-// body is required field.
- let posts_options = {
-    "body": "Adding test comment"
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the post
-let post_id = "45934757";
-
- // using create_comment endpoint 
-stack_posts.create_comment(post_id, posts_options, (response) => {
-    console.log(response);
-});
-```
-
-#### render_comment
-Renders a hypothetical comment on the given post.
-
- ```js
- 
- let posts_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the post
-let post_id = "45934757";
-
- // using render_comment endpoint 
-stack_posts.render_comment(post_id, {}, (response) => {
-    console.log(response);
-});
-```
-
-#### revisions_by_ids
-Get revisions on the set of posts in ids.
-
- ```js
- 
- let posts_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the post
-let post_id= 39892422;
-
- // using revisions_by_ids endpoint 
-stack_posts.revisions_by_ids(post_id, posts_options, (response) => {
-    console.log(response);
-});
-```
-
-#### posts_on_suggested_edits
-Get suggested edits on the set of posts in ids.
-`
- ```js
- let posts_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the post
-let post_id= 39892422;
-
- // using posts_on_suggested_edits endpoint 
-stack_posts.posts_on_suggested_edits(post_id, posts_options, (response) => {
-    console.log(response);
-});
-```
-
-
-## comments section
-
-```js
-
-// creating comments object
-const stack_comments = new stackexchange.comments();
-
-
-```
-
-#### comments
-Get all comments on the site. comments_options can be empty object. 
-
- ```js
-
- let comments_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
- // using comments endpoint 
-stack_comments.comments(comments_options, (response) => {
-    console.log(response);
-});
-
-```
-
-#### comments_by_ids
-Get comments identified by a set of ids.
-
- ```js
-//options for comments
- let comments_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the comment
-let comment_id = "131321";
-
-// using comments_by_ids endpoint 
-stack_comments.comments_by_ids(comment_id, comments_options, (response) => {
-    console.log(response);
-});
-
-```
-
-#### delete_comment
-Delete a comment identified by its id. **auth required**
-
- ```js
-//options for comments
- let comments_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the comment
-let comment_id = "12135";
-
-// using delete_comment endpoint 
-stack_comments.delete_comment(comment_id, comments_options, (response) => {
-    console.log(response);
-});
-
-
-```
-
-#### edit_comment
-Edit a comment identified by its id. **auth required**. body is required in options
-
- ```js
-//options for comments
- let comments_options = {
-    "body": "edited comment"
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the comment
-let comment_id = "12135";
-
-// using edit_comment endpoint 
-stack_comments.edit_comment(comment_id, comments_options, (response) => {
-    console.log(response);
-});
-
-
-```
-
-#### create_comment_flag
-Casts a flag on the given comment. **auth required**. option_id is required in options
-
- ```js
-//options for comments
- let comments_options = {
-    "option_id": "1323"
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the comment
-let comment_id = "12135";
-
-// using create_comment_flag endpoint 
-stack_comments.create_comment_flag(comment_id, comments_options, (response) => {
-    console.log(response);
-});
-
-```
-
-#### comment_flag_options
-Returns valid flag options for the given comment. **auth required**
-
- ```js
-//options for comments
- let comments_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the comment
-let comment_id = "12135";
-
-// using comment_flag_options endpoint 
-stack_comments.comment_flag_options(comment_id, comments_options, (response) => {
-    console.log(response);
-});
-
-```
-
-#### upvote_comment
-Casts an upvote on the given comment. **auth required**
-
- ```js
-//options for comments
- let comments_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the comment
-let comment_id = "12135";
-
-// using upvote_comment endpoint 
-stack_comments.upvote_comment(comment_id, comments_options, (response) => {
-    console.log(response);
-});
-
-```
-
-#### undo_upvote_comment
-Undoes an upvote on the given comment. **auth required**
-
- ```js
-//options for comments
- let comments_options = {
-    "key": "your_key",
-    "access_token": "your_token"
-}
-
-//id of the comment
-let comment_id = "12135";
-
-// using undo_upvote_comment endpoint 
-stack_comments.undo_upvote_comment(comment_id, comments_options, (response) => {
-    console.log(response);
-});
-
-```
-
 ## users section
 All user methods that take an {ids} parameter have a /me equivalent method that takes an access_token instead. 
 
@@ -2299,6 +1316,890 @@ stack_me.me_merge_history(inbox_options, (response) => {
 
 ```
 
+## questions section
+
+The options object is optional, can be an empty object also. update all your query fields in it. supported query fields are as follows:
+
+```js
+let options  = {
+    "order": "desc",
+    "sort": "activity",
+    "site": "stackoverflow",
+    "key" : "your_key"
+}
+
+// creating questions object
+const stack_questions = new stackexchange.questions();
+```
+
+#### questions
+ Get all questions on the site.
+ 
+ ```js
+ // using questions endpoint 
+stack_questions.questions(options , (response) => {
+    // response will be json 
+    console.log(response);
+ });
+``` 
+#### questions by ids
+Get the questions identified by a set of ids.
+
+ ```js
+ ids = "47559184"
+ // using questions_by_ids endpoint 
+ stack_questions.questions_by_ids(ids , options , (response) => {
+    // response will be json 
+    console.log(response);
+ });
+``` 
+
+
+#### answers on questions
+Get the answers to the questions identified by a set of ids.
+ ```js
+ id = "47596027"
+ // using answers_on_questions endpoint 
+ stack_questions.answers_on_questions(id, options , (response) => {
+    // response will be json 
+    console.log(response);
+ });
+``` 
+
+#### render answers
+
+ Renders a hypothetical answer to a question. This is a post endpoints, the options section looks like this, both fields are required.
+ ```js
+  let options = {
+    "body": "hello",
+    "site": "stackoverflow"
+}
+
+// id of the question
+ let id = "47596027"
+ 
+ // using render_answer endpoint 
+stack_questions.render_answer("47596027", options , (response) => {
+   // response returns hypothetical solution
+    console.log(response);
+});
+``` 
+
+#### linked questions
+Get the questions that link to the questions identified by a set of ids.
+
+ ```js
+ // id of the question
+ let id = "1884724";
+ 
+ // using answers_on_questions endpoint 
+ stack_questions.linked_questions(id, options , (response) => {
+    console.log(response);
+ });
+ 
+``` 
+
+#### related questions
+Get the questions that are related to the questions identified by a set of ids.
+
+ ```js
+ // id of the question
+ let id = "37878662";
+ 
+ // using related_questions endpoint 
+ stack_questions.related_questions(id, options , (response) => {
+        console.log(response);
+ });
+ 
+``` 
+
+
+#### questions timeline
+Get the timelines of the questions identified by a set of ids.
+
+ ```js
+ // id of the question
+ let id = "37878662";
+ 
+ // using questions_timeline endpoint 
+stack_questions.questions_timeline(id, options, (response) => {
+    console.log(response);
+});
+ 
+```
+
+#### featured questions
+Get all questions on the site with active bounties.
+
+ ```js
+ 
+ // using featured_questions endpoint 
+stack_questions.featured_questions(options, (response) => {
+      //will return featured questions
+    console.log(response);
+});
+
+```
+
+#### no answer questions
+Get all questions on the site with no answers.
+
+ ```js
+ 
+ // using no_answer_questions endpoint 
+stack_questions.no_answer_questions( options , (response) => {
+   // will return no-answer questions
+    console.log(response);
+ });
+```
+
+
+
+#### unanswered questions
+Get all questions the site considers unanswered.
+
+ ```js
+ 
+ // using unanswered_questions endpoint 
+stack_questions.unanswered_questions( options , (response) => {
+    //returns unanswered questions details
+    console.log(response);
+ });
+```
+
+
+
+#### unanswered questions my tags
+
+Get questions the site considers unanswered within a user's favorite or interesting tags. **auth required** This endpoint required access_token and key in options. 
+ ```js
+
+ // using unanswered_questions_my_tags endpoint 
+stack_questions.unanswered_questions_my_tags( options , (response) => {
+    console.log(response);
+ });
+```
+
+#### question flag options
+
+Returns valid flag options for the given question. **auth required**. This endpoint required access_token and key in options. 
+ ```js
+let options = {
+    "key": "your_key",
+    "access_token": "your_token",
+    "site": "stackoverflow"
+}
+
+let question_id = "37878662";
+
+ // using question_flag_options endpoint 
+stack_questions.question_flag_options(question_id, options, (response) => {
+    console.log(response);
+});
+```
+
+#### question close options
+
+Returns valid flag options which are also close reasons for the given question. **auth required**. This endpoint required access_token and key in options. 
+ ```js
+let options = {
+    "key": "your_key",
+    "access_token": "your_token",
+    "site": "stackoverflow"
+}
+
+let question_id = "37878662";
+
+ // using question_close_options endpoint 
+stack_questions.question_close_options(question_id, options, (response) => {
+    console.log(response);
+});
+```
+
+#### comments on questions
+
+Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options. 
+ ```js
+let options = {
+    "key": "your_key",
+    "access_token": "your_token",
+    "site": "stackoverflow"
+}
+
+let question_id = "45934757";
+
+ // using comments_on_questions endpoint 
+stack_questions.comments_on_questions(question_id, options, (response) => {
+    console.log(response);
+});
+
+```
+
+## badges section
+
+```js
+let badges_options = {
+    "site": "stackoverflow",
+    "key": "U4DMV*8nvpm3EOpvf69Rxw(("
+}
+
+// creating badges object
+const stack_badges = new stackexchange.badges();
+
+```
+
+#### badges
+Get all badges on the site, in alphabetical order.
+
+ ```js
+ // using badges endpoint 
+stack_badges.badges(badges_options, (response) => {
+    // response will be json     
+    console.log(response);
+});
+
+```
+
+#### badges_by_id
+Get the badges identified by ids.
+
+ ```js
+// id of the badge
+let id = "222"
+ // using badges_by_id endpoint 
+stack_badges.badges_by_id(id, badges_options, (response) => {
+    // response will be json    
+    console.log(response);
+});
+
+```
+#### badges_by_name
+ Get all non-tagged-based badges in alphabetical order.
+ 
+ ```js
+ 
+// name of the badge
+let name = "fanatic"
+
+ // using badges_by_name endpoint 
+stack_badges.badges_by_name(name, badges_options, (response) => {
+    // response will be json    
+    console.log(response);
+});
+
+```
+
+#### badge_recipients
+Get badges recently awarded on the site.
+
+ ```js
+//  options fields are as follows 
+ let options = {
+        "site": "stackoverflow"
+    }
+
+ // using badge_recipients endpoint 
+stack_badges.badge_recipients( options, (response) => {
+    // response will be json        
+    console.log(response);
+});
+
+```
+
+#### badge_recipients_by_id
+Get the recent recipients of the given badges.
+
+ ```js
+ //  options fields are as follows 
+ let options = {
+        "site": "stackoverflow"
+    }
+
+// id of the badge
+let id = "222"
+ // using badge_recipients_by_id endpoint 
+stack_badges.badge_recipients_by_id(id,  badges_options, (response) => {
+    // response will be json        
+    console.log(response);
+});
+
+```
+
+
+#### badge_by_tags
+Get all tagged-based badges in alphabetical order.
+
+ ```js
+//  options fields are as follows 
+ let options = {
+        "order": "desc",
+        "sort": "popular",
+        "site": "stackoverflow"
+    }
+
+ // using badge_by_tags endpoint 
+stack_badges.badge_by_tags(options, (response) => {
+    // response will be json        
+    console.log(response);
+});
+
+```
+## tags section
+```js
+let tags_options = {
+    "site": "stackoverflow",
+    "key": "your_key"
+}
+
+
+// creating tags object
+const stack_tags = new stackexchange.tags();
+```
+
+#### tags
+Get the tags on the site.
+
+ ```js
+ // using tags endpoint 
+stack_tags.tags(tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### tags by name
+Get tags on the site by their names.
+
+ ```js
+ //tag name for search
+ let tag_name = "nodejs"
+ // using tags_by_name endpoint 
+stack_tags.tags_by_name(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+#### moderator only tags
+Get the tags on the site that only moderators can use.
+
+ ```js
+ // using moderator_only_tags endpoint 
+stack_tags.moderator_only_tags(tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### require tags
+Get the tags on the site that fulfill required tag constraints.
+
+ ```js
+ // using require_tags endpoint 
+stack_tags.require_tags(tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### tag synonyms
+Get all the tag synonyms on the site.
+
+ ```js
+ // using tag_synonyms endpoint 
+stack_tags.tag_synonyms(tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### faqs by tags
+Get frequently asked questions in a set of tags.
+
+ ```js
+ //tag name for search
+ let tag_name = "nodejs"
+ // using faqs_by_tags endpoint 
+stack_tags.faqs_by_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### related tags
+Get related tags, based on common tag pairings.
+
+ ```js
+ //tag name for search
+ let tag_name = "nodejs"
+ // using related_tags endpoint 
+stack_tags.related_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### synonyms by tags
+Get the synonyms for a specific set of tags.
+
+ ```js
+ //tag name for search
+ let tag_name = "nodejs"
+ // using synonyms_by_tags endpoint 
+stack_tags.synonyms_by_tags("nodejs", tags_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### top answerers on tags
+Get the top answer posters in a specific tag, either in the last month or for all time.
+
+ ```js
+ //tag name for search
+ let tag_name = "java"
+ // using top_answerers_on_tags endpoint 
+stack_tags.top_answerers_on_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### top askers on tags
+Get the top question askers in a specific tag, either in the last month or for all time.
+
+ ```js
+ //tag name for search
+ let tag_name = "java"
+ // using top_askers_on_tags endpoint 
+stack_tags.top_askers_on_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+
+#### wikis by tags
+Get the wiki entries for a set of tags.
+
+ ```js
+ //tag name for search
+ let tag_name = "java"
+ // using wikis_by_tags endpoint 
+stack_tags.wikis_by_tags(tag_name, tags_options, (response) => {
+    console.log(response);
+});
+```
+
+## comments section
+
+```js
+
+// creating comments object
+const stack_comments = new stackexchange.comments();
+
+
+```
+
+#### comments
+Get all comments on the site. comments_options can be empty object. 
+
+ ```js
+
+ let comments_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+ // using comments endpoint 
+stack_comments.comments(comments_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### comments_by_ids
+Get comments identified by a set of ids.
+
+ ```js
+//options for comments
+ let comments_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the comment
+let comment_id = "131321";
+
+// using comments_by_ids endpoint 
+stack_comments.comments_by_ids(comment_id, comments_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### delete_comment
+Delete a comment identified by its id. **auth required**
+
+ ```js
+//options for comments
+ let comments_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the comment
+let comment_id = "12135";
+
+// using delete_comment endpoint 
+stack_comments.delete_comment(comment_id, comments_options, (response) => {
+    console.log(response);
+});
+
+
+```
+
+#### edit_comment
+Edit a comment identified by its id. **auth required**. body is required in options
+
+ ```js
+//options for comments
+ let comments_options = {
+    "body": "edited comment"
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the comment
+let comment_id = "12135";
+
+// using edit_comment endpoint 
+stack_comments.edit_comment(comment_id, comments_options, (response) => {
+    console.log(response);
+});
+
+
+```
+
+#### create_comment_flag
+Casts a flag on the given comment. **auth required**. option_id is required in options
+
+ ```js
+//options for comments
+ let comments_options = {
+    "option_id": "1323"
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the comment
+let comment_id = "12135";
+
+// using create_comment_flag endpoint 
+stack_comments.create_comment_flag(comment_id, comments_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### comment_flag_options
+Returns valid flag options for the given comment. **auth required**
+
+ ```js
+//options for comments
+ let comments_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the comment
+let comment_id = "12135";
+
+// using comment_flag_options endpoint 
+stack_comments.comment_flag_options(comment_id, comments_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### upvote_comment
+Casts an upvote on the given comment. **auth required**
+
+ ```js
+//options for comments
+ let comments_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the comment
+let comment_id = "12135";
+
+// using upvote_comment endpoint 
+stack_comments.upvote_comment(comment_id, comments_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### undo_upvote_comment
+Undoes an upvote on the given comment. **auth required**
+
+ ```js
+//options for comments
+ let comments_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the comment
+let comment_id = "12135";
+
+// using undo_upvote_comment endpoint 
+stack_comments.undo_upvote_comment(comment_id, comments_options, (response) => {
+    console.log(response);
+});
+
+```
+
+## posts section
+
+```js
+
+// creating posts object
+const stack_posts = new stackexchange.posts();
+
+```
+
+#### posts
+Get all posts (questions and answers) in the system. posts_options can be empty object. 
+
+ ```js
+
+ let posts_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+ // using posts endpoint 
+stack_posts.posts(posts_options, (response) => {
+    console.log(response);
+});
+```
+
+#### posts_by_ids
+Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known. 
+
+ ```js
+
+ let posts_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the post
+let post_id = "45934757";
+
+ // using posts_by_ids endpoint 
+stack_posts.posts_by_ids(post_id, posts_options, (response) => {
+    console.log(response);
+});
+```
+
+#### comments_on_posts
+Get comments on the posts (question or answer) identified by a set of ids. 
+
+ ```js
+
+ let posts_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the post
+let post_id = "45934757";
+
+ // using comments_on_posts endpoint 
+stack_posts.comments_on_posts(post_id, posts_options, (response) => {
+    console.log(response);
+});
+```
+
+#### create_comment
+Create a new comment on the post identified by id. **auth required**. the comment should be included in options as body.
+
+ ```js
+// body is required field.
+ let posts_options = {
+    "body": "Adding test comment"
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the post
+let post_id = "45934757";
+
+ // using create_comment endpoint 
+stack_posts.create_comment(post_id, posts_options, (response) => {
+    console.log(response);
+});
+```
+
+#### render_comment
+Renders a hypothetical comment on the given post.
+
+ ```js
+ 
+ let posts_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the post
+let post_id = "45934757";
+
+ // using render_comment endpoint 
+stack_posts.render_comment(post_id, {}, (response) => {
+    console.log(response);
+});
+```
+
+#### revisions_by_ids
+Get revisions on the set of posts in ids.
+
+ ```js
+ 
+ let posts_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the post
+let post_id= 39892422;
+
+ // using revisions_by_ids endpoint 
+stack_posts.revisions_by_ids(post_id, posts_options, (response) => {
+    console.log(response);
+});
+```
+
+#### posts_on_suggested_edits
+Get suggested edits on the set of posts in ids.
+`
+ ```js
+ let posts_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the post
+let post_id= 39892422;
+
+ // using posts_on_suggested_edits endpoint 
+stack_posts.posts_on_suggested_edits(post_id, posts_options, (response) => {
+    console.log(response);
+});
+```
+
+## search section
+
+```js
+
+// creating search object
+const stack_search = new stackexchange.search();
+```
+
+#### search
+Search the site for questions meeting certain criteria. search_options must contain one of **tagged** or **intitle** field.
+
+ ```js
+
+ let search_options = {
+    "tagged": "nodejs",
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+ // using search endpoint 
+stack_search.search(search_options, (response) => {
+    console.log(response);
+});
+```
+
+#### advanced_search
+Search the site for questions using most of the on-site search options. for more search_options please visit [advanced_search](https://api.stackexchange.com/docs/advanced-search) endpoint of stackexchange.
+
+ ```js
+
+ let search_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+ // using advanced_search endpoint 
+stack_search.advanced_search(search_options, (response) => {
+    console.log(response);
+});
+```
+
+#### similar
+Search the site based on similarity to a title. title must be set in search_options. 
+
+ ```js
+
+ let search_options = {
+    "title": "npm install error",
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+ // using similar endpoint 
+stack_search.similar(search_options, (response) => {
+    console.log(response);
+});
+```
+
+#### excerpt_search
+Searches a site. For more search_options see [excerpt_search](https://api.stackexchange.com/docs/excerpt-search) endpoint of stackexchange. 
+
+ ```js
+
+ let search_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+ // using excerpt_search endpoint 
+stack_search.excerpt_search(search_options, (response) => {
+    console.log(response);
+});
+```
+
+## suggested_edits section
+
+```js
+let suggested_edits_options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+// creating suggested_edits object
+const stack_suggested_edits = new stackexchange.suggested_edits();
+```
+
+#### suggested_edits
+Get all the suggested edits on the site. options is optional, can be an empty object
+
+ ```js
+ // using suggested_edits endpoint 
+stack_suggested_edits.suggested_edits(suggested_edits_options, (response) => {
+        console.log(response);
+});
+```
+
+#### suggested_edits_by_ids
+Get the suggested edits identified by a set of ids. options is optional, can be an empty object
+
+ ```js
+ // id of the suggested_edit
+let suggested_edit_id = "3445738"
+
+ // using suggested_edits_by_ids endpoint 
+stack_suggested_edits.suggested_edits_by_ids(suggested_edit_id, suggested_edits_options, (response) => {
+    console.log(response);
+});
+```
+
 ## network section
 These methods return data across the entire Stack Exchange network of sites. Accordingly, you do not pass a site parameter to them.
 
@@ -2538,86 +2439,104 @@ stack_network.sites(inbox_options, (response) => {
 
 ```
 
+## info section
+```js
+let info_options = {
+    "site": "stackoverflow"
+}
+
+// creating info object
+const stack_info = new stackexchange.info();
+```
+
+#### info
+Get information about the entire site.
+
+ ```js
+ // using info endpoint 
+stack_info.info(info_options, (response) => {
+    // response will be json 
+    console.log(response);
+});
+```
+
+## privilages section
+
+```js
+let privilages_options = {
+    "site": "stackoverflow",
+    "key" : "your_key"
+}
+
+// creating privilages object
+const stack_privilages = new stackexchange.privilages();
+```
+
+#### privilages
+Get all the privileges available on the site.
+
+ ```js
+ // using info endpoint 
+stack_privilages.privilages(privilages_options, (response) => {
+    // response will be json 
+    console.log(response);
+});
+```
+
+## revisions section
+
+```js
+let revisions_options = {
+    "site": "stackoverflow",
+    "key" : "your_key"
+}
+
+// creating privilages object
+const stack_revisions = new stackexchange.revisions();
+```
+
+#### revisions
+Get all revisions identified by a set of ids.
+
+ ```js
+ // ids will be available from posts_id endpoint, can be single or multiple seperated by comma. 
+ let ids = "BCF73AEC-7F9D-4623-8C38-66E481B52513"
+ // using info endpoint 
+stack_revisions.revisions( ids , revisions_options, (response) => {
+    // response will be json 
+    console.log(response);
+});
+```
+
+## events section
+
+To use events endpoint you need to have access_token and key, you can generate your access_token and key [here](https://api.stackexchange.com/docs/events).
+```js
+let event_options = {
+    "site": "stackoverflow",
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+// creating events object
+const stack_events = new stackexchange.events();
+```
+
+#### events
+Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required**
+ ```js
+ // using info endpoint 
+stack_events.events(event_options, (response) => {
+    // response will be json 
+    console.log(response);
+});
+```
+
+
 
 ## Table of Content
 
 The module exposes following endpoints of stackexchange api:
-
-* [Questions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
-
-| Endpoints | Description | See in StackExchange              |
-|-------------|------|--------------------|
-| [questions](https://github.com/KarthikGangadhar/stack-exchange#questions) | Get all questions on the site. | [questions](https://api.stackexchange.com/docs/questions) |
-| [quetions_by_id](https://github.com/KarthikGangadhar/stack-exchange#questions-by-ids) | Get the questions identified by a set of ids. | [questions/{ids}](https://api.stackexchange.com/docs/questions-by-ids) |
-| [answers_on_questions](https://github.com/KarthikGangadhar/stack-exchange#answers-on-questions) | Get the answers to the questions identified by a set of ids. | [questions/{ids}/answers](https://api.stackexchange.com/docs/answers-on-questions) |
-| [render_answers](https://github.com/KarthikGangadhar/stack-exchange#render-answers) | Renders a hypothetical answer to a question. This is a post endpoints, the options section looks like this, both fields are required.  | [questions/{id}/answers/render](https://api.stackexchange.com/docs/render-answer) |
-| [linked_questions](https://github.com/KarthikGangadhar/stack-exchange#linked-questions) | Get the questions that link to the questions identified by a set of ids.  | [questions/{ids}/linked](https://api.stackexchange.com/docs/linked-questions) |
-| [related_questions](https://github.com/KarthikGangadhar/stack-exchange#related-questions)  | Get the questions that are related to the questions identified by a set of ids. | [questions/{ids}/related](https://api.stackexchange.com/docs/related-questions) |
-| [questions_timeline](https://github.com/KarthikGangadhar/stack-exchange#questions-timeline) | Get the timelines of the questions identified by a set of ids.  | [questions/{ids}/timeline](https://api.stackexchange.com/docs/questions-timeline) |
-| [featured_questions](https://github.com/KarthikGangadhar/stack-exchange#featured-questions) | Get all questions on the site with active bounties. | [questions/featured](https://api.stackexchange.com/docs/featured-questions) |
-| [no-answer-questions](https://github.com/KarthikGangadhar/stack-exchange#no-answer-questions) | Get all questions on the site with no answers. | [questions/no-answers](https://api.stackexchange.com/docs/no-answer-questions) |
-| [unanswered_questions](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions) | Get all questions the site considers unanswered. | [questions/unanswered](https://api.stackexchange.com/docs/unanswered-questions) |
-| [unanswered_questions_my_tags](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions-my-tags) | Get questions the site considers unanswered within a user's favorite or interesting tags. **auth required**. | [questions/unanswered/my-tags](https://api.stackexchange.com/docs/unanswered-questions-my-tags) |
-| [question_flag_options](https://github.com/KarthikGangadhar/stack-exchange#question-flag-options) | Returns valid flag options for the given question. **auth** required. | [questions/{id}/flags/options](https://api.stackexchange.com/docs/question-flag-options) |
-| [question_close_options](https://github.com/KarthikGangadhar/stack-exchange#question-close-options) | Returns valid flag options which are also close reasons for the given question. **auth required.**  | [questions/{id}/close/options](https://api.stackexchange.com/docs/question-close-options) |
-| [comments_on_questions](https://github.com/KarthikGangadhar/stack-exchange#comments-on-questions) | Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options. | [questions/{ids}/comments](https://api.stackexchange.com/docs/comments-on-questions) |
-
-
-* [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
-
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| [badges](https://github.com/KarthikGangadhar/stack-exchange#badges) | Get all badges on the site, in alphabetical order. | [badges](https://api.stackexchange.com/docs/badges) |
-| [badges_by_id](https://github.com/KarthikGangadhar/stack-exchange#badges_by_id) | Get the badges identified by ids. | [badges/{ids}](https://api.stackexchange.com/docs/badges-by-ids) |
-| [badges_by_name](https://github.com/KarthikGangadhar/stack-exchange#badges_by_name) | Get all non-tagged-based badges in alphabetical order. | [badges/name](https://api.stackexchange.com/docs/badges-by-name) |
-| [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients) | Get badges recently awarded on the site. | [badges/recipients](https://api.stackexchange.com/docs/badge-recipients)  |
-| [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id) | Get the recent recipients of the given badges. | [badges/{ids}/recipients](https://api.stackexchange.com/docs/badge-recipients-by-ids)  |
-| [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags) | Get all tagged-based badges in alphabetical order. | [badges/tags](https://api.stackexchange.com/docs/badges-by-tag)  |
-
-
-* [Tags section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
-
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| [tags](https://github.com/KarthikGangadhar/stack-exchange#tags) | Get the tags on the site. | [tags](https://api.stackexchange.com/docs/tags) |
-| [tags_by_name](https://github.com/KarthikGangadhar/stack-exchange#tags-by-name) | Get tags on the site by their names. | [tags/{tags}/info](https://api.stackexchange.com/docs/tags-by-name) |
-| [moderator_only_tags](https://github.com/KarthikGangadhar/stack-exchange#moderator-only-tags) | Get the tags on the site that only moderators can use. | [tags/moderator-only](https://api.stackexchange.com/docs/moderator-only-tags) |
-| [require_tags](https://github.com/KarthikGangadhar/stack-exchange#require-tags) | Get the tags on the site that fulfill required tag constraints. | [tags/required](https://api.stackexchange.com/docs/required-tags) |
-| [tag_synonyms](https://github.com/KarthikGangadhar/stack-exchange#tag-synonyms) | Get all the tag synonyms on the site. | [tags/synonyms](https://api.stackexchange.com/docs/tag-synonyms) |
-| [faqs_by_tags](https://github.com/KarthikGangadhar/stack-exchange#faqs-by-tags) | Get frequently asked questions in a set of tags. | [tags/{tags}/faq](https://api.stackexchange.com/docs/faqs-by-tags) |
-| [related_tags](https://github.com/KarthikGangadhar/stack-exchange#related-tags) | Get related tags, based on common tag pairings. | [tags/{tags}/related](https://api.stackexchange.com/docs/related-tags) |
-| [synonyms_by_tags](https://github.com/KarthikGangadhar/stack-exchange#synonyms-by-tags) | Get the synonyms for a specific set of tags. | [tags/{tags}/synonyms](https://api.stackexchange.com/docs/synonyms-by-tags) |
-| [top_answerers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-answerers-on-tags) | Get the top answer posters in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-answerers/{period}](https://api.stackexchange.com/docs/top-answerers-on-tags) |
-| [top_askers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-askers-on-tags) | Get the top question askers in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-askers/{period}](https://api.stackexchange.com/docs/top-askers-on-tags) |
-| [wikis_by_tags](https://github.com/KarthikGangadhar/stack-exchange#wikis-by-tags) | Get the wiki entries for a set of tags. | [tags/{tags}/wikis](https://api.stackexchange.com/docs/wikis-by-tags) |
-     
-
-* [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
-
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| [info](https://github.com/KarthikGangadhar/stack-exchange#info) | Get information about the entire site. | [info](https://api.stackexchange.com/docs/info) |
-
-* [Privilages section](https://github.com/KarthikGangadhar/stack-exchange#privilages-section)
-
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| [privilages](https://github.com/KarthikGangadhar/stack-exchange#info) | Get all the privileges available on the site. | [privileges](https://api.stackexchange.com/docs/privileges) |
-
-    
-* [Revisions section](https://github.com/KarthikGangadhar/stack-exchange#revisions-section)
-
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| [revisions](https://github.com/KarthikGangadhar/stack-exchange#revisions) | Get all revisions identified by a set of ids. | [revisions/{ids}](https://api.stackexchange.com/docs/revisions-by-guids) |
-
-
-* [Events section](https://github.com/KarthikGangadhar/stack-exchange#events-section)
-
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| [events](https://github.com/KarthikGangadhar/stack-exchange#events) | Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required** | [events](https://api.stackexchange.com/docs/events) |
-
 
 * [Users section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
 
@@ -2696,19 +2615,53 @@ The module exposes following endpoints of stackexchange api:
 | [me_associated_users](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_associated_users) | Get a user's associated accounts. | [me/associated](https://api.stackexchange.com/docs/me-associated-users) |
 | [me_merge_history](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_merge_history) | Get the merges a user's accounts has undergone. | [me/merges](https://api.stackexchange.com/docs/me-merge-history) |
 
+* [Questions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
 
-* [Posts section](https://github.com/KarthikGangadhar/stack-exchange#posts-section)
+| Endpoints | Description | See in StackExchange              |
+|-------------|------|--------------------|
+| [questions](https://github.com/KarthikGangadhar/stack-exchange#questions) | Get all questions on the site. | [questions](https://api.stackexchange.com/docs/questions) |
+| [quetions_by_id](https://github.com/KarthikGangadhar/stack-exchange#questions-by-ids) | Get the questions identified by a set of ids. | [questions/{ids}](https://api.stackexchange.com/docs/questions-by-ids) |
+| [answers_on_questions](https://github.com/KarthikGangadhar/stack-exchange#answers-on-questions) | Get the answers to the questions identified by a set of ids. | [questions/{ids}/answers](https://api.stackexchange.com/docs/answers-on-questions) |
+| [render_answers](https://github.com/KarthikGangadhar/stack-exchange#render-answers) | Renders a hypothetical answer to a question. This is a post endpoints, the options section looks like this, both fields are required.  | [questions/{id}/answers/render](https://api.stackexchange.com/docs/render-answer) |
+| [linked_questions](https://github.com/KarthikGangadhar/stack-exchange#linked-questions) | Get the questions that link to the questions identified by a set of ids.  | [questions/{ids}/linked](https://api.stackexchange.com/docs/linked-questions) |
+| [related_questions](https://github.com/KarthikGangadhar/stack-exchange#related-questions)  | Get the questions that are related to the questions identified by a set of ids. | [questions/{ids}/related](https://api.stackexchange.com/docs/related-questions) |
+| [questions_timeline](https://github.com/KarthikGangadhar/stack-exchange#questions-timeline) | Get the timelines of the questions identified by a set of ids.  | [questions/{ids}/timeline](https://api.stackexchange.com/docs/questions-timeline) |
+| [featured_questions](https://github.com/KarthikGangadhar/stack-exchange#featured-questions) | Get all questions on the site with active bounties. | [questions/featured](https://api.stackexchange.com/docs/featured-questions) |
+| [no-answer-questions](https://github.com/KarthikGangadhar/stack-exchange#no-answer-questions) | Get all questions on the site with no answers. | [questions/no-answers](https://api.stackexchange.com/docs/no-answer-questions) |
+| [unanswered_questions](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions) | Get all questions the site considers unanswered. | [questions/unanswered](https://api.stackexchange.com/docs/unanswered-questions) |
+| [unanswered_questions_my_tags](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions-my-tags) | Get questions the site considers unanswered within a user's favorite or interesting tags. **auth required**. | [questions/unanswered/my-tags](https://api.stackexchange.com/docs/unanswered-questions-my-tags) |
+| [question_flag_options](https://github.com/KarthikGangadhar/stack-exchange#question-flag-options) | Returns valid flag options for the given question. **auth** required. | [questions/{id}/flags/options](https://api.stackexchange.com/docs/question-flag-options) |
+| [question_close_options](https://github.com/KarthikGangadhar/stack-exchange#question-close-options) | Returns valid flag options which are also close reasons for the given question. **auth required.**  | [questions/{id}/close/options](https://api.stackexchange.com/docs/question-close-options) |
+| [comments_on_questions](https://github.com/KarthikGangadhar/stack-exchange#comments-on-questions) | Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options. | [questions/{ids}/comments](https://api.stackexchange.com/docs/comments-on-questions) |
+
+
+* [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [posts](https://github.com/KarthikGangadhar/stack-exchange#posts) | Get all posts (questions and answers) in the system. | [posts](https://api.stackexchange.com/docs/posts) |
-| [posts_by_ids](https://github.com/KarthikGangadhar/stack-exchange#posts_by_ids) | Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known. | [posts/{ids}](https://api.stackexchange.com/docs/posts-by-ids) |
-| [comments_on_posts](https://github.com/KarthikGangadhar/stack-exchange#comments_on_posts) | Get comments on the posts (question or answer) identified by a set of ids. | [posts/{ids}/comments](https://api.stackexchange.com/docs/comments-on-posts) |
-| [create_comment](https://github.com/KarthikGangadhar/stack-exchange#create_comment) | Create a new comment on the post identified by id. **auth required**  | [posts/{id}/comments/add](https://api.stackexchange.com/docs/create-comment) |
-| [render_comment](https://github.com/KarthikGangadhar/stack-exchange#render_comment) | Renders a hypothetical comment on the given post. | [posts/{id}/comments/render](https://api.stackexchange.com/docs/render-comment) |
-| [revisions_by_ids](https://github.com/KarthikGangadhar/stack-exchange#revisions_by_ids) | Get revisions on the set of posts in ids. | [posts/{ids}/revisions](https://api.stackexchange.com/docs/revisions-by-ids) |
-| [posts_on_suggested_edits](https://github.com/KarthikGangadhar/stack-exchange#posts_on_suggested_edits) | Get suggested edits on the set of posts in ids. | [posts/{ids}/suggested-edits](https://api.stackexchange.com/docs/posts-on-suggested-edits) |
+| [badges](https://github.com/KarthikGangadhar/stack-exchange#badges) | Get all badges on the site, in alphabetical order. | [badges](https://api.stackexchange.com/docs/badges) |
+| [badges_by_id](https://github.com/KarthikGangadhar/stack-exchange#badges_by_id) | Get the badges identified by ids. | [badges/{ids}](https://api.stackexchange.com/docs/badges-by-ids) |
+| [badges_by_name](https://github.com/KarthikGangadhar/stack-exchange#badges_by_name) | Get all non-tagged-based badges in alphabetical order. | [badges/name](https://api.stackexchange.com/docs/badges-by-name) |
+| [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients) | Get badges recently awarded on the site. | [badges/recipients](https://api.stackexchange.com/docs/badge-recipients)  |
+| [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id) | Get the recent recipients of the given badges. | [badges/{ids}/recipients](https://api.stackexchange.com/docs/badge-recipients-by-ids)  |
+| [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags) | Get all tagged-based badges in alphabetical order. | [badges/tags](https://api.stackexchange.com/docs/badges-by-tag)  |
 
+
+* [Tags section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [tags](https://github.com/KarthikGangadhar/stack-exchange#tags) | Get the tags on the site. | [tags](https://api.stackexchange.com/docs/tags) |
+| [tags_by_name](https://github.com/KarthikGangadhar/stack-exchange#tags-by-name) | Get tags on the site by their names. | [tags/{tags}/info](https://api.stackexchange.com/docs/tags-by-name) |
+| [moderator_only_tags](https://github.com/KarthikGangadhar/stack-exchange#moderator-only-tags) | Get the tags on the site that only moderators can use. | [tags/moderator-only](https://api.stackexchange.com/docs/moderator-only-tags) |
+| [require_tags](https://github.com/KarthikGangadhar/stack-exchange#require-tags) | Get the tags on the site that fulfill required tag constraints. | [tags/required](https://api.stackexchange.com/docs/required-tags) |
+| [tag_synonyms](https://github.com/KarthikGangadhar/stack-exchange#tag-synonyms) | Get all the tag synonyms on the site. | [tags/synonyms](https://api.stackexchange.com/docs/tag-synonyms) |
+| [faqs_by_tags](https://github.com/KarthikGangadhar/stack-exchange#faqs-by-tags) | Get frequently asked questions in a set of tags. | [tags/{tags}/faq](https://api.stackexchange.com/docs/faqs-by-tags) |
+| [related_tags](https://github.com/KarthikGangadhar/stack-exchange#related-tags) | Get related tags, based on common tag pairings. | [tags/{tags}/related](https://api.stackexchange.com/docs/related-tags) |
+| [synonyms_by_tags](https://github.com/KarthikGangadhar/stack-exchange#synonyms-by-tags) | Get the synonyms for a specific set of tags. | [tags/{tags}/synonyms](https://api.stackexchange.com/docs/synonyms-by-tags) |
+| [top_answerers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-answerers-on-tags) | Get the top answer posters in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-answerers/{period}](https://api.stackexchange.com/docs/top-answerers-on-tags) |
+| [top_askers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-askers-on-tags) | Get the top question askers in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-askers/{period}](https://api.stackexchange.com/docs/top-askers-on-tags) |
+| [wikis_by_tags](https://github.com/KarthikGangadhar/stack-exchange#wikis-by-tags) | Get the wiki entries for a set of tags. | [tags/{tags}/wikis](https://api.stackexchange.com/docs/wikis-by-tags) |
 
 * [Comments section](https://github.com/KarthikGangadhar/stack-exchange#comments-section)
 
@@ -2722,6 +2675,19 @@ The module exposes following endpoints of stackexchange api:
 | [comment_flag_options](https://github.com/KarthikGangadhar/stack-exchange#comment_flag_options) | Returns valid flag options for the given comment. **auth required** | [comments/{id}/flags/options](https://api.stackexchange.com/docs/comment-flag-options) |
 | [upvote_comment](https://github.com/KarthikGangadhar/stack-exchange#upvote_comment) | Casts an upvote on the given comment. **auth required** | [comments/{id}/upvote](https://api.stackexchange.com/docs/upvote-comment) |
 | [undo_upvote_comment](https://github.com/KarthikGangadhar/stack-exchange#undo_upvote_comment) | Undoes an upvote on the given comment. **auth required** | [comments/{id}/upvote/undo](https://api.stackexchange.com/docs/undo-upvote-comment) |
+
+
+* [Posts section](https://github.com/KarthikGangadhar/stack-exchange#posts-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [posts](https://github.com/KarthikGangadhar/stack-exchange#posts) | Get all posts (questions and answers) in the system. | [posts](https://api.stackexchange.com/docs/posts) |
+| [posts_by_ids](https://github.com/KarthikGangadhar/stack-exchange#posts_by_ids) | Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known. | [posts/{ids}](https://api.stackexchange.com/docs/posts-by-ids) |
+| [comments_on_posts](https://github.com/KarthikGangadhar/stack-exchange#comments_on_posts) | Get comments on the posts (question or answer) identified by a set of ids. | [posts/{ids}/comments](https://api.stackexchange.com/docs/comments-on-posts) |
+| [create_comment](https://github.com/KarthikGangadhar/stack-exchange#create_comment) | Create a new comment on the post identified by id. **auth required**  | [posts/{id}/comments/add](https://api.stackexchange.com/docs/create-comment) |
+| [render_comment](https://github.com/KarthikGangadhar/stack-exchange#render_comment) | Renders a hypothetical comment on the given post. | [posts/{id}/comments/render](https://api.stackexchange.com/docs/render-comment) |
+| [revisions_by_ids](https://github.com/KarthikGangadhar/stack-exchange#revisions_by_ids) | Get revisions on the set of posts in ids. | [posts/{ids}/revisions](https://api.stackexchange.com/docs/revisions-by-ids) |
+| [posts_on_suggested_edits](https://github.com/KarthikGangadhar/stack-exchange#posts_on_suggested_edits) | Get suggested edits on the set of posts in ids. | [posts/{ids}/suggested-edits](https://api.stackexchange.com/docs/posts-on-suggested-edits) |
 
 * [Search section](https://github.com/KarthikGangadhar/stack-exchange#search-section)
 
@@ -2755,4 +2721,42 @@ The module exposes following endpoints of stackexchange api:
 | [notifications](https://github.com/KarthikGangadhar/stack-exchange#notifications-1) | Get a user's notifications, outside of the context of a site. **auth required** | [notifications](https://api.stackexchange.com/docs/notifications) |
 | [unread_notifications](https://github.com/KarthikGangadhar/stack-exchange#unread_notifications) | Get a user's unread notifications, outside of the context of a site. **auth required** | [notifications/unread](https://api.stackexchange.com/docs/unread-notifications) |
 | [sites](https://github.com/KarthikGangadhar/stack-exchange#sites-1) | Get all the sites in the Stack Exchange network. | [sites](https://api.stackexchange.com/docs/sites) |
+
+* [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [info](https://github.com/KarthikGangadhar/stack-exchange#info) | Get information about the entire site. | [info](https://api.stackexchange.com/docs/info) |
+
+* [Privilages section](https://github.com/KarthikGangadhar/stack-exchange#privilages-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [privilages](https://github.com/KarthikGangadhar/stack-exchange#info) | Get all the privileges available on the site. | [privileges](https://api.stackexchange.com/docs/privileges) |
+
+    
+* [Revisions section](https://github.com/KarthikGangadhar/stack-exchange#revisions-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [revisions](https://github.com/KarthikGangadhar/stack-exchange#revisions) | Get all revisions identified by a set of ids. | [revisions/{ids}](https://api.stackexchange.com/docs/revisions-by-guids) |
+
+
+* [Events section](https://github.com/KarthikGangadhar/stack-exchange#events-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [events](https://github.com/KarthikGangadhar/stack-exchange#events) | Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required** | [events](https://api.stackexchange.com/docs/events) |
+     
+
+
+
+
+
+
+
+
+
+
+
 
