@@ -14,14 +14,20 @@ $ npm install stack-exchange
 
 You can make 300 requests without a key per day, with a key you can make 10,000 requests. To generate key visit [here](https://api.stackexchange.com/docs/authentication).The sections are as follows
 
+* [Users section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
+* [Me section](https://github.com/KarthikGangadhar/stack-exchange#me-section)
 * [Questions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
+* [Answers section](https://github.com/KarthikGangadhar/stack-exchange#answers-section)
 * [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
-* [Tags section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
+* [Tags section](https://github.com/KarthikGangadhar/stack-exchange#tags-section)
+* [Comments section](https://github.com/KarthikGangadhar/stack-exchange#comments-section)
+* [Posts section](https://github.com/KarthikGangadhar/stack-exchange#posts-section)
+* [Search section](https://github.com/KarthikGangadhar/stack-exchange#search-section)
+* [Suggested Edits section](https://github.com/KarthikGangadhar/stack-exchange#suggested_edits-section)
 * [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
 * [Privilages section](https://github.com/KarthikGangadhar/stack-exchange#privilages-section)
 * [Revisions section](https://github.com/KarthikGangadhar/stack-exchange#revisions-section)
 * [Events section](https://github.com/KarthikGangadhar/stack-exchange#events-section)
-* [Users section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
 
 For more details about the endpoints on each section visit [table-of-content](https://github.com/KarthikGangadhar/stack-exchange#table-of-content). To use above mentioned sections endpoints, you need to create their respective sections objects as follows:
 
