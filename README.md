@@ -1534,6 +1534,107 @@ stack_questions.comments_on_questions(question_id, options, (response) => {
 });
 
 ```
+## answers section
+
+The options object is optional, can be an empty object also. update all your query fields in it.
+
+```js
+
+// creating answers object
+const stack_questions = new stackexchange.questions();
+```
+
+#### answers
+ Get all answers on the site.
+ 
+ ```js
+ // answer query options
+ let options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+ // using answers endpoint 
+stack_answers.answers(answers_options, (response) => {
+    console.log(response);
+});
+```
+
+#### answers_by_ids
+ Get answers identified by a set of ids.
+ 
+ ```js
+ // query options
+ let options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the answer
+let answer_id = "6414102";
+
+ // using answers_by_ids endpoint 
+stack_answers.answers_by_ids(answer_id, answers_options, (response) => {
+    console.log(response);
+});
+
+```
+
+#### accept_answer
+ Casts an accept vote on the given answer. **auth required**
+ 
+ ```js
+ // query options
+ let options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the answer
+let answer_id = "6414102";
+
+ // using accept_answer endpoint 
+stack_answers.accept_answer(answer_id, answers_options, (response) => {
+    console.log(response);
+});
+```
+
+#### undo_accept_answer
+ Undoes an accept vote on the given answer. **auth required**
+ 
+ ```js
+ // query options
+ let options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the answer
+let answer_id = "47451356";
+
+ // using undo_accept_answer endpoint 
+stack_answers.undo_accept_answer(answer_id, answers_options, (response) => {
+    console.log(response);
+});
+```
+#### comments_on_answers
+ Get comments on the answers identified by a set of ids.
+ 
+ ```js
+ // query options
+ let options = {
+    "key": "your_key",
+    "access_token": "your_token"
+}
+
+//id of the answer
+let answer_id = "37886434";
+
+ // using comments_on_answers endpoint 
+stack_answers.comments_on_answers(answer_id, answers_options, (response) => {
+    console.log(response);
+});
+```
 
 ## badges section
 
