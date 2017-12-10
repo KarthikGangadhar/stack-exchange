@@ -1541,7 +1541,7 @@ The options object is optional, can be an empty object also. update all your que
 ```js
 
 // creating answers object
-const stack_questions = new stackexchange.questions();
+const stack_answers = new stackexchange.answers();
 ```
 
 #### answers
@@ -2734,6 +2734,16 @@ The module exposes following endpoints of stackexchange api:
 | [question_flag_options](https://www.npmjs.com/package/stack-exchange#question-flag-options) | Returns valid flag options for the given question. **auth** required. | [questions/{id}/flags/options](https://api.stackexchange.com/docs/question-flag-options) |
 | [question_close_options](https://www.npmjs.com/package/stack-exchange#question-close-options) | Returns valid flag options which are also close reasons for the given question. **auth required.**  | [questions/{id}/close/options](https://api.stackexchange.com/docs/question-close-options) |
 | [comments_on_questions](https://www.npmjs.com/package/stack-exchange#comments-on-questions) | Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options. | [questions/{ids}/comments](https://api.stackexchange.com/docs/comments-on-questions) |
+
+* [Answers section](https://www.npmjs.com/package/stack-exchange#answers-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [answers](https://www.npmjs.com/package/stack-exchange#answers) | Get all answers on the site. | [answers](https://api.stackexchange.com/docs/answers) |
+| [answers_by_ids](https://www.npmjs.com/package/stack-exchange#answers_by_ids) | Get answers identified by a set of ids. | [answers/{ids}](https://api.stackexchange.com/docs/answers-by-ids) |
+| [accept_answer](https://www.npmjs.com/package/stack-exchange#accept_answer) | Casts an accept vote on the given answer. **auth required** | [answers/{id}/accept](https://api.stackexchange.com/docs/accept-answer) |
+| [comments_on_answers](https://www.npmjs.com/package/stack-exchange#comments_on_answers) | Undoes an accept vote on the given answer. **auth required** | [answers/{id}/accept/undo](https://api.stackexchange.com/docs/undo-accept-answer) |
+| [undo_accept_answer](https://www.npmjs.com/package/stack-exchange#undo_accept_answer) | Get comments on the answers identified by a set of ids. | [answers/{ids}/comments](https://api.stackexchange.com/docs/comments-on-answers) |
 
 
 * [Badges section](https://www.npmjs.com/package/stack-exchange#badges-section)
