@@ -749,7 +749,7 @@ const stack_answers = new stackexchange.answers();
 
 answers_options = {
     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-    "access_token": "S8Irmb83HARHUwZ1CXGvwg))"
+    "access_token": "87NODPheyiKQfhDdHdM0RA))"
 }
 // stack_answers.answers(answers_options, (response) => {
 //     console.log(response);
@@ -763,8 +763,10 @@ answers_options = {
 //     console.log(response);
 // });
 
-stack_answers.undo_accept_answer("47451356", answers_options, (response) => {
+// stack_answers.undo_accept_answer("47451356", answers_options, (response) => {
+//     console.log(response);
+// });
+
+stack_answers.comments_on_answers("37886434", answers_options, (response) => {
     console.log(response);
 });
-
-// undo-accept-answer /2.2/answers/47451356/accept/undo

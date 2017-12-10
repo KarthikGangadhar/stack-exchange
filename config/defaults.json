@@ -565,6 +565,11 @@
     },
     "ACCEPT_ANSWER": {},
     "UNDO_ACCEPT_ANSWER": {},
+    "COMMENTS_ON_ANSWERS": {
+        "site": "stackoverflow",
+        "order": "desc",
+        "sort": "creation"
+    },
     "endpoints": {
         "BASE_URL": "https://api.stackexchange.com",
         "EVENTS": "/2.2/events?",
@@ -706,7 +711,8 @@
         "ANSWERS": "/2.2/answers?",
         "ANSWERS_BY_IDS": "/2.2/answers/%s?",
         "ACCEPT_ANSWER": "/2.2/answers/%s/accept",
-        "UNDO_ACCEPT_ANSWER": "/2.2/answers/%s/accept/undo"
+        "UNDO_ACCEPT_ANSWER": "/2.2/answers/%s/accept/undo",
+        "COMMENTS_ON_ANSWERS": "/2.2/answers/%s/comments?"
     }
     
 }
