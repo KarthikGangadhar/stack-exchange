@@ -12,25 +12,25 @@ $ npm install stack-exchange
 
 ## Quick Start
 
-You can make 300 requests without a key per day, with a key you can make 10,000 requests. To generate key visit [here](https://api.stackexchange.com/docs/authentication).The sections are as follows
+You can make 300 requests without a key per day, with a key you can make 10,000 requests. To generate key visit [here](https://stackapps.com/apps/oauth/register).The sections are as follows
 
-* [Users section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
-* [Me section](https://github.com/KarthikGangadhar/stack-exchange#me-section)
-* [Questions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
-* [Answers section](https://github.com/KarthikGangadhar/stack-exchange#answers-section)
-* [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
-* [Tags section](https://github.com/KarthikGangadhar/stack-exchange#tags-section)
-* [Comments section](https://github.com/KarthikGangadhar/stack-exchange#comments-section)
-* [Posts section](https://github.com/KarthikGangadhar/stack-exchange#posts-section)
-* [Search section](https://github.com/KarthikGangadhar/stack-exchange#search-section)
-* [Suggested Edits section](https://github.com/KarthikGangadhar/stack-exchange#suggested_edits-section)
-* [Network section](https://github.com/KarthikGangadhar/stack-exchange#network-section)
-* [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
-* [Privilages section](https://github.com/KarthikGangadhar/stack-exchange#privilages-section)
-* [Revisions section](https://github.com/KarthikGangadhar/stack-exchange#revisions-section)
-* [Events section](https://github.com/KarthikGangadhar/stack-exchange#events-section)
+* [Users section](https://www.npmjs.com/package/stack-exchange#users-section)
+* [Me section](https://www.npmjs.com/package/stack-exchange#me-section)
+* [Questions section](https://www.npmjs.com/package/stack-exchange#questions-section)
+* [Answers section](https://www.npmjs.com/package/stack-exchange#answers-section)
+* [Badges section](https://www.npmjs.com/package/stack-exchange#badges-section)
+* [Tags section](https://www.npmjs.com/package/stack-exchange#tags-section)
+* [Comments section](https://www.npmjs.com/package/stack-exchange#comments-section)
+* [Posts section](https://www.npmjs.com/package/stack-exchange#posts-section)
+* [Search section](https://www.npmjs.com/package/stack-exchange#search-section)
+* [Suggested Edits section](https://www.npmjs.com/package/stack-exchange#suggested_edits-section)
+* [Network section](https://www.npmjs.com/package/stack-exchange#network-section)
+* [Info section](https://www.npmjs.com/package/stack-exchange#info-section)
+* [Privilages section](https://www.npmjs.com/package/stack-exchange#privilages-section)
+* [Revisions section](https://www.npmjs.com/package/stack-exchange#revisions-section)
+* [Events section](https://www.npmjs.com/package/stack-exchange#events-section)
 
-For more details about the endpoints on each section visit [table-of-content](https://github.com/KarthikGangadhar/stack-exchange#table-of-content). To use above mentioned sections endpoints, you need to create their respective sections objects as follows:
+For more details about the endpoints on each section visit [table-of-content](https://www.npmjs.com/package/stack-exchange#table-of-content). To use above mentioned sections endpoints, you need to create their respective sections objects as follows:
 
 ```javascript
 const stackexchange  = require("stack-exchange");
@@ -2538,45 +2538,45 @@ stack_events.events(event_options, (response) => {
 
 The module exposes following endpoints of stackexchange api:
 
-* [Users section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
+* [Users section](https://www.npmjs.com/package/stack-exchange#users-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [users](https://github.com/KarthikGangadhar/stack-exchange#users) | Get all users on the site. | [users](https://api.stackexchange.com/docs/users) |
-| [users_by_ids](https://github.com/KarthikGangadhar/stack-exchange#users_by_ids) | Get the users identified by a set of ids. | [users/{ids}](https://api.stackexchange.com/docs/users-by-ids) |
-| [answers_on_users](https://github.com/KarthikGangadhar/stack-exchange#answers_on_users) | Get the answers posted by the users identified by a set of ids. | [users/{ids}/answers]( https://api.stackexchange.com/docs/answers-on-users) |
-| [badges_on_users](https://github.com/KarthikGangadhar/stack-exchange#badges_on_users) | Get the badges earned by the users identified by a set of ids. | [users/{ids}/badges](https://api.stackexchange.com/docs/badges-on-users) |
-| [comments_on_users](https://github.com/KarthikGangadhar/stack-exchange#comments_on_users) | Get the comments posted by the users identified by a set of ids. | [users/{ids}/comments](https://api.stackexchange.com/docs/comments-on-users) |
-| [comments_by_users_to_user](https://github.com/KarthikGangadhar/stack-exchange#comments_by_users_to_user) | Get the comments posted by a set of users in reply to another user. | [/users/{ids}/comments/{toid}](https://api.stackexchange.com/docs/comments-by-users-to-user) |
-|[favorites_on_users](https://github.com/KarthikGangadhar/stack-exchange#favorites_on_users)  | Get the questions favorited by users identified by a set of ids. | [users/{ids}/favorites](https://api.stackexchange.com/docs/favorites-on-users) |
-| [mentions_on_users](https://github.com/KarthikGangadhar/stack-exchange#mentions_on_users) | Get the comments that mention one of the users identified by a set of ids. | [users/{ids}/mentioned](https://api.stackexchange.com/docs/mentions-on-users) |
-| [users_network_activity](https://github.com/KarthikGangadhar/stack-exchange#users_network_activity) | Gets a user's activity across the Stack Exchange network. | [users/{id}/network-activity](https://api.stackexchange.com/docs/users-network-activity) |
-| [user_notifications](https://github.com/KarthikGangadhar/stack-exchange#user_notifications) | Get a user's notifications. | [users/{id}/notifications](https://api.stackexchange.com/docs/user-notifications) |
-| [user_unread_notifications](https://github.com/KarthikGangadhar/stack-exchange#user_unread_notifications) | Get a user's unread notifications. | [users/{id}/notifications/unread](https://api.stackexchange.com/docs/user-unread-notifications) |
-|[posts_on_users](https://github.com/KarthikGangadhar/stack-exchange#posts_on_users) | Get all posts (questions and answers) owned by a set of users. | [users/{ids}/posts](https://api.stackexchange.com/docs/posts-on-users) |
-| [privileges_on_users](https://github.com/KarthikGangadhar/stack-exchange#privileges_on_users) | Get the privileges the given user has on the site. | [users/{id}/privileges](https://api.stackexchange.com/docs/privileges-on-users) |
-| [questions_on_users](https://github.com/KarthikGangadhar/stack-exchange#questions_on_users) | Get the questions asked by the users identified by a set of ids. | [users/{ids}/questions](https://api.stackexchange.com/docs/questions-on-users) |
-| [featured_questions_on_users](https://github.com/KarthikGangadhar/stack-exchange#featured_questions_on_users) | Get the questions on which a set of users, have active bounties. | [users/{ids}/questions/featured](https://api.stackexchange.com/docs/featured-questions-on-users) |
-| [no_answer_questions_on_users](https://github.com/KarthikGangadhar/stack-exchange#no_answer_questions_on_users) | Get the questions asked by a set of users, which have no answers. | [users/{ids}/questions/no-answers](https://api.stackexchange.com/docs/no-answer-questions-on-users) |
-| [unaccepted_questions_on_users](https://github.com/KarthikGangadhar/stack-exchange#unaccepted_questions_on_users) | Get the questions asked by a set of users, which have at least one answer but no accepted answer. | [users/{ids}/questions/unaccepted](https://api.stackexchange.com/docs/unaccepted-questions-on-users) |
-| [unanswered_questions_on_users](https://github.com/KarthikGangadhar/stack-exchange#unanswered_questions_on_users) | Get the questions asked by a set of users, which are not considered to be adequately answered. | [users/{ids}/questions/unanswered](https://api.stackexchange.com/docs/unanswered-questions-on-users) |
-| [reputation_on_users](https://github.com/KarthikGangadhar/stack-exchange#reputation_on_users) | Get a subset of the reputation changes experienced by the users identified by a set of ids. | [users/{ids}/reputation](https://api.stackexchange.com/docs/reputation-on-users) |
-| [reputation_history](https://github.com/KarthikGangadhar/stack-exchange#reputation_history) | Get a history of a user's reputation, excluding private events. | [users/{ids}/reputation-history](https://api.stackexchange.com/docs/reputation-history) |
-| [full_reputation_history](https://github.com/KarthikGangadhar/stack-exchange#full_reputation_history) | Get a full history of a user's reputation. auth required | [users/{id}/reputation-history/full](https://api.stackexchange.com/docs/full-reputation-history) |
-| [tags_on_users](https://github.com/KarthikGangadhar/stack-exchange#tags_on_users) | Get the tags that the users (identified by a set of ids) have been active in. | [users/{ids}/tags](https://api.stackexchange.com/docs/tags-on-users) |
-| [suggested_edits_on_users](https://github.com/KarthikGangadhar/stack-exchange#suggested_edits_on_users) | Get the suggested edits provided by users identified by a set of ids. | [users/{ids}/suggested-edits](https://api.stackexchange.com/docs/suggested-edits-on-users) |
-| [top_user_answers_in_tags](https://github.com/KarthikGangadhar/stack-exchange#top_user_answers_in_tags) | Get the top answers a user has posted on questions with a set of tags. | [users/{id}/tags/{tags}/top-answers](https://api.stackexchange.com/docs/top-user-answers-in-tags) |
-| [top_user_questions_in_tags](https://github.com/KarthikGangadhar/stack-exchange#top_user_questions_in_tags) | Get the top questions a user has posted with a set of tags. | [users/{id}/tags/{tags}/top-questions](https://api.stackexchange.com/docs/top-user-questions-in-tags) |
-| [timeline_on_users](https://github.com/KarthikGangadhar/stack-exchange#timeline_on_users) | Get a subset of the actions of that have been taken by the users identified by a set of ids. | [users/{ids}/timeline](https://api.stackexchange.com/docs/timeline-on-users) |
-| [top_answer_tags_on_users](https://github.com/KarthikGangadhar/stack-exchange#top_answer_tags_on_users) | Get the top tags (by score) a single user has posted answers in. | [users/{id}/top-answer-tags](https://api.stackexchange.com/docs/top-answer-tags-on-users) |
-| [top_tags_on_users](https://github.com/KarthikGangadhar/stack-exchange#top_tags_on_users) | Get the top tags (by score) a single user has posted in. | [users/{id}/top-tags](https://api.stackexchange.com/docs/top-tags-on-users) |
-| [top_question_tags_on_users](https://github.com/KarthikGangadhar/stack-exchange#top_question_tags_on_users) | Get the top tags (by score) a single user has asked questions in. | [users/{id}/top-question-tags](https://api.stackexchange.com/docs/top-question-tags-on-users) |
-| [moderators](https://github.com/KarthikGangadhar/stack-exchange#moderators) | Get the users who have moderation powers on the site. | [users/moderators](https://api.stackexchange.com/docs/moderators) |
-| [elected_moderators](https://github.com/KarthikGangadhar/stack-exchange#elected_moderators) | Get the users who are active moderators who have also won a moderator election. | [users/moderators/elected](https://api.stackexchange.com/docs/elected-moderators) |
-| [user_inbox](https://github.com/KarthikGangadhar/stack-exchange#user_inbox) | Get a user's inbox. auth required  | [users/{id}/inbox](https://api.stackexchange.com/docs/user-inbox) |
-| [user_unread_inbox](https://github.com/KarthikGangadhar/stack-exchange#user_unread_inbox) | Get the unread items in a user's inbox. auth required  | [users/{id}/inbox/unread](https://api.stackexchange.com/docs/user-unread-inbox) |
-| [associated_users](https://github.com/KarthikGangadhar/stack-exchange#associated_users) | Get a user's associated accounts. | [users/{ids}/associated](https://api.stackexchange.com/docs/associated-users) |
-| [merge_history](https://github.com/KarthikGangadhar/stack-exchange#merge_history) | Get the merges a user's accounts has undergone. | [users/{ids}/merges](https://api.stackexchange.com/docs/merge-history) |
+| [users](https://www.npmjs.com/package/stack-exchange#users) | Get all users on the site. | [users](https://api.stackexchange.com/docs/users) |
+| [users_by_ids](https://www.npmjs.com/package/stack-exchange#users_by_ids) | Get the users identified by a set of ids. | [users/{ids}](https://api.stackexchange.com/docs/users-by-ids) |
+| [answers_on_users](https://www.npmjs.com/package/stack-exchange#answers_on_users) | Get the answers posted by the users identified by a set of ids. | [users/{ids}/answers]( https://api.stackexchange.com/docs/answers-on-users) |
+| [badges_on_users](https://www.npmjs.com/package/stack-exchange#badges_on_users) | Get the badges earned by the users identified by a set of ids. | [users/{ids}/badges](https://api.stackexchange.com/docs/badges-on-users) |
+| [comments_on_users](https://www.npmjs.com/package/stack-exchange#comments_on_users) | Get the comments posted by the users identified by a set of ids. | [users/{ids}/comments](https://api.stackexchange.com/docs/comments-on-users) |
+| [comments_by_users_to_user](https://www.npmjs.com/package/stack-exchange#comments_by_users_to_user) | Get the comments posted by a set of users in reply to another user. | [/users/{ids}/comments/{toid}](https://api.stackexchange.com/docs/comments-by-users-to-user) |
+|[favorites_on_users](https://www.npmjs.com/package/stack-exchange#favorites_on_users)  | Get the questions favorited by users identified by a set of ids. | [users/{ids}/favorites](https://api.stackexchange.com/docs/favorites-on-users) |
+| [mentions_on_users](https://www.npmjs.com/package/stack-exchange#mentions_on_users) | Get the comments that mention one of the users identified by a set of ids. | [users/{ids}/mentioned](https://api.stackexchange.com/docs/mentions-on-users) |
+| [users_network_activity](https://www.npmjs.com/package/stack-exchange#users_network_activity) | Gets a user's activity across the Stack Exchange network. | [users/{id}/network-activity](https://api.stackexchange.com/docs/users-network-activity) |
+| [user_notifications](https://www.npmjs.com/package/stack-exchange#user_notifications) | Get a user's notifications. | [users/{id}/notifications](https://api.stackexchange.com/docs/user-notifications) |
+| [user_unread_notifications](https://www.npmjs.com/package/stack-exchange#user_unread_notifications) | Get a user's unread notifications. | [users/{id}/notifications/unread](https://api.stackexchange.com/docs/user-unread-notifications) |
+|[posts_on_users](https://www.npmjs.com/package/stack-exchange#posts_on_users) | Get all posts (questions and answers) owned by a set of users. | [users/{ids}/posts](https://api.stackexchange.com/docs/posts-on-users) |
+| [privileges_on_users](https://www.npmjs.com/package/stack-exchange#privileges_on_users) | Get the privileges the given user has on the site. | [users/{id}/privileges](https://api.stackexchange.com/docs/privileges-on-users) |
+| [questions_on_users](https://www.npmjs.com/package/stack-exchange#questions_on_users) | Get the questions asked by the users identified by a set of ids. | [users/{ids}/questions](https://api.stackexchange.com/docs/questions-on-users) |
+| [featured_questions_on_users](https://www.npmjs.com/package/stack-exchange#featured_questions_on_users) | Get the questions on which a set of users, have active bounties. | [users/{ids}/questions/featured](https://api.stackexchange.com/docs/featured-questions-on-users) |
+| [no_answer_questions_on_users](https://www.npmjs.com/package/stack-exchange#no_answer_questions_on_users) | Get the questions asked by a set of users, which have no answers. | [users/{ids}/questions/no-answers](https://api.stackexchange.com/docs/no-answer-questions-on-users) |
+| [unaccepted_questions_on_users](https://www.npmjs.com/package/stack-exchange#unaccepted_questions_on_users) | Get the questions asked by a set of users, which have at least one answer but no accepted answer. | [users/{ids}/questions/unaccepted](https://api.stackexchange.com/docs/unaccepted-questions-on-users) |
+| [unanswered_questions_on_users](https://www.npmjs.com/package/stack-exchange#unanswered_questions_on_users) | Get the questions asked by a set of users, which are not considered to be adequately answered. | [users/{ids}/questions/unanswered](https://api.stackexchange.com/docs/unanswered-questions-on-users) |
+| [reputation_on_users](https://www.npmjs.com/package/stack-exchange#reputation_on_users) | Get a subset of the reputation changes experienced by the users identified by a set of ids. | [users/{ids}/reputation](https://api.stackexchange.com/docs/reputation-on-users) |
+| [reputation_history](https://www.npmjs.com/package/stack-exchange#reputation_history) | Get a history of a user's reputation, excluding private events. | [users/{ids}/reputation-history](https://api.stackexchange.com/docs/reputation-history) |
+| [full_reputation_history](https://www.npmjs.com/package/stack-exchange#full_reputation_history) | Get a full history of a user's reputation. auth required | [users/{id}/reputation-history/full](https://api.stackexchange.com/docs/full-reputation-history) |
+| [tags_on_users](https://www.npmjs.com/package/stack-exchange#tags_on_users) | Get the tags that the users (identified by a set of ids) have been active in. | [users/{ids}/tags](https://api.stackexchange.com/docs/tags-on-users) |
+| [suggested_edits_on_users](https://www.npmjs.com/package/stack-exchange#suggested_edits_on_users) | Get the suggested edits provided by users identified by a set of ids. | [users/{ids}/suggested-edits](https://api.stackexchange.com/docs/suggested-edits-on-users) |
+| [top_user_answers_in_tags](https://www.npmjs.com/package/stack-exchange#top_user_answers_in_tags) | Get the top answers a user has posted on questions with a set of tags. | [users/{id}/tags/{tags}/top-answers](https://api.stackexchange.com/docs/top-user-answers-in-tags) |
+| [top_user_questions_in_tags](https://www.npmjs.com/package/stack-exchange#top_user_questions_in_tags) | Get the top questions a user has posted with a set of tags. | [users/{id}/tags/{tags}/top-questions](https://api.stackexchange.com/docs/top-user-questions-in-tags) |
+| [timeline_on_users](https://www.npmjs.com/package/stack-exchange#timeline_on_users) | Get a subset of the actions of that have been taken by the users identified by a set of ids. | [users/{ids}/timeline](https://api.stackexchange.com/docs/timeline-on-users) |
+| [top_answer_tags_on_users](https://www.npmjs.com/package/stack-exchange#top_answer_tags_on_users) | Get the top tags (by score) a single user has posted answers in. | [users/{id}/top-answer-tags](https://api.stackexchange.com/docs/top-answer-tags-on-users) |
+| [top_tags_on_users](https://www.npmjs.com/package/stack-exchange#top_tags_on_users) | Get the top tags (by score) a single user has posted in. | [users/{id}/top-tags](https://api.stackexchange.com/docs/top-tags-on-users) |
+| [top_question_tags_on_users](https://www.npmjs.com/package/stack-exchange#top_question_tags_on_users) | Get the top tags (by score) a single user has asked questions in. | [users/{id}/top-question-tags](https://api.stackexchange.com/docs/top-question-tags-on-users) |
+| [moderators](https://www.npmjs.com/package/stack-exchange#moderators) | Get the users who have moderation powers on the site. | [users/moderators](https://api.stackexchange.com/docs/moderators) |
+| [elected_moderators](https://www.npmjs.com/package/stack-exchange#elected_moderators) | Get the users who are active moderators who have also won a moderator election. | [users/moderators/elected](https://api.stackexchange.com/docs/elected-moderators) |
+| [user_inbox](https://www.npmjs.com/package/stack-exchange#user_inbox) | Get a user's inbox. auth required  | [users/{id}/inbox](https://api.stackexchange.com/docs/user-inbox) |
+| [user_unread_inbox](https://www.npmjs.com/package/stack-exchange#user_unread_inbox) | Get the unread items in a user's inbox. auth required  | [users/{id}/inbox/unread](https://api.stackexchange.com/docs/user-unread-inbox) |
+| [associated_users](https://www.npmjs.com/package/stack-exchange#associated_users) | Get a user's associated accounts. | [users/{ids}/associated](https://api.stackexchange.com/docs/associated-users) |
+| [merge_history](https://www.npmjs.com/package/stack-exchange#merge_history) | Get the merges a user's accounts has undergone. | [users/{ids}/merges](https://api.stackexchange.com/docs/merge-history) |
 
 * [Me section](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me-section)
 
@@ -2615,138 +2615,138 @@ The module exposes following endpoints of stackexchange api:
 | [me_associated_users](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_associated_users) | Get a user's associated accounts. | [me/associated](https://api.stackexchange.com/docs/me-associated-users) |
 | [me_merge_history](https://github.com/KarthikGangadhar/stack-exchange/blob/master/README.md#me_merge_history) | Get the merges a user's accounts has undergone. | [me/merges](https://api.stackexchange.com/docs/me-merge-history) |
 
-* [Questions section](https://github.com/KarthikGangadhar/stack-exchange#questions-section)
+* [Questions section](https://www.npmjs.com/package/stack-exchange#questions-section)
 
 | Endpoints | Description | See in StackExchange              |
 |-------------|------|--------------------|
-| [questions](https://github.com/KarthikGangadhar/stack-exchange#questions) | Get all questions on the site. | [questions](https://api.stackexchange.com/docs/questions) |
-| [quetions_by_id](https://github.com/KarthikGangadhar/stack-exchange#questions-by-ids) | Get the questions identified by a set of ids. | [questions/{ids}](https://api.stackexchange.com/docs/questions-by-ids) |
-| [answers_on_questions](https://github.com/KarthikGangadhar/stack-exchange#answers-on-questions) | Get the answers to the questions identified by a set of ids. | [questions/{ids}/answers](https://api.stackexchange.com/docs/answers-on-questions) |
-| [render_answers](https://github.com/KarthikGangadhar/stack-exchange#render-answers) | Renders a hypothetical answer to a question. This is a post endpoints, the options section looks like this, both fields are required.  | [questions/{id}/answers/render](https://api.stackexchange.com/docs/render-answer) |
-| [linked_questions](https://github.com/KarthikGangadhar/stack-exchange#linked-questions) | Get the questions that link to the questions identified by a set of ids.  | [questions/{ids}/linked](https://api.stackexchange.com/docs/linked-questions) |
-| [related_questions](https://github.com/KarthikGangadhar/stack-exchange#related-questions)  | Get the questions that are related to the questions identified by a set of ids. | [questions/{ids}/related](https://api.stackexchange.com/docs/related-questions) |
-| [questions_timeline](https://github.com/KarthikGangadhar/stack-exchange#questions-timeline) | Get the timelines of the questions identified by a set of ids.  | [questions/{ids}/timeline](https://api.stackexchange.com/docs/questions-timeline) |
-| [featured_questions](https://github.com/KarthikGangadhar/stack-exchange#featured-questions) | Get all questions on the site with active bounties. | [questions/featured](https://api.stackexchange.com/docs/featured-questions) |
-| [no-answer-questions](https://github.com/KarthikGangadhar/stack-exchange#no-answer-questions) | Get all questions on the site with no answers. | [questions/no-answers](https://api.stackexchange.com/docs/no-answer-questions) |
-| [unanswered_questions](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions) | Get all questions the site considers unanswered. | [questions/unanswered](https://api.stackexchange.com/docs/unanswered-questions) |
-| [unanswered_questions_my_tags](https://github.com/KarthikGangadhar/stack-exchange#unanswered-questions-my-tags) | Get questions the site considers unanswered within a user's favorite or interesting tags. **auth required**. | [questions/unanswered/my-tags](https://api.stackexchange.com/docs/unanswered-questions-my-tags) |
-| [question_flag_options](https://github.com/KarthikGangadhar/stack-exchange#question-flag-options) | Returns valid flag options for the given question. **auth** required. | [questions/{id}/flags/options](https://api.stackexchange.com/docs/question-flag-options) |
-| [question_close_options](https://github.com/KarthikGangadhar/stack-exchange#question-close-options) | Returns valid flag options which are also close reasons for the given question. **auth required.**  | [questions/{id}/close/options](https://api.stackexchange.com/docs/question-close-options) |
-| [comments_on_questions](https://github.com/KarthikGangadhar/stack-exchange#comments-on-questions) | Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options. | [questions/{ids}/comments](https://api.stackexchange.com/docs/comments-on-questions) |
+| [questions](https://www.npmjs.com/package/stack-exchange#questions) | Get all questions on the site. | [questions](https://api.stackexchange.com/docs/questions) |
+| [quetions_by_id](https://www.npmjs.com/package/stack-exchange#questions-by-ids) | Get the questions identified by a set of ids. | [questions/{ids}](https://api.stackexchange.com/docs/questions-by-ids) |
+| [answers_on_questions](https://www.npmjs.com/package/stack-exchange#answers-on-questions) | Get the answers to the questions identified by a set of ids. | [questions/{ids}/answers](https://api.stackexchange.com/docs/answers-on-questions) |
+| [render_answers](https://www.npmjs.com/package/stack-exchange#render-answers) | Renders a hypothetical answer to a question. This is a post endpoints, the options section looks like this, both fields are required.  | [questions/{id}/answers/render](https://api.stackexchange.com/docs/render-answer) |
+| [linked_questions](https://www.npmjs.com/package/stack-exchange#linked-questions) | Get the questions that link to the questions identified by a set of ids.  | [questions/{ids}/linked](https://api.stackexchange.com/docs/linked-questions) |
+| [related_questions](https://www.npmjs.com/package/stack-exchange#related-questions)  | Get the questions that are related to the questions identified by a set of ids. | [questions/{ids}/related](https://api.stackexchange.com/docs/related-questions) |
+| [questions_timeline](https://www.npmjs.com/package/stack-exchange#questions-timeline) | Get the timelines of the questions identified by a set of ids.  | [questions/{ids}/timeline](https://api.stackexchange.com/docs/questions-timeline) |
+| [featured_questions](https://www.npmjs.com/package/stack-exchange#featured-questions) | Get all questions on the site with active bounties. | [questions/featured](https://api.stackexchange.com/docs/featured-questions) |
+| [no-answer-questions](https://www.npmjs.com/package/stack-exchange#no-answer-questions) | Get all questions on the site with no answers. | [questions/no-answers](https://api.stackexchange.com/docs/no-answer-questions) |
+| [unanswered_questions](https://www.npmjs.com/package/stack-exchange#unanswered-questions) | Get all questions the site considers unanswered. | [questions/unanswered](https://api.stackexchange.com/docs/unanswered-questions) |
+| [unanswered_questions_my_tags](https://www.npmjs.com/package/stack-exchange#unanswered-questions-my-tags) | Get questions the site considers unanswered within a user's favorite or interesting tags. **auth required**. | [questions/unanswered/my-tags](https://api.stackexchange.com/docs/unanswered-questions-my-tags) |
+| [question_flag_options](https://www.npmjs.com/package/stack-exchange#question-flag-options) | Returns valid flag options for the given question. **auth** required. | [questions/{id}/flags/options](https://api.stackexchange.com/docs/question-flag-options) |
+| [question_close_options](https://www.npmjs.com/package/stack-exchange#question-close-options) | Returns valid flag options which are also close reasons for the given question. **auth required.**  | [questions/{id}/close/options](https://api.stackexchange.com/docs/question-close-options) |
+| [comments_on_questions](https://www.npmjs.com/package/stack-exchange#comments-on-questions) | Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options. | [questions/{ids}/comments](https://api.stackexchange.com/docs/comments-on-questions) |
 
 
-* [Badges section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
-
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| [badges](https://github.com/KarthikGangadhar/stack-exchange#badges) | Get all badges on the site, in alphabetical order. | [badges](https://api.stackexchange.com/docs/badges) |
-| [badges_by_id](https://github.com/KarthikGangadhar/stack-exchange#badges_by_id) | Get the badges identified by ids. | [badges/{ids}](https://api.stackexchange.com/docs/badges-by-ids) |
-| [badges_by_name](https://github.com/KarthikGangadhar/stack-exchange#badges_by_name) | Get all non-tagged-based badges in alphabetical order. | [badges/name](https://api.stackexchange.com/docs/badges-by-name) |
-| [badge_recipients](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients) | Get badges recently awarded on the site. | [badges/recipients](https://api.stackexchange.com/docs/badge-recipients)  |
-| [badge_recipients_by_id](https://github.com/KarthikGangadhar/stack-exchange#badge_recipients_by_id) | Get the recent recipients of the given badges. | [badges/{ids}/recipients](https://api.stackexchange.com/docs/badge-recipients-by-ids)  |
-| [badge_by_tags](https://github.com/KarthikGangadhar/stack-exchange#badge_by_tags) | Get all tagged-based badges in alphabetical order. | [badges/tags](https://api.stackexchange.com/docs/badges-by-tag)  |
-
-
-* [Tags section](https://github.com/KarthikGangadhar/stack-exchange#badges-section)
+* [Badges section](https://www.npmjs.com/package/stack-exchange#badges-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [tags](https://github.com/KarthikGangadhar/stack-exchange#tags) | Get the tags on the site. | [tags](https://api.stackexchange.com/docs/tags) |
-| [tags_by_name](https://github.com/KarthikGangadhar/stack-exchange#tags-by-name) | Get tags on the site by their names. | [tags/{tags}/info](https://api.stackexchange.com/docs/tags-by-name) |
-| [moderator_only_tags](https://github.com/KarthikGangadhar/stack-exchange#moderator-only-tags) | Get the tags on the site that only moderators can use. | [tags/moderator-only](https://api.stackexchange.com/docs/moderator-only-tags) |
-| [require_tags](https://github.com/KarthikGangadhar/stack-exchange#require-tags) | Get the tags on the site that fulfill required tag constraints. | [tags/required](https://api.stackexchange.com/docs/required-tags) |
-| [tag_synonyms](https://github.com/KarthikGangadhar/stack-exchange#tag-synonyms) | Get all the tag synonyms on the site. | [tags/synonyms](https://api.stackexchange.com/docs/tag-synonyms) |
-| [faqs_by_tags](https://github.com/KarthikGangadhar/stack-exchange#faqs-by-tags) | Get frequently asked questions in a set of tags. | [tags/{tags}/faq](https://api.stackexchange.com/docs/faqs-by-tags) |
-| [related_tags](https://github.com/KarthikGangadhar/stack-exchange#related-tags) | Get related tags, based on common tag pairings. | [tags/{tags}/related](https://api.stackexchange.com/docs/related-tags) |
-| [synonyms_by_tags](https://github.com/KarthikGangadhar/stack-exchange#synonyms-by-tags) | Get the synonyms for a specific set of tags. | [tags/{tags}/synonyms](https://api.stackexchange.com/docs/synonyms-by-tags) |
-| [top_answerers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-answerers-on-tags) | Get the top answer posters in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-answerers/{period}](https://api.stackexchange.com/docs/top-answerers-on-tags) |
-| [top_askers_on_tags](https://github.com/KarthikGangadhar/stack-exchange#top-askers-on-tags) | Get the top question askers in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-askers/{period}](https://api.stackexchange.com/docs/top-askers-on-tags) |
-| [wikis_by_tags](https://github.com/KarthikGangadhar/stack-exchange#wikis-by-tags) | Get the wiki entries for a set of tags. | [tags/{tags}/wikis](https://api.stackexchange.com/docs/wikis-by-tags) |
+| [badges](https://www.npmjs.com/package/stack-exchange#badges) | Get all badges on the site, in alphabetical order. | [badges](https://api.stackexchange.com/docs/badges) |
+| [badges_by_id](https://www.npmjs.com/package/stack-exchange#badges_by_id) | Get the badges identified by ids. | [badges/{ids}](https://api.stackexchange.com/docs/badges-by-ids) |
+| [badges_by_name](https://www.npmjs.com/package/stack-exchange#badges_by_name) | Get all non-tagged-based badges in alphabetical order. | [badges/name](https://api.stackexchange.com/docs/badges-by-name) |
+| [badge_recipients](https://www.npmjs.com/package/stack-exchange#badge_recipients) | Get badges recently awarded on the site. | [badges/recipients](https://api.stackexchange.com/docs/badge-recipients)  |
+| [badge_recipients_by_id](https://www.npmjs.com/package/stack-exchange#badge_recipients_by_id) | Get the recent recipients of the given badges. | [badges/{ids}/recipients](https://api.stackexchange.com/docs/badge-recipients-by-ids)  |
+| [badge_by_tags](https://www.npmjs.com/package/stack-exchange#badge_by_tags) | Get all tagged-based badges in alphabetical order. | [badges/tags](https://api.stackexchange.com/docs/badges-by-tag)  |
 
-* [Comments section](https://github.com/KarthikGangadhar/stack-exchange#comments-section)
+
+* [Tags section](https://www.npmjs.com/package/stack-exchange#badges-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [comments](https://github.com/KarthikGangadhar/stack-exchange#comments) | Get all comments on the site. | [comments](https://api.stackexchange.com/docs/comments) |
-| [comments_by_ids](https://github.com/KarthikGangadhar/stack-exchange#comments_by_ids) | Get comments identified by a set of ids. | [comments/{ids}](https://api.stackexchange.com/docs/comments-by-ids) |
-| [delete_comment](https://github.com/KarthikGangadhar/stack-exchange#delete_comment) | Delete a comment identified by its id. **auth required** | [comments/{id}/delete](https://api.stackexchange.com/docs/delete-comment) |
-| [edit_comment](https://github.com/KarthikGangadhar/stack-exchange#edit_comment) | Edit a comment identified by its id. **auth required** | [comments/{id}/edit](https://api.stackexchange.com/docs/edit-comment) |
-| [create_comment_flag](https://github.com/KarthikGangadhar/stack-exchange#create_comment_flag) | Casts a flag on the given comment. **auth required** | [comments/{id}/flags/add](https://api.stackexchange.com/docs/create-comment-flag) |
-| [comment_flag_options](https://github.com/KarthikGangadhar/stack-exchange#comment_flag_options) | Returns valid flag options for the given comment. **auth required** | [comments/{id}/flags/options](https://api.stackexchange.com/docs/comment-flag-options) |
-| [upvote_comment](https://github.com/KarthikGangadhar/stack-exchange#upvote_comment) | Casts an upvote on the given comment. **auth required** | [comments/{id}/upvote](https://api.stackexchange.com/docs/upvote-comment) |
-| [undo_upvote_comment](https://github.com/KarthikGangadhar/stack-exchange#undo_upvote_comment) | Undoes an upvote on the given comment. **auth required** | [comments/{id}/upvote/undo](https://api.stackexchange.com/docs/undo-upvote-comment) |
+| [tags](https://www.npmjs.com/package/stack-exchange#tags) | Get the tags on the site. | [tags](https://api.stackexchange.com/docs/tags) |
+| [tags_by_name](https://www.npmjs.com/package/stack-exchange#tags-by-name) | Get tags on the site by their names. | [tags/{tags}/info](https://api.stackexchange.com/docs/tags-by-name) |
+| [moderator_only_tags](https://www.npmjs.com/package/stack-exchange#moderator-only-tags) | Get the tags on the site that only moderators can use. | [tags/moderator-only](https://api.stackexchange.com/docs/moderator-only-tags) |
+| [require_tags](https://www.npmjs.com/package/stack-exchange#require-tags) | Get the tags on the site that fulfill required tag constraints. | [tags/required](https://api.stackexchange.com/docs/required-tags) |
+| [tag_synonyms](https://www.npmjs.com/package/stack-exchange#tag-synonyms) | Get all the tag synonyms on the site. | [tags/synonyms](https://api.stackexchange.com/docs/tag-synonyms) |
+| [faqs_by_tags](https://www.npmjs.com/package/stack-exchange#faqs-by-tags) | Get frequently asked questions in a set of tags. | [tags/{tags}/faq](https://api.stackexchange.com/docs/faqs-by-tags) |
+| [related_tags](https://www.npmjs.com/package/stack-exchange#related-tags) | Get related tags, based on common tag pairings. | [tags/{tags}/related](https://api.stackexchange.com/docs/related-tags) |
+| [synonyms_by_tags](https://www.npmjs.com/package/stack-exchange#synonyms-by-tags) | Get the synonyms for a specific set of tags. | [tags/{tags}/synonyms](https://api.stackexchange.com/docs/synonyms-by-tags) |
+| [top_answerers_on_tags](https://www.npmjs.com/package/stack-exchange#top-answerers-on-tags) | Get the top answer posters in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-answerers/{period}](https://api.stackexchange.com/docs/top-answerers-on-tags) |
+| [top_askers_on_tags](https://www.npmjs.com/package/stack-exchange#top-askers-on-tags) | Get the top question askers in a specific tag, either in the last month or for all time.  | [tags/{tag}/top-askers/{period}](https://api.stackexchange.com/docs/top-askers-on-tags) |
+| [wikis_by_tags](https://www.npmjs.com/package/stack-exchange#wikis-by-tags) | Get the wiki entries for a set of tags. | [tags/{tags}/wikis](https://api.stackexchange.com/docs/wikis-by-tags) |
 
-
-* [Posts section](https://github.com/KarthikGangadhar/stack-exchange#posts-section)
-
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| [posts](https://github.com/KarthikGangadhar/stack-exchange#posts) | Get all posts (questions and answers) in the system. | [posts](https://api.stackexchange.com/docs/posts) |
-| [posts_by_ids](https://github.com/KarthikGangadhar/stack-exchange#posts_by_ids) | Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known. | [posts/{ids}](https://api.stackexchange.com/docs/posts-by-ids) |
-| [comments_on_posts](https://github.com/KarthikGangadhar/stack-exchange#comments_on_posts) | Get comments on the posts (question or answer) identified by a set of ids. | [posts/{ids}/comments](https://api.stackexchange.com/docs/comments-on-posts) |
-| [create_comment](https://github.com/KarthikGangadhar/stack-exchange#create_comment) | Create a new comment on the post identified by id. **auth required**  | [posts/{id}/comments/add](https://api.stackexchange.com/docs/create-comment) |
-| [render_comment](https://github.com/KarthikGangadhar/stack-exchange#render_comment) | Renders a hypothetical comment on the given post. | [posts/{id}/comments/render](https://api.stackexchange.com/docs/render-comment) |
-| [revisions_by_ids](https://github.com/KarthikGangadhar/stack-exchange#revisions_by_ids) | Get revisions on the set of posts in ids. | [posts/{ids}/revisions](https://api.stackexchange.com/docs/revisions-by-ids) |
-| [posts_on_suggested_edits](https://github.com/KarthikGangadhar/stack-exchange#posts_on_suggested_edits) | Get suggested edits on the set of posts in ids. | [posts/{ids}/suggested-edits](https://api.stackexchange.com/docs/posts-on-suggested-edits) |
-
-* [Search section](https://github.com/KarthikGangadhar/stack-exchange#search-section)
+* [Comments section](https://www.npmjs.com/package/stack-exchange#comments-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [search](https://github.com/KarthikGangadhar/stack-exchange#search) | Search the site for questions meeting certain criteria. | [search](https://api.stackexchange.com/docs/search) |
-| [advanced_search](https://github.com/KarthikGangadhar/stack-exchange#advanced_search) | Search the site for questions using most of the on-site search options. | [search/advanced](https://api.stackexchange.com/docs/advanced-search) |
-| [similar](https://github.com/KarthikGangadhar/stack-exchange#similar) | Search the site based on similarity to a title. | [similar](https://api.stackexchange.com/docs/similar) |
-| [excerpt_search](https://github.com/KarthikGangadhar/stack-exchange#excerpt_search) | Searches a site. | [search/excerpts](https://api.stackexchange.com/docs/excerpt-search) |
+| [comments](https://www.npmjs.com/package/stack-exchange#comments) | Get all comments on the site. | [comments](https://api.stackexchange.com/docs/comments) |
+| [comments_by_ids](https://www.npmjs.com/package/stack-exchange#comments_by_ids) | Get comments identified by a set of ids. | [comments/{ids}](https://api.stackexchange.com/docs/comments-by-ids) |
+| [delete_comment](https://www.npmjs.com/package/stack-exchange#delete_comment) | Delete a comment identified by its id. **auth required** | [comments/{id}/delete](https://api.stackexchange.com/docs/delete-comment) |
+| [edit_comment](https://www.npmjs.com/package/stack-exchange#edit_comment) | Edit a comment identified by its id. **auth required** | [comments/{id}/edit](https://api.stackexchange.com/docs/edit-comment) |
+| [create_comment_flag](https://www.npmjs.com/package/stack-exchange#create_comment_flag) | Casts a flag on the given comment. **auth required** | [comments/{id}/flags/add](https://api.stackexchange.com/docs/create-comment-flag) |
+| [comment_flag_options](https://www.npmjs.com/package/stack-exchange#comment_flag_options) | Returns valid flag options for the given comment. **auth required** | [comments/{id}/flags/options](https://api.stackexchange.com/docs/comment-flag-options) |
+| [upvote_comment](https://www.npmjs.com/package/stack-exchange#upvote_comment) | Casts an upvote on the given comment. **auth required** | [comments/{id}/upvote](https://api.stackexchange.com/docs/upvote-comment) |
+| [undo_upvote_comment](https://www.npmjs.com/package/stack-exchange#undo_upvote_comment) | Undoes an upvote on the given comment. **auth required** | [comments/{id}/upvote/undo](https://api.stackexchange.com/docs/undo-upvote-comment) |
 
-* [Suggested Edits section](https://github.com/KarthikGangadhar/stack-exchange#users-section)
 
-| Endpoints | Description | See in StackExchange    |
-|-------------|------|--------------------|
-| [suggested_edits](https://github.com/KarthikGangadhar/stack-exchange#suggested_edits) | Get all the suggested edits on the site. | [suggested-edits](https://api.stackexchange.com/docs/suggested-edits) |
-| [suggested_edits_by_ids](https://github.com/KarthikGangadhar/stack-exchange#suggested_edits_by_ids) | Get the suggested edits identified by a set of ids. | [suggested-edits/{ids}](https://api.stackexchange.com/docs/suggested-edits-by-ids) |
-
-* [Network section](https://github.com/KarthikGangadhar/stack-exchange#network-section)
+* [Posts section](https://www.npmjs.com/package/stack-exchange#posts-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [invalidate_access_tokens](https://github.com/KarthikGangadhar/stack-exchange#invalidate_access_tokens) | Allows an application to dispose of access_tokens when it is done with them. | [access-tokens/{accessTokens}/invalidate](https://api.stackexchange.com/docs/invalidate-access-tokens) |
-| [read_access_tokens](https://github.com/KarthikGangadhar/stack-exchange#read_access_tokens) | Allows an application to inspect access_tokens it has, useful for debugging. | [access-tokens/{accessTokens}](https://api.stackexchange.com/docs/read-access-tokens) |
-| [application_de_authenticate](https://github.com/KarthikGangadhar/stack-exchange#application_de_authenticate) | Allows an application to de-authorize itself for a set of users. | [apps/{accessTokens}/de-authenticate](https://api.stackexchange.com/docs/application-de-authenticate) |
-| [errors](https://github.com/KarthikGangadhar/stack-exchange#errors-1) | Get descriptions of all the errors that the API could return. | [errors](https://api.stackexchange.com/docs/errors) |
-| [simulate_errors](https://github.com/KarthikGangadhar/stack-exchange#simulate_errors) | Simulate an API error for testing purposes.  | [errors/{id}](https://api.stackexchange.com/docs/simulate-error) |
-| [create_filter](https://github.com/KarthikGangadhar/stack-exchange#create_filter) | Create a new [filter](https://api.stackexchange.com/docs/filters). | [filters/create](https://api.stackexchange.com/docs/create-filter) |
-| [read_filter](https://github.com/KarthikGangadhar/stack-exchange#read_filter) | Decode a set of filters, useful for debugging purposes. | [filters/{filters}](https://api.stackexchange.com/docs/read-filter) |
-| [Inbox](https://github.com/KarthikGangadhar/stack-exchange#inbox-1) | Get a user's inbox, outside of the context of a site. **auth required** | [inbox](https://api.stackexchange.com/docs/inbox) |
-| [inbox_unread](https://github.com/KarthikGangadhar/stack-exchange#inbox_unread) | Get the unread items in a user's inbox, outside of the context of a site. **auth required** | [inbox/unread](https://api.stackexchange.com/docs/inbox-unread) |
-| [notifications](https://github.com/KarthikGangadhar/stack-exchange#notifications-1) | Get a user's notifications, outside of the context of a site. **auth required** | [notifications](https://api.stackexchange.com/docs/notifications) |
-| [unread_notifications](https://github.com/KarthikGangadhar/stack-exchange#unread_notifications) | Get a user's unread notifications, outside of the context of a site. **auth required** | [notifications/unread](https://api.stackexchange.com/docs/unread-notifications) |
-| [sites](https://github.com/KarthikGangadhar/stack-exchange#sites-1) | Get all the sites in the Stack Exchange network. | [sites](https://api.stackexchange.com/docs/sites) |
+| [posts](https://www.npmjs.com/package/stack-exchange#posts) | Get all posts (questions and answers) in the system. | [posts](https://api.stackexchange.com/docs/posts) |
+| [posts_by_ids](https://www.npmjs.com/package/stack-exchange#posts_by_ids) | Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known. | [posts/{ids}](https://api.stackexchange.com/docs/posts-by-ids) |
+| [comments_on_posts](https://www.npmjs.com/package/stack-exchange#comments_on_posts) | Get comments on the posts (question or answer) identified by a set of ids. | [posts/{ids}/comments](https://api.stackexchange.com/docs/comments-on-posts) |
+| [create_comment](https://www.npmjs.com/package/stack-exchange#create_comment) | Create a new comment on the post identified by id. **auth required**  | [posts/{id}/comments/add](https://api.stackexchange.com/docs/create-comment) |
+| [render_comment](https://www.npmjs.com/package/stack-exchange#render_comment) | Renders a hypothetical comment on the given post. | [posts/{id}/comments/render](https://api.stackexchange.com/docs/render-comment) |
+| [revisions_by_ids](https://www.npmjs.com/package/stack-exchange#revisions_by_ids) | Get revisions on the set of posts in ids. | [posts/{ids}/revisions](https://api.stackexchange.com/docs/revisions-by-ids) |
+| [posts_on_suggested_edits](https://www.npmjs.com/package/stack-exchange#posts_on_suggested_edits) | Get suggested edits on the set of posts in ids. | [posts/{ids}/suggested-edits](https://api.stackexchange.com/docs/posts-on-suggested-edits) |
 
-* [Info section](https://github.com/KarthikGangadhar/stack-exchange#info-section)
+* [Search section](https://www.npmjs.com/package/stack-exchange#search-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [info](https://github.com/KarthikGangadhar/stack-exchange#info) | Get information about the entire site. | [info](https://api.stackexchange.com/docs/info) |
+| [search](https://www.npmjs.com/package/stack-exchange#search) | Search the site for questions meeting certain criteria. | [search](https://api.stackexchange.com/docs/search) |
+| [advanced_search](https://www.npmjs.com/package/stack-exchange#advanced_search) | Search the site for questions using most of the on-site search options. | [search/advanced](https://api.stackexchange.com/docs/advanced-search) |
+| [similar](https://www.npmjs.com/package/stack-exchange#similar) | Search the site based on similarity to a title. | [similar](https://api.stackexchange.com/docs/similar) |
+| [excerpt_search](https://www.npmjs.com/package/stack-exchange#excerpt_search) | Searches a site. | [search/excerpts](https://api.stackexchange.com/docs/excerpt-search) |
 
-* [Privilages section](https://github.com/KarthikGangadhar/stack-exchange#privilages-section)
+* [Suggested Edits section](https://www.npmjs.com/package/stack-exchange#users-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [privilages](https://github.com/KarthikGangadhar/stack-exchange#info) | Get all the privileges available on the site. | [privileges](https://api.stackexchange.com/docs/privileges) |
+| [suggested_edits](https://www.npmjs.com/package/stack-exchange#suggested_edits) | Get all the suggested edits on the site. | [suggested-edits](https://api.stackexchange.com/docs/suggested-edits) |
+| [suggested_edits_by_ids](https://www.npmjs.com/package/stack-exchange#suggested_edits_by_ids) | Get the suggested edits identified by a set of ids. | [suggested-edits/{ids}](https://api.stackexchange.com/docs/suggested-edits-by-ids) |
+
+* [Network section](https://www.npmjs.com/package/stack-exchange#network-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [invalidate_access_tokens](https://www.npmjs.com/package/stack-exchange#invalidate_access_tokens) | Allows an application to dispose of access_tokens when it is done with them. | [access-tokens/{accessTokens}/invalidate](https://api.stackexchange.com/docs/invalidate-access-tokens) |
+| [read_access_tokens](https://www.npmjs.com/package/stack-exchange#read_access_tokens) | Allows an application to inspect access_tokens it has, useful for debugging. | [access-tokens/{accessTokens}](https://api.stackexchange.com/docs/read-access-tokens) |
+| [application_de_authenticate](https://www.npmjs.com/package/stack-exchange#application_de_authenticate) | Allows an application to de-authorize itself for a set of users. | [apps/{accessTokens}/de-authenticate](https://api.stackexchange.com/docs/application-de-authenticate) |
+| [errors](https://www.npmjs.com/package/stack-exchange#errors-1) | Get descriptions of all the errors that the API could return. | [errors](https://api.stackexchange.com/docs/errors) |
+| [simulate_errors](https://www.npmjs.com/package/stack-exchange#simulate_errors) | Simulate an API error for testing purposes.  | [errors/{id}](https://api.stackexchange.com/docs/simulate-error) |
+| [create_filter](https://www.npmjs.com/package/stack-exchange#create_filter) | Create a new [filter](https://api.stackexchange.com/docs/filters). | [filters/create](https://api.stackexchange.com/docs/create-filter) |
+| [read_filter](https://www.npmjs.com/package/stack-exchange#read_filter) | Decode a set of filters, useful for debugging purposes. | [filters/{filters}](https://api.stackexchange.com/docs/read-filter) |
+| [Inbox](https://www.npmjs.com/package/stack-exchange#inbox-1) | Get a user's inbox, outside of the context of a site. **auth required** | [inbox](https://api.stackexchange.com/docs/inbox) |
+| [inbox_unread](https://www.npmjs.com/package/stack-exchange#inbox_unread) | Get the unread items in a user's inbox, outside of the context of a site. **auth required** | [inbox/unread](https://api.stackexchange.com/docs/inbox-unread) |
+| [notifications](https://www.npmjs.com/package/stack-exchange#notifications-1) | Get a user's notifications, outside of the context of a site. **auth required** | [notifications](https://api.stackexchange.com/docs/notifications) |
+| [unread_notifications](https://www.npmjs.com/package/stack-exchange#unread_notifications) | Get a user's unread notifications, outside of the context of a site. **auth required** | [notifications/unread](https://api.stackexchange.com/docs/unread-notifications) |
+| [sites](https://www.npmjs.com/package/stack-exchange#sites-1) | Get all the sites in the Stack Exchange network. | [sites](https://api.stackexchange.com/docs/sites) |
+
+* [Info section](https://www.npmjs.com/package/stack-exchange#info-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [info](https://www.npmjs.com/package/stack-exchange#info) | Get information about the entire site. | [info](https://api.stackexchange.com/docs/info) |
+
+* [Privilages section](https://www.npmjs.com/package/stack-exchange#privilages-section)
+
+| Endpoints | Description | See in StackExchange    |
+|-------------|------|--------------------|
+| [privilages](https://www.npmjs.com/package/stack-exchange#info) | Get all the privileges available on the site. | [privileges](https://api.stackexchange.com/docs/privileges) |
 
     
-* [Revisions section](https://github.com/KarthikGangadhar/stack-exchange#revisions-section)
+* [Revisions section](https://www.npmjs.com/package/stack-exchange#revisions-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [revisions](https://github.com/KarthikGangadhar/stack-exchange#revisions) | Get all revisions identified by a set of ids. | [revisions/{ids}](https://api.stackexchange.com/docs/revisions-by-guids) |
+| [revisions](https://www.npmjs.com/package/stack-exchange#revisions) | Get all revisions identified by a set of ids. | [revisions/{ids}](https://api.stackexchange.com/docs/revisions-by-guids) |
 
 
-* [Events section](https://github.com/KarthikGangadhar/stack-exchange#events-section)
+* [Events section](https://www.npmjs.com/package/stack-exchange#events-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [events](https://github.com/KarthikGangadhar/stack-exchange#events) | Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required** | [events](https://api.stackexchange.com/docs/events) |
+| [events](https://www.npmjs.com/package/stack-exchange#events) | Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required** | [events](https://api.stackexchange.com/docs/events) |
      
 
 
