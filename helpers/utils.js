@@ -51,8 +51,8 @@ var PostResponse = (url, body) => {
     })
 };
 
-var GetEndpoint = (options, calltype) => {
-    let url = defaults.endpoints.BASE_URL
+var GetEndpoint = (version, options, calltype) => {
+    let url = defaults.endpoints.BASE_URL + version;
     Defaults(options, defaults[calltype])
     return url + defaults.endpoints[calltype] + querystring.stringify(options);
 }

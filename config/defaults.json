@@ -571,11 +571,11 @@
         "sort": "creation"
     },
     "endpoints": {
-        "BASE_URL": "https://api.stackexchange.com",
+        "BASE_URL": "https://api.stackexchange.com/",
         "EVENTS": "/2.2/events?",
         "QUESTIONS": "/2.2/questions?",
         "QUESTIONS_BY_ID": "/2.2/questions/%s?",
-        "INFO": "/2.2/info?",
+        "INFO": "/info?",
         "PRIVILEGES": "/2.2/privileges?",
         "REVISIONS": "/2.2/revisions/%s?",
         "BADGES": "/2.2/badges?",
