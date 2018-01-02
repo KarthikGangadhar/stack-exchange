@@ -33,7 +33,8 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
 For more details about the endpoints on each section visit [table-of-content](https://www.npmjs.com/package/stack-exchange#table-of-content). To use above mentioned sections endpoints, you need to create their respective sections objects as follows:
 
 ```javascript
-const stackexchange  = require("stack-exchange");
+
+const stackexchange  = require("stack-exchange")({ version : "2.2" });
 
 const stack_users = stackexchange.users;//for users sections endpoints
 const stack_me = stackexchange.me;//for me sections endpoints
