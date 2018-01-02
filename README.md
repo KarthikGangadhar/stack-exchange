@@ -35,21 +35,21 @@ For more details about the endpoints on each section visit [table-of-content](ht
 ```javascript
 const stackexchange  = require("stack-exchange");
 
-const stack_users = new stackexchange.users();//for users sections endpoints
-const stack_me = new stackexchange.me();//for me sections endpoints
-const stack_questions = new stackexchange.questions(); //for questions sections endpoints
-const stack_answers = new stackexchange.answers(); //for answers sections endpoints
-const stack_badges = new stackexchange.badges(); //for badges sections endpoints
-const stack_tags = new stackexchange.tags(); //for tags sections endpoints
-const stack_comments = new stackexchange.comments();//for comments sections endpoints
-const stack_posts = new stackexchange.posts();//for posts sections endpoints
-const stack_search = new stackexchange.search();//for search sections endpoints
-const stack_suggested_edits = new stackexchange.suggested_edits();//for suggested_edits sections endpoints
-const stack_network = new stackexchange.network();//for network sections endpoints
-const stack_info = new stackexchange.info(); //for info sections endpoints
-const stack_privilages = new stackexchange.privilages(); //for privilages sections endpoints
-const stack_revisions = new stackexchange.revisions(); //for revisions sections endpoints
-const stack_events = new stackexchange.events(); //for events sections endpoints
+const stack_users = stackexchange.users;//for users sections endpoints
+const stack_me = stackexchange.me;//for me sections endpoints
+const stack_questions = stackexchange.questions; //for questions sections endpoints
+const stack_answers = stackexchange.answers; //for answers sections endpoints
+const stack_badges = stackexchange.badges; //for badges sections endpoints
+const stack_tags = stackexchange.tags; //for tags sections endpoints
+const stack_comments = stackexchange.comments;//for comments sections endpoints
+const stack_posts = stackexchange.posts;//for posts sections endpoints
+const stack_search = stackexchange.search;//for search sections endpoints
+const stack_suggested_edits = stackexchange.suggested_edits;//for suggested_edits sections endpoints
+const stack_network = stackexchange.network;//for network sections endpoints
+const stack_info = stackexchange.info; //for info sections endpoints
+const stack_privilages = stackexchange.privilages; //for privilages sections endpoints
+const stack_revisions = stackexchange.revisions; //for revisions sections endpoints
+const stack_events = stackexchange.events; //for events sections endpoints
 ```
 
 ## users section
@@ -57,8 +57,8 @@ All user methods that take an {ids} parameter have a /me equivalent method that 
 
 ```js
 
-// creating users object
-const stack_users = new stackexchange.users();
+//  users object
+const stack_users = stackexchange.users;
 
 ```
 
@@ -760,8 +760,8 @@ stack_users.merge_history(user_ids, users_options, (response) => {
 
 ```js
 
-// creating me object
-const stack_me = new stackexchange.me();
+//  me object
+const stack_me = stackexchange.me;
 
 ```
 
@@ -1328,8 +1328,8 @@ let options  = {
     "key" : "your_key"
 }
 
-// creating questions object
-const stack_questions = new stackexchange.questions();
+//  questions object
+const stack_questions = stackexchange.questions;
 ```
 
 #### questions
@@ -1540,8 +1540,8 @@ The options object is optional, can be an empty object also. update all your que
 
 ```js
 
-// creating answers object
-const stack_answers = new stackexchange.answers();
+//  answers object
+const stack_answers = stackexchange.answers;
 ```
 
 #### answers
@@ -1644,8 +1644,8 @@ let badges_options = {
     "key": "U4DMV*8nvpm3EOpvf69Rxw(("
 }
 
-// creating badges object
-const stack_badges = new stackexchange.badges();
+//  badges object
+const stack_badges = stackexchange.badges;
 
 ```
 
@@ -1753,8 +1753,8 @@ let tags_options = {
 }
 
 
-// creating tags object
-const stack_tags = new stackexchange.tags();
+//  tags object
+const stack_tags = stackexchange.tags;
 ```
 
 #### tags
@@ -1886,8 +1886,8 @@ stack_tags.wikis_by_tags(tag_name, tags_options, (response) => {
 
 ```js
 
-// creating comments object
-const stack_comments = new stackexchange.comments();
+//  comments object
+const stack_comments = stackexchange.comments;
 
 
 ```
@@ -2057,8 +2057,8 @@ stack_comments.undo_upvote_comment(comment_id, comments_options, (response) => {
 
 ```js
 
-// creating posts object
-const stack_posts = new stackexchange.posts();
+//  posts object
+const stack_posts = stackexchange.posts;
 
 ```
 
@@ -2196,8 +2196,8 @@ stack_posts.posts_on_suggested_edits(post_id, posts_options, (response) => {
 
 ```js
 
-// creating search object
-const stack_search = new stackexchange.search();
+//  search object
+const stack_search = stackexchange.search;
 ```
 
 #### search
@@ -2274,8 +2274,8 @@ let suggested_edits_options = {
     "access_token": "your_token"
 }
 
-// creating suggested_edits object
-const stack_suggested_edits = new stackexchange.suggested_edits();
+//  suggested_edits object
+const stack_suggested_edits = stackexchange.suggested_edits;
 ```
 
 #### suggested_edits
@@ -2306,8 +2306,8 @@ These methods return data across the entire Stack Exchange network of sites. Acc
 
 ```js
 
-// creating network object
-const stack_network = new stackexchange.network();
+//  network object
+const stack_network = stackexchange.network;
 
 ```
 
@@ -2546,8 +2546,8 @@ let info_options = {
     "site": "stackoverflow"
 }
 
-// creating info object
-const stack_info = new stackexchange.info();
+//  info object
+const stack_info = stackexchange.info;
 ```
 
 #### info
@@ -2569,8 +2569,8 @@ let privilages_options = {
     "key" : "your_key"
 }
 
-// creating privilages object
-const stack_privilages = new stackexchange.privilages();
+//  privilages object
+const stack_privilages = stackexchange.privilages;
 ```
 
 #### privilages
@@ -2592,8 +2592,8 @@ let revisions_options = {
     "key" : "your_key"
 }
 
-// creating privilages object
-const stack_revisions = new stackexchange.revisions();
+// privilages object
+const stack_revisions = stackexchange.revisions;
 ```
 
 #### revisions
@@ -2619,8 +2619,8 @@ let event_options = {
     "access_token": "your_token"
 }
 
-// creating events object
-const stack_events = new stackexchange.events();
+// ; events object
+const stack_events = stackexchange.events;
 ```
 
 #### events
