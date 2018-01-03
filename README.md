@@ -33,8 +33,8 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
 For more details about the endpoints on each section visit [table-of-content](https://www.npmjs.com/package/stack-exchange#table-of-content). To use above mentioned sections endpoints, you need to create their respective sections objects as follows:
 
 ```javascript
-//You can specify the version you of api you want to use by passing object with version field.
-//if version is not provided. by default api response with version 2.2 will be provided 
+// You can specify the version of api you want to use by passing object with version field.
+// if version is not provided, by default api response with version 2.2 will be provided 
 
 const stackexchange  = require("stack-exchange")({ version : "2.2" });
 

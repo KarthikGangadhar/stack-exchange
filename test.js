@@ -234,16 +234,15 @@ stack_tags = stackexchange.tags;
 //     console.log(response);
 // });
 
-stack_tags.wikis_by_tags("java", tags_options, (response) => {
-    console.log(response);
-});
+// stack_tags.wikis_by_tags("java", tags_options, (response) => {
+//     console.log(response);
+// });
 
 stack_suggested_edits = stackexchange.suggested_edits
 
 
 let options = {
     "order": "desc",
-    "sort": "activity",
     "site": "stackoverflow",
     "key":"U4DMV*8nvpm3EOpvf69Rxw((",
     "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
@@ -260,10 +259,12 @@ let options = {
 
 //testing search endpoints
 
-// const stack_search = stackexchange.search
+const stack_search = stackexchange.search
 
 // let search_options = {
-//     "title": "npm install error"
+//     "title": "npm install error",
+//     "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+//     "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
 // }
 
 // stack_search.search(search_options, (response) => {
@@ -291,8 +292,8 @@ const stack_posts = stackexchange.posts;
 let posts_options = {
     // "body": "npm install error",
     "site": "stackoverflow",
-    //  "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-    // "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
 }
 
 // stack_posts.posts(posts_options, (response) => {
