@@ -2,16 +2,13 @@ var stackexchange = require("./server")({ version : "2.2"});
 
 // To test questions
 
-let options = {
-    "order": "desc",
-    "sort": "activity",
-    "site": "stackoverflow",
-    // "key": "DBVM6y4xyYm)5CCwoGsOag((",
-    // "access_token": "pW)Ms6zd4hIgjwUE6QF1Qg(("
-    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
-    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
-}
-// https://api.stackexchange.com/2.2/me/answers?key=U4DMV*8nvpm3EOpvf69Rxw((&site=stackoverflow&order=desc&sort=activity&access_token=hWdvdUtE3viqDRE1LjVjxA))&filter=default
+// let options = {
+//     "order": "desc",
+//     "sort": "activity",
+//     "site": "stackoverflow",
+//     "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+//     "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+// }
 stack_questions = stackexchange.questions;
 
 // stack_questions.questions(options, (response) => {
@@ -142,13 +139,14 @@ let revisions_options = {
 
 // To test badges
 
-// let badges_options = {
-//     "site": "stackoverflow",
-//     "key": "U4DMV*8nvpm3EOpvf69Rxw(("
-// }
+let badges_options = {
+    "site": "stackoverflow",
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+}
 
 
-// stack_badges = stackexchange.badges
+stack_badges = stackexchange.badges
 
 // stack_badges.badges(badges_options, (response) => {
 //     console.log(response);
@@ -188,11 +186,9 @@ let revisions_options = {
 
 let tags_options = {
     "site": "stackoverflow",
-    "key": "U4DMV*8nvpm3EOpvf69Rxw(("
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
 }
-
-// "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-// "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
 
 
 stack_tags = stackexchange.tags;
@@ -238,20 +234,20 @@ stack_tags = stackexchange.tags;
 //     console.log(response);
 // });
 
-// stack_tags.wikis_by_tags("java", tags_options, (response) => {
-//     console.log(response);
-// });
+stack_tags.wikis_by_tags("java", tags_options, (response) => {
+    console.log(response);
+});
 
 stack_suggested_edits = stackexchange.suggested_edits
 
 
-// let options = {
-    // "order": "desc",
-    // "sort": "activity",
-    // "site": "stackoverflow",
-    // "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-    // "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
-// }
+let options = {
+    "order": "desc",
+    "sort": "activity",
+    "site": "stackoverflow",
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+}
 
 // stack_suggested_edits.suggested_edits(options, (response) => {
 //         console.log(response);

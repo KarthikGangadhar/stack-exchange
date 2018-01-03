@@ -18,7 +18,7 @@ const network = require("./lib/network");
 
 module.exports = function (options) {
     let version = "2.2"
-    if (options && options.version) {
+    if (options && options.version && !isNaN(options.version)) {
         version = options.version
     }
     return {
