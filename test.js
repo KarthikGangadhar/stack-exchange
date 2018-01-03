@@ -1,16 +1,18 @@
-var stackexchange = require("./server");
+var stackexchange = require("./server")({ version : "2.2"});
 
 // To test questions
 
-// let options = {
-//     "order": "desc",
-//     "sort": "activity",
-//     "site": "stackoverflow",
-//     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-//     "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
-// }
-
-// stack_questions = new stackexchange.questions();
+let options = {
+    "order": "desc",
+    "sort": "activity",
+    "site": "stackoverflow",
+    // "key": "DBVM6y4xyYm)5CCwoGsOag((",
+    // "access_token": "pW)Ms6zd4hIgjwUE6QF1Qg(("
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+}
+// https://api.stackexchange.com/2.2/me/answers?key=U4DMV*8nvpm3EOpvf69Rxw((&site=stackoverflow&order=desc&sort=activity&access_token=hWdvdUtE3viqDRE1LjVjxA))&filter=default
+stack_questions = stackexchange.questions;
 
 // stack_questions.questions(options, (response) => {
 //     console.log(response);
@@ -61,11 +63,11 @@ var stackexchange = require("./server");
 //     console.log(response);
 //  });
 
-// flag_options = {
-//     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-//     "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))",
-//     "site":"stackoverflow"
-// }
+flag_options = {
+    "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+}
 // stack_questions.question_flag_options("37878662", flag_options, (response) => {
 //     console.log(response);
 // });
@@ -80,13 +82,13 @@ var stackexchange = require("./server");
 
 // To test events
 
-// let event_options = {
-//     "site": "stackoverflow",
-//     "access_token": "TzAfXCF6PjvW5dkOCbiEyw))",
-//     "key": "U4DMV*8nvpm3EOpvf69Rxw((" 
-// }
+let event_options = {
+    "site": "stackoverflow",
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+}
 
-// stack_events = new stackexchange.events();
+stack_events = stackexchange.events;
 
 // stack_events.events(event_options, (response) => {
 //     console.log(response);
@@ -94,11 +96,13 @@ var stackexchange = require("./server");
 
 // To test info
 
-// let info_options = {
-//     "site": "stackoverflow"
-// }
+let info_options = {
+    "site": "stackoverflow",
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+}
 
-// stack_info = new stackexchange.info();
+stack_info = stackexchange.info;
 
 // stack_info.info(info_options, (response) => {
 //     console.log(response);
@@ -107,12 +111,13 @@ var stackexchange = require("./server");
 
 // To test privilages
 
-// let privilages_options = {
-//     "site": "stackoverflow",
-//     "key" : "U4DMV*8nvpm3EOpvf69Rxw(("
-// }
+let privilages_options = {
+    "site": "stackoverflow",
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+}
 
-// stack_privilages = new stackexchange.privilages();
+stack_privilages = stackexchange.privilages;
 
 // stack_privilages.privilages(privilages_options, (response) => {
 //     console.log(response);
@@ -121,14 +126,15 @@ var stackexchange = require("./server");
 
 // To test revisions
 
-// let revisions_options = {
-//     "site": "stackoverflow",
-//     "key" : "U4DMV*8nvpm3EOpvf69Rxw(("
-// }
+let revisions_options = {
+    "site": "stackoverflow",
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+}
 
 // let ids = "BCF73AEC-7F9D-4623-8C38-66E481B52513"
 
-// stack_revisions = new stackexchange.revisions();
+// stack_revisions = stackexchange.revisions;
 
 // stack_revisions.revisions( ids , revisions_options, (response) => {
 //     console.log(response);
@@ -142,7 +148,7 @@ var stackexchange = require("./server");
 // }
 
 
-// stack_badges = new stackexchange.badges();
+// stack_badges = stackexchange.badges
 
 // stack_badges.badges(badges_options, (response) => {
 //     console.log(response);
@@ -189,7 +195,7 @@ let tags_options = {
 // "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
 
 
-stack_tags = new stackexchange.tags();
+stack_tags = stackexchange.tags;
 
 // stack_tags.tags(tags_options, (response) => {
 //     console.log(response);
@@ -236,16 +242,16 @@ stack_tags = new stackexchange.tags();
 //     console.log(response);
 // });
 
-stack_suggested_edits = new stackexchange.suggested_edits();
+stack_suggested_edits = stackexchange.suggested_edits
 
 
-let options = {
+// let options = {
     // "order": "desc",
     // "sort": "activity",
     // "site": "stackoverflow",
     // "key": "U4DMV*8nvpm3EOpvf69Rxw((",
     // "access_token": "ZnGGKBHHy9zsLnWzR1lO(g))"
-}
+// }
 
 // stack_suggested_edits.suggested_edits(options, (response) => {
 //         console.log(response);
@@ -258,7 +264,7 @@ let options = {
 
 //testing search endpoints
 
-// const stack_search = new stackexchange.search();
+// const stack_search = stackexchange.search
 
 // let search_options = {
 //     "title": "npm install error"
@@ -284,7 +290,7 @@ let options = {
 
 //tests for posts endpoints
 
-const stack_posts = new stackexchange.posts();
+const stack_posts = stackexchange.posts;
 
 let posts_options = {
     // "body": "npm install error",
@@ -327,7 +333,7 @@ let post_id = "45934757";
 
 //tests for comments endpoints
 
-// const stack_comments = new stackexchange.comments();
+// const stack_comments = stackexchange.comments;
 // let comments_options = {
 //     access_token: "VvGwnS49NbZKImZYu5ylJA))",
 //     key: "U4DMV*8nvpm3EOpvf69Rxw(("
@@ -375,7 +381,7 @@ let comment_id = "82236358";
 
 //for testing users endpoints
 
-const stack_users = new stackexchange.users();
+const stack_users = stackexchange.users;
 let users_options = {
     key: "U4DMV*8nvpm3EOpvf69Rxw((",
     access_token: "obK0oR346xNv7hZENM8sZw))"
@@ -516,7 +522,7 @@ let tags = "nodejs";
 // testing me section 
 
 
-const stack_me = new stackexchange.me();
+const stack_me = stackexchange.me;
 // users_options = {
 //     key: "U4DMV*8nvpm3EOpvf69Rxw((",
 //     access_token: "QfbROTOhsIYYN6GwBEVfkw))"
@@ -650,7 +656,7 @@ user_ids = "6414102";
 
 // to test network endpoints
 
-const stack_network = new stackexchange.network();
+const stack_network = stackexchange.network;
 
 let invalidate_options = {
     key: "U4DMV*8nvpm3EOpvf69Rxw((",
@@ -745,7 +751,7 @@ inbox_options = {
 // tests for answers endpoints
 
 // answers /2.2/answers?order=desc&sort=activity&site=stackoverflow
-const stack_answers = new stackexchange.answers();
+const stack_answers = stackexchange.answers;
 
 answers_options = {
     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
@@ -767,6 +773,6 @@ answers_options = {
 //     console.log(response);
 // });
 
-stack_answers.comments_on_answers("37886434", answers_options, (response) => {
-    console.log(response);
-});
+// stack_answers.comments_on_answers("37886434", answers_options, (response) => {
+//     console.log(response);
+// });
