@@ -318,7 +318,7 @@ let post_id = "45934757";
 //     console.log(response);
 // });
 
-// post_id= 39892422
+post_id= 39892422
 
 // stack_posts.revisions_by_ids(post_id, posts_options, (response) => {
 //     console.log(response);
@@ -330,15 +330,15 @@ let post_id = "45934757";
 
 //tests for comments endpoints
 
-// const stack_comments = stackexchange.comments;
-// let comments_options = {
-//     access_token: "VvGwnS49NbZKImZYu5ylJA))",
-//     key: "U4DMV*8nvpm3EOpvf69Rxw(("
-// };
+const stack_comments = stackexchange.comments;
+let comments_options = {
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+};
 
-// stack_comments.comments(comments_options, (response) => {
-//     console.log(response);
-// });
+stack_comments.comments(comments_options, (response) => {
+    console.log(response);
+});
 
 let comment_id = "82236358";
 
