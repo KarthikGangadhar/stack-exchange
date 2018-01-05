@@ -333,12 +333,12 @@ post_id= 39892422
 const stack_comments = stackexchange.comments;
 let comments_options = {
     "key":"U4DMV*8nvpm3EOpvf69Rxw((",
-    "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
+    "access_token":"9EyME9jJ0Pim9YQtvNUccA))"
 };
 
-stack_comments.comments(comments_options, (response) => {
-    console.log(response);
-});
+// stack_comments.comments(comments_options, (response) => {
+//     console.log(response);
+// });
 
 let comment_id = "82236358";
 
@@ -380,15 +380,15 @@ let comment_id = "82236358";
 
 const stack_users = stackexchange.users;
 let users_options = {
-    key: "U4DMV*8nvpm3EOpvf69Rxw((",
-    access_token: "obK0oR346xNv7hZENM8sZw))"
+    "key":"U4DMV*8nvpm3EOpvf69Rxw((",
+    "access_token":"9EyME9jJ0Pim9YQtvNUccA))"
 };
 // users
 let user_ids = "6414102";
 
-// stack_users.users(users_options, (response) => {
-//     console.log(response);
-// });
+stack_users.users(users_options, (response) => {
+    console.log(response);
+});
 
 // stack_users.users_by_ids(user_ids, users_options, (response) => {
 //     console.log(response);
