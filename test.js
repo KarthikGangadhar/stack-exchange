@@ -526,9 +526,9 @@ const stack_me = stackexchange.me;
 // users
 user_ids = "6414102";
 
-stack_me.me( users_options, (response) => {
-    console.log(response);
-});
+// stack_me.me( users_options, (response) => {
+//     console.log(response);
+// });
 
 // stack_me.me_answers( users_options, (response) => {
 //     console.log(response);
