@@ -381,14 +381,14 @@ let comment_id = "82236358";
 const stack_users = stackexchange.users;
 let users_options = {
     "key":"U4DMV*8nvpm3EOpvf69Rxw((",
-    "access_token":"9EyME9jJ0Pim9YQtvNUccA))"
+    "access_token":"XeU2fEpraLcrpkqWK((WmQ))"
 };
 // users
 let user_ids = "6414102";
 
-stack_users.users(users_options, (response) => {
-    console.log(response);
-});
+// stack_users.users(users_options, (response) => {
+//     console.log(response);
+// });
 
 // stack_users.users_by_ids(user_ids, users_options, (response) => {
 //     console.log(response);
@@ -412,7 +412,6 @@ let toid = 1427878;
 //     console.log(response);
 // });
 
-// favorites_on_users FAVORITES_ON_USERS /2.2/users/6414102/favorites?order=desc&sort=activity&site=stackoverflow
 
 // stack_users.favorites_on_users(user_ids, users_options, (response) => {
 //     console.log(response);
@@ -527,9 +526,9 @@ const stack_me = stackexchange.me;
 // users
 user_ids = "6414102";
 
-// stack_me.me( users_options, (response) => {
-//     console.log(response);
-// });
+stack_me.me( users_options, (response) => {
+    console.log(response);
+});
 
 // stack_me.me_answers( users_options, (response) => {
 //     console.log(response);
