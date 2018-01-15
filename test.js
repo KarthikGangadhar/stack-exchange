@@ -704,7 +704,7 @@ filter = ".quota_max"
 // inbox INDOX /2.2/inbox?key=U4DMV*8nvpm3EOpvf69Rxw((&access_token=S8Irmb83HARHUwZ1CXGvwg))&filter=default
 inbox_options = {
     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-    "access_token": "S8Irmb83HARHUwZ1CXGvwg))"
+    "access_token": "ECPqOGhEOcwFHTVAQZjURg))"
 }
 // stack_network.inbox(inbox_options, (response) => {
 //     console.log(response);
