@@ -16,20 +16,26 @@ const comments = require("./lib/comments");
 const me = require("./lib/me");
 const network = require("./lib/network");
 
-module.exports = {
-    questions: questions,
-    answers: answers,
-    events: events,
-    info: info,
-    privilages: privilages,
-    revisions: revisions,
-    badges: badges,
-    tags: tags,
-    posts: posts,
-    search: search,
-    suggested_edits: suggested_edits,
-    users: users,
-    comments: comments,
-    me: me,
-    network: network
+module.exports = function (options) {
+    let version = "2.2"
+    if (options && options.version && !isNaN(options.version)) {
+        version = options.version
+    }
+    return {
+        questions: new questions(version),
+        answers: new answers(version),
+        events: new events(version),
+        info: new info(version),
+        privilages: new privilages(version),
+        revisions: new revisions(version),
+        badges: new badges(version),
+        tags: new tags(version),
+        posts: new posts(version),
+        search: new search(version),
+        suggested_edits: new suggested_edits(version),
+        users: new users(version),
+        comments: new comments(version),
+        me: new me(version),
+        network: new network(version)
+    }
 };
