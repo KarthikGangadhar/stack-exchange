@@ -751,7 +751,7 @@ const stack_answers = stackexchange.answers;
 
 answers_options = {
     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
-    "access_token": "87NODPheyiKQfhDdHdM0RA))"
+    "access_token": "ECPqOGhEOcwFHTVAQZjURg))"
 }
 // stack_answers.answers(answers_options, (response) => {
 //     console.log(response);
