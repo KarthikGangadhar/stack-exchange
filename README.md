@@ -1,5 +1,6 @@
 # stack-exchange
 
+[![NPM](https://nodei.co/npm/stack-exchange.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/stack-exchange/)
 [![npm version](https://badge.fury.io/js/stack-exchange.svg)](https://api.stackexchange.com/docs)
 
 The [stack-exchange](https://api.stackexchange.com/docs) is a simple npm module that utilizes request and the StackOverflow API.
