@@ -1,25 +1,25 @@
-'use strict'
+'use strict';
 
-const questions = require("./lib/questions");
-const answers = require("./lib/answers");
-const events = require("./lib/events");
-const info = require("./lib/info");
-const privilages = require("./lib/privilages");
-const revisions = require("./lib/revisions");
-const badges = require("./lib/badges");
-const tags = require("./lib/tags");
-const posts = require("./lib/posts");
-const search = require("./lib/search");
-const suggested_edits = require("./lib/suggested_edits");
-const users = require("./lib/users");
-const comments = require("./lib/comments");
-const me = require("./lib/me");
-const network = require("./lib/network");
+const questions = require('./lib/questions');
+const answers = require('./lib/answers');
+const events = require('./lib/events');
+const info = require('./lib/info');
+const privilages = require('./lib/privilages');
+const revisions = require('./lib/revisions');
+const badges = require('./lib/badges');
+const tags = require('./lib/tags');
+const posts = require('./lib/posts');
+const search = require('./lib/search');
+const suggested_edits = require('./lib/suggested_edits');
+const users = require('./lib/users');
+const comments = require('./lib/comments');
+const me = require('./lib/me');
+const network = require('./lib/network');
 
 module.exports = function (options) {
-    let version = "2.2"
+    let version = '2.2';
     if (options && options.version && !isNaN(options.version)) {
-        version = options.version
+        version = options.version;
     }
     return {
         questions: new questions(version),
@@ -37,5 +37,5 @@ module.exports = function (options) {
         comments: new comments(version),
         me: new me(version),
         network: new network(version)
-    }
+    };
 };

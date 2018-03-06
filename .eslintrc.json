@@ -1,0 +1,40 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2017
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "indent": ["error", 4],
+        "eol-last": ["error", "always"],
+        "strict": ["error", "global"],
+        "curly": ["error", "multi-line", "consistent"],
+        "eqeqeq": "error",
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": false
+            }
+        ],
+        "linebreak-style": ["error", "unix"],
+        "quotes": [
+            "error",
+            "single",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "semi": ["error", "always"],
+        "keyword-spacing": [
+            "error",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "no-eval": ["error"]
+    }
+}
