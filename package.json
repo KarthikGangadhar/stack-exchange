@@ -1,11 +1,12 @@
 {
   "name": "stack-exchange",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a simple npm module that utilizes request and the StackOverflow API.",
-  "main": "test.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -18,12 +19,13 @@
   },
   "homepage": "https://github.com/KarthikGangadhar/stack-exchange#readme",
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "request": "^2.83.0",
-    "util": "^0.10.3"
+    "request": "^2.83.0"
   },
   "engines": {
     "node": "8.9.1",
     "npm": "5.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2"
   }
 }
