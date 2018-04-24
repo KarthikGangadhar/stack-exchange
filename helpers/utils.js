@@ -72,9 +72,9 @@ const Defaults = (object, ...sources) => {
 };
 
 const GetEndpoint = (version, options, calltype) => {
-    let url = defaults.endpoints.BASE_URL + version;
+    let url = `${defaults.endpoints.BASE_URL}${version}`;
     Defaults(options, defaults[calltype]);
-    return url + defaults.endpoints[calltype] + querystring.stringify(options);
+    return `${url}${defaults.endpoints[calltype]}${querystring.stringify(options)}`;
 };
 
 module.exports = {
