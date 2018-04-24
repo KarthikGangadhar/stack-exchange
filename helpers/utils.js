@@ -7,8 +7,8 @@ const defaults = require('../config/defaults');
 const objectProto = Object.prototype;
 const hasOwnProperty = objectProto.hasOwnProperty;
 
-var GetResponse = (url) => {
-    return new Promise(function (resolve, reject) {
+const GetResponse = (url) => {
+    return new Promise((resolve, reject) => {
         httpRequest.get(url, {
             encoding: null
         }, (err, resp, body) => {
@@ -16,7 +16,7 @@ var GetResponse = (url) => {
                 reject(err);
             } else {
                 if (resp.headers['content-encoding'] === 'gzip') {
-                    zlib.gunzip(body, function (err, dezipped) {
+                    zlib.gunzip(body, (err, dezipped) => {
                         resolve(dezipped.toString());
                     });
                 } else {
@@ -28,8 +28,8 @@ var GetResponse = (url) => {
     });
 };
 
-var PostResponse = (url, body) => {
-    return new Promise(function (resolve, reject) {
+const PostResponse = (url, body) => {
+    return new Promise((resolve, reject) => {
         httpRequest.post(url, {
             form: body,
             encoding: null
@@ -38,7 +38,7 @@ var PostResponse = (url, body) => {
                 reject(err);
             } else {
                 if (resp.headers['content-encoding'] === 'gzip') {
-                    zlib.gunzip(body, function (err, dezipped) {
+                    zlib.gunzip(body, (err, dezipped) => {
                         resolve(dezipped.toString());
                     });
                 } else {
@@ -50,17 +50,17 @@ var PostResponse = (url, body) => {
     });
 };
 
-var Eq = (value, other) => {
+const Eq = (value, other) => {
     return value === other || (value !== value && other !== other);
 };
 
-var Defaults = (object, ...sources) => {
+const Defaults = (object, ...sources) => {
     object = Object(object);
     sources.forEach((source) => {
         if (source !== null) {
             source = Object(source);
-            for (const key in source) {
-                const value = object[key];
+            for (let key in source) {
+                let value = object[key];
                 if (value === undefined ||
                     (Eq(value, objectProto[key]) && !hasOwnProperty.call(object, key))) {
                     object[key] = source[key];
@@ -71,7 +71,7 @@ var Defaults = (object, ...sources) => {
     return object;
 };
 
-var GetEndpoint = (version, options, calltype) => {
+const GetEndpoint = (version, options, calltype) => {
     let url = defaults.endpoints.BASE_URL + version;
     Defaults(options, defaults[calltype]);
     return url + defaults.endpoints[calltype] + querystring.stringify(options);

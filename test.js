@@ -1,4 +1,4 @@
-// var stackexchange = require('./server')({ version : '2.2'});
+// const stackexchange = require('./server')({ version : '2.2'});
 
 // // To test questions
 
