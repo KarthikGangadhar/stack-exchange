@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/KarthikGangadhar/stack-exchange#readme",
   "dependencies": {
-    "request": "^2.83.0"
+    "request": "^2.85.0"
   },
   "engines": {
     "node": "8.9.1",
