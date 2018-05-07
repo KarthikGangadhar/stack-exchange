@@ -16,7 +16,7 @@ const comments = require('./lib/comments');
 const me = require('./lib/me');
 const network = require('./lib/network');
 
-module.exports = function (options) {
+module.exports = (options) => {
     let version = '2.2';
     if (options && options.version && !isNaN(options.version)) {
         version = options.version;
