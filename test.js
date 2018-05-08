@@ -1,19 +1,22 @@
-// const stackexchange = require('./server')({ version : '2.2'});
+// const stackexchange = require('./server')({
+//     version: '2.2'
+// });
 
 // // To test questions
 
-// // let options = {
-// //     "order": "desc",
-// //     "sort": "activity",
-// //     "site": "stackoverflow",
-// //     "key":"U4DMV*8nvpm3EOpvf69Rxw((",
-// //     "access_token":"hWdvdUtE3viqDRE1LjVjxA))"
-// // }
+// let options = {
+//     "order": "desc",
+//     "sort": "activity",
+//     "site": "stackoverflow",
+//     "key": "U4DMV*8nvpm3EOpvf69Rxw((",
+//     "access_token": "gbTtTJgVat8iSw2orHDOBQ))"
+// }
+
 // let stack_questions = stackexchange.questions;
 
-// // stack_questions.questions(options, (response) => {
-// //     console.log(response);
-// //  });
+// stack_questions.questions(options, (response) => {
+//     console.log(response);
+// });
 
 // //  stack_questions.questions_by_ids("47559184", options , (response) => {
 // //     console.log(response);
