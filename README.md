@@ -2,13 +2,12 @@
 
 [![NPM](https://nodei.co/npm/stack-exchange.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/stack-exchange/)
 
+The [stack-exchange](https://api.stackexchange.com/docs) is a simple npm module that provides a wrapper to access StackOverflow API endpoint.
 
 [![Build Status](https://travis-ci.org/KarthikGangadhar/stack-exchange.svg "Build Status = Tests Passing")](https://travis-ci.org/KarthikGangadhar/stack-exchange)
 [![npm version](https://badge.fury.io/js/stack-exchange.svg)]()
 [![Node.js Version](https://img.shields.io/node/v/stack-exchange.svg?style=flat "Node.js 10 & 12 and io.js latest both supported")](http://nodejs.org/download/)
-
-
-The [stack-exchange](https://api.stackexchange.com/docs) is a simple npm module that utilizes request and the StackOverflow API.
+[![Known Vulnerabilities](https://snyk.io/test/github/KarthikGangadhar/stack-exchange/badge.svg?targetFile=package.json)](https://snyk.io/test/github/KarthikGangadhar/stack-exchange?targetFile=package.json)
 
 ## Installation
 Installation is done using the npm install command:
