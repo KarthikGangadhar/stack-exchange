@@ -1,3 +1,4 @@
+'use strict';
 // Dependencies
 const stack_exchange = require('../server.js');
 const assert = require('assert');
@@ -7,15 +8,15 @@ const version = {
 
 const stack_questions = stack_exchange(version).questions;
 let options = {
-    "order": "desc",
-    "sort": "activity",
-    "site": "stackoverflow",
+    'order': 'desc',
+    'sort': 'activity',
+    'site': 'stackoverflow',
     // "access_token": "hWdvdUtE3viqDRE1LjVjxA))",
     // "key":"U4DMV*8nvpm3EOpvf69Rxw(("
 };
 
 // Holder of all tests
-_app = {};
+const _app = {};
 _app.tests = {
     'unit': {}
 };
@@ -33,7 +34,7 @@ _app.tests.unit['stack_questions.questions should return a object with status 20
 
 // 2. Assert that the questions method is returning a object
 _app.tests.unit['stack_questions.questions_by_ids should return a object with status 200'] = (done) => {
-    let ids = "49752913";
+    let ids = '49752913';
     stack_questions.questions_by_ids(ids, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
@@ -55,11 +56,11 @@ _app.tests.unit['stack_questions.answers_on_questions should return a object wit
 
 // 3. Assert that the render_answer method is returning a object
 _app.tests.unit['stack_questions.render_answer should return a object with status 200'] = (done) => {
-    let id = "47596027";
+    let id = '47596027';
     let options = {
-        "body": "hello",
-        "site": "stackoverflow"
-    }
+        'body': 'hello',
+        'site': 'stackoverflow'
+    };
 
     stack_questions.render_answer(id, options, response => {
         response = JSON.parse(response);
@@ -82,7 +83,7 @@ _app.tests.unit['stack_questions.linked_questions should return a object with st
 
 // 5. Assert that the related_questions method is returning a object
 _app.tests.unit['stack_questions.related_questions should return a object with status 200'] = (done) => {
-    let id = "37878662";
+    let id = '37878662';
     stack_questions.related_questions(id, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
@@ -93,7 +94,7 @@ _app.tests.unit['stack_questions.related_questions should return a object with s
 
 // 6. Assert that the questions_timeline method is returning a object
 _app.tests.unit['stack_questions.questions_timeline should return a object with status 200'] = (done) => {
-    let id = "37878662";
+    let id = '37878662';
     stack_questions.questions_timeline(id, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
@@ -144,7 +145,7 @@ _app.tests.unit['stack_questions.unanswered_questions_my_tags should return a ob
 
 // 11. Assert that the question_flag_options method is returning a object
 _app.tests.unit['stack_questions.question_flag_options should return a object with status 200'] = (done) => {
-    let question_id = "37878662";
+    let question_id = '37878662';
     stack_questions.question_flag_options(question_id, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
@@ -155,7 +156,7 @@ _app.tests.unit['stack_questions.question_flag_options should return a object wi
 
 // 12. Assert that the question_close_options method is returning a object
 _app.tests.unit['stack_questions.question_close_options should return a object with status 200'] = (done) => {
-    let question_id = "37878662";
+    let question_id = '37878662';
     stack_questions.question_close_options(question_id, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
@@ -166,7 +167,7 @@ _app.tests.unit['stack_questions.question_close_options should return a object w
 
 // // 13. Assert that the comments_on_questions method is returning a object
 _app.tests.unit['stack_questions.comments_on_questions should return a object with status 200'] = (done) => {
-    let question_id = "45934757";
+    let question_id = '45934757';
     stack_questions.comments_on_questions(question_id, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');

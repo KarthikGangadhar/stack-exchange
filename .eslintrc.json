@@ -35,6 +35,7 @@
                 "after": true
             }
         ],
-        "no-eval": ["error"]
+        "no-eval": ["error"],
+        "no-console": "off"
     }
 }
