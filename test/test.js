@@ -3,14 +3,19 @@
  * Test runner
  *
  */
+// require all unit test_cases
+const questions =require('./questions_test');
+const badges = require('./badges_test');
+const tags = require('./tags_test');
 
-const units = require('./questions_test');
 // Application logic for the test runner
+const testCases = Object.assign({}, questions, badges, tags);
+
 const _app = {};
 _app.tests = {};
 
 // Holder of all tests
-_app.tests['unit'] = units;
+_app.tests['unit'] = testCases;
 
 // Count all the tests
 _app.countTests = () => {
