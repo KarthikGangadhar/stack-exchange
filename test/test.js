@@ -12,6 +12,7 @@ const revisions = require('./revisions_test');
 const privileges = require('./privileges_test');
 const info = require('./info_tests');
 const suggested_edits = require('./suggested_edits_tests');
+const search = require('./search_tests');
 
 // Application logic for the test runner
 // const testCases = Object.assign({}, questions, badges, tags);
@@ -29,6 +30,7 @@ _app.tests['revisions'] = revisions;
 _app.tests['privileges'] = privileges;
 _app.tests['info'] = info;
 _app.tests['suggested_edits'] = suggested_edits;
+_app.tests['search'] = search;
 
 // Count all the tests
 _app.countTests = () => {

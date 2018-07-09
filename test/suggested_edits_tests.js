@@ -31,7 +31,7 @@ _app.tests.unit['suggested_edits.suggested_edits should return a object with sta
 
 // 2. Assert that the suggested_edits_by_ids method is returning a object
 _app.tests.unit['suggested_edits.suggested_edits_by_ids should return a object with status 200'] = (done) => {
-    let suggested_edit_id = "3445738";
+    let suggested_edit_id = '3445738';
     suggested_edits.suggested_edits_by_ids(suggested_edit_id, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
