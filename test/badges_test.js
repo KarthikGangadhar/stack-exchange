@@ -9,8 +9,8 @@ const version = {
 const stack_badges = stack_exchange(version).badges;
 let options = {
     'site': 'stackoverflow',
-    "access_token": "DFcw0pTAzfDhrw1KXOjHKQ))",
-    "key":"U4DMV*8nvpm3EOpvf69Rxw(("
+    'access_token': 'DFcw0pTAzfDhrw1KXOjHKQ))',
+    'key':'U4DMV*8nvpm3EOpvf69Rxw(('
 };
 
 // Holder of all tests
