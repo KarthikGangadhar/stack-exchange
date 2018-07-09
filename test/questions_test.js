@@ -11,8 +11,8 @@ let options = {
     'order': 'desc',
     'sort': 'activity',
     'site': 'stackoverflow',
-    // "access_token": "hWdvdUtE3viqDRE1LjVjxA))",
-    // "key":"U4DMV*8nvpm3EOpvf69Rxw(("
+    "access_token": "DFcw0pTAzfDhrw1KXOjHKQ))",
+    "key":"U4DMV*8nvpm3EOpvf69Rxw(("
 };
 
 // Holder of all tests

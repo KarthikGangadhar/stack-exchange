@@ -4,18 +4,21 @@
  *
  */
 // require all unit test_cases
-const questions =require('./questions_test');
+const questions = require('./questions_test');
 const badges = require('./badges_test');
 const tags = require('./tags_test');
 
 // Application logic for the test runner
-const testCases = Object.assign({}, questions, badges, tags);
+// const testCases = Object.assign({}, questions, badges, tags);
 
 const _app = {};
 _app.tests = {};
 
 // Holder of all tests
-_app.tests['unit'] = testCases;
+// _app.tests['unit'] = testCases;
+_app.tests['questions'] = questions;
+_app.tests['badges'] = badges;
+_app.tests['tags'] = tags;
 
 // Count all the tests
 _app.countTests = () => {
@@ -39,6 +42,7 @@ _app.runTests = () => {
     let successes = 0;
     let limit = _app.countTests();
     let counter = 0;
+    let counterTime = 2000;
     for (let key in _app.tests) {
         if (_app.tests.hasOwnProperty(key)) {
             let subTests = _app.tests[key];
@@ -49,15 +53,18 @@ _app.runTests = () => {
                         let testValue = subTests[testName];
                         // Call the test
                         try {
-                            testValue(() => {
-                                // If it calls back without throwing, then it succeeded, so log it in green
-                                console.log('\x1b[32m%s\x1b[0m', tmpTestName);
-                                counter++;
-                                successes++;
-                                if (counter === limit) {
-                                    _app.produceTestReport(limit, successes, errors);
-                                }
-                            });
+                            setTimeout(function () {
+                                testValue(() => {
+                                    // If it calls back without throwing, then it succeeded, so log it in green
+                                    console.log('\x1b[32m%s\x1b[0m', tmpTestName);
+                                    counter++;
+                                    successes++;
+                                    if (counter === limit) {
+                                        _app.produceTestReport(limit, successes, errors);
+                                    }
+                                });
+                            }, counterTime);
+                            counterTime += 7000;
                         } catch (e) {
                             // If it throws, then it failed, so capture the error thrown and log it in red
                             errors.push({
