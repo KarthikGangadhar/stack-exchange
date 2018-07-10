@@ -7,12 +7,13 @@
 // const questions = require('./questions_test');
 // const badges = require('./badges_test');
 // const tags = require('./tags_test');
-const events = require('./events_test');
-const revisions = require('./revisions_test');
-const privileges = require('./privileges_test');
-const info = require('./info_tests');
-const suggested_edits = require('./suggested_edits_tests');
-const search = require('./search_tests');
+// const events = require('./events_test');
+// const revisions = require('./revisions_test');
+// const privileges = require('./privileges_test');
+// const info = require('./info_tests');
+// const suggested_edits = require('./suggested_edits_tests');
+// const search = require('./search_tests');
+const me = require('./me_tests');
 
 // Application logic for the test runner
 // const testCases = Object.assign({}, questions, badges, tags);
@@ -25,12 +26,13 @@ _app.tests = {};
 // _app.tests['questions'] = questions;
 // _app.tests['badges'] = badges;
 // _app.tests['tags'] = tags;
-_app.tests['events'] = events;
-_app.tests['revisions'] = revisions;
-_app.tests['privileges'] = privileges;
-_app.tests['info'] = info;
-_app.tests['suggested_edits'] = suggested_edits;
-_app.tests['search'] = search;
+// _app.tests['events'] = events;
+// _app.tests['revisions'] = revisions;
+// _app.tests['privileges'] = privileges;
+// _app.tests['info'] = info;
+// _app.tests['suggested_edits'] = suggested_edits;
+// _app.tests['search'] = search;
+_app.tests['me'] = me;
 
 // Count all the tests
 _app.countTests = () => {
