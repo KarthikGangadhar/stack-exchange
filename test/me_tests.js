@@ -23,7 +23,7 @@ _app.tests.unit['stack_me.me should return a object with status 200'] = (done) =
     stack_me.me(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -33,7 +33,7 @@ _app.tests.unit['stack_me.me_answers should return a object with status 200'] = 
     stack_me.me_answers(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -43,7 +43,7 @@ _app.tests.unit['stack_me.me_badges should return a object with status 200'] = (
     stack_me.me_badges(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -53,7 +53,7 @@ _app.tests.unit['stack_me.me_comments should return a object with status 200'] =
     stack_me.me_comments(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -65,7 +65,7 @@ _app.tests.unit['stack_me.me_comments_to should return a object with status 200'
     stack_me.me_comments_to(toid, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -75,7 +75,7 @@ _app.tests.unit['stack_me.me_favorites should return a object with status 200'] 
     stack_me.me_favorites(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -85,7 +85,7 @@ _app.tests.unit['stack_me.me_mentioned should return a object with status 200'] 
     stack_me.me_mentioned(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -95,7 +95,7 @@ _app.tests.unit['stack_me.me_network_activity should return a object with status
     stack_me.me_network_activity(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -105,7 +105,7 @@ _app.tests.unit['stack_me.me_notifications should return a object with status 20
     stack_me.me_notifications(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        // assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        // assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -115,7 +115,7 @@ _app.tests.unit['stack_me.me_unread_notifications should return a object with st
     stack_me.me_unread_notifications(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        // assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        // assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -125,7 +125,7 @@ _app.tests.unit['stack_me.me_posts should return a object with status 200'] = (d
     stack_me.me_posts(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -135,7 +135,7 @@ _app.tests.unit['stack_me.me_privileges should return a object with status 200']
     stack_me.me_privileges(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -145,7 +145,7 @@ _app.tests.unit['stack_me.me_questions should return a object with status 200'] 
     stack_me.me_questions(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -155,7 +155,7 @@ _app.tests.unit['stack_me.me_featured_questions should return a object with stat
     stack_me.me_featured_questions(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -165,7 +165,7 @@ _app.tests.unit['stack_me.me_no_answer_questions should return a object with sta
     stack_me.me_no_answer_questions(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -175,7 +175,7 @@ _app.tests.unit['stack_me.me_unaccepted_questions should return a object with st
     stack_me.me_unaccepted_questions(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -185,7 +185,7 @@ _app.tests.unit['stack_me.me_unanswered_questions should return a object with st
     stack_me.me_unanswered_questions(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -195,7 +195,7 @@ _app.tests.unit['stack_me.me_reputation should return a object with status 200']
     stack_me.me_reputation(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -205,7 +205,7 @@ _app.tests.unit['stack_me.me_reputation_history should return a object with stat
     stack_me.me_reputation_history(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -215,7 +215,7 @@ _app.tests.unit['stack_me.me_full_reputation_history should return a object with
     stack_me.me_full_reputation_history(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        // assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -225,7 +225,7 @@ _app.tests.unit['stack_me.me_suggested_edits should return a object with status 
     stack_me.me_suggested_edits(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -236,7 +236,7 @@ _app.tests.unit['stack_me.me_tags should return a object with status 200'] = (do
     stack_me.me_tags(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -247,7 +247,7 @@ _app.tests.unit['stack_me.me_tags_top_questions should return a object with stat
     stack_me.me_tags_top_questions(tags, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -258,7 +258,7 @@ _app.tests.unit['stack_me.me_tags_top_answers should return a object with status
     stack_me.me_tags_top_answers(tags, options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -268,7 +268,7 @@ _app.tests.unit['stack_me.me_top_answer_tags should return a object with status 
     stack_me.me_top_answer_tags(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -278,7 +278,7 @@ _app.tests.unit['stack_me.me_top_question_tags should return a object with statu
     stack_me.me_top_question_tags(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -288,7 +288,7 @@ _app.tests.unit['stack_me.me_timeline should return a object with status 200'] =
     stack_me.me_timeline(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -298,7 +298,7 @@ _app.tests.unit['stack_me.me_top_tags should return a object with status 200'] =
     stack_me.me_top_tags(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -308,7 +308,7 @@ _app.tests.unit['stack_me.me_inbox should return a object with status 200'] = (d
     stack_me.me_inbox(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        // assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        // assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -318,7 +318,7 @@ _app.tests.unit['stack_me.me_unread_inbox should return a object with status 200
     stack_me.me_unread_inbox(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        // assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        // assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -328,7 +328,7 @@ _app.tests.unit['stack_me.me_associated_users should return a object with status
     stack_me.me_associated_users(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        // assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        // assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
@@ -338,7 +338,7 @@ _app.tests.unit['stack_me.me_merge_history should return a object with status 20
     stack_me.me_merge_history(options, response => {
         response = JSON.parse(response);
         assert.equal(typeof (response), 'object');
-        assert.equal(typeof (response.items) && response.items instanceof Array, true);
+        assert.equal(typeof (response.items) === 'object' && response.items instanceof Array, true);
         done();
     });
 };
