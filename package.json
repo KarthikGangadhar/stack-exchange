@@ -1,6 +1,6 @@
 {
   "name": "stack-exchange",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is a simple npm module that utilizes request and the StackOverflow API.",
   "main": "server.js",
   "scripts": {
@@ -17,12 +17,8 @@
     "url": "https://github.com/KarthikGangadhar/stack-exchange/issues"
   },
   "homepage": "https://github.com/KarthikGangadhar/stack-exchange#readme",
-  "dependencies": {
-  },
   "engines": {
     "node": "8.9.1",
     "npm": "5.4.2"
-  },
-  "devDependencies": {
   }
 }

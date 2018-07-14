@@ -1387,7 +1387,7 @@ Get the answers to the questions identified by a set of ids.
  let id = "47596027"
  
  // using render_answer endpoint 
-stack_questions.render_answer("47596027", options , (response) => {
+stack_questions.render_answer(id, options , (response) => {
    // response returns hypothetical solution
     console.log(response);
 });
@@ -1848,7 +1848,7 @@ Get the synonyms for a specific set of tags.
  //tag name for search
  let tag_name = "nodejs"
  // using synonyms_by_tags endpoint 
-stack_tags.synonyms_by_tags("nodejs", tags_options, (response) => {
+stack_tags.synonyms_by_tags(tag_name, tags_options, (response) => {
     console.log(response);
 });
 
