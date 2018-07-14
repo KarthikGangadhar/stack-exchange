@@ -17,6 +17,25 @@
     "url": "https://github.com/KarthikGangadhar/stack-exchange/issues"
   },
   "homepage": "https://github.com/KarthikGangadhar/stack-exchange#readme",
+  "keywords": [
+    "stack-exchange",
+    "stackoverflow", 
+    "users", 
+    "me", 
+    "questions", 
+    "answers", 
+    "badges", 
+    "tags", 
+    "comments", 
+    "posts", 
+    "search", 
+    "suggested_edits", 
+    "network", 
+    "info", 
+    "privilages", 
+    "revisions",
+    "events"
+  ],
   "engines": {
     "node": "8.9.1",
     "npm": "5.4.2"
