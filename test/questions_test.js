@@ -1,6 +1,7 @@
 'use strict';
 // Dependencies
 const stack_exchange = require('../server.js');
+const config = require('./config/config.json');
 const assert = require('assert');
 const version = {
     version: '2.2'
@@ -10,9 +11,9 @@ const stack_questions = stack_exchange(version).questions;
 let options = {
     'order': 'desc',
     'sort': 'activity',
-    'site': 'stackoverflow',
-    'access_token': 'DFcw0pTAzfDhrw1KXOjHKQ))',
-    'key':'U4DMV*8nvpm3EOpvf69Rxw(('
+    'site': config.site,
+    'access_token': config.access_token,
+    'key': config.key
 };
 
 // Holder of all tests

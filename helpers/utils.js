@@ -1,6 +1,6 @@
 'use strict';
 
-const httpRequest = require('request');
+const httpRequest = require('../helpers/request_helper');
 const zlib = require('zlib');
 const querystring = require('querystring');
 const defaults = require('../config/defaults');
