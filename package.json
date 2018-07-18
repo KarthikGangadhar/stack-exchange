@@ -1,7 +1,7 @@
 {
   "name": "stack-exchange",
   "version": "0.0.3",
-  "description": "This is a simple npm module that utilizes request and the StackOverflow API.",
+  "description": "The stack-exchange provides a wrapper to access StackOverflow API endpoints.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
