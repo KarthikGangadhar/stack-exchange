@@ -1,6 +1,6 @@
 {
   "name": "stack-exchange",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "The stack-exchange provides a wrapper to access StackOverflow API endpoints.",
   "main": "server.js",
   "scripts": {
