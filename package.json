@@ -1,5 +1,5 @@
 {
-  "name": "stack-exchange",
+  "name": "@karthikgangadhar/stack-exchange",
   "version": "1.0.0",
   "description": "The stack-exchange provides a wrapper to access StackOverflow API endpoints.",
   "main": "server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KarthikGangadhar/stack-exchange.git"
+    "url": "git://github.com/KarthikGangadhar/stack-exchange.git"
   },
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "author": "kgangadhar <karthikg1643@gmail.com> (https://github.com/karthikgangadhar)",
