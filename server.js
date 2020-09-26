@@ -4,7 +4,7 @@ const questions = require('./lib/questions');
 const answers = require('./lib/answers');
 const events = require('./lib/events');
 const info = require('./lib/info');
-const privilages = require('./lib/privilages');
+const privileges = require('./lib/privileges');
 const revisions = require('./lib/revisions');
 const badges = require('./lib/badges');
 const tags = require('./lib/tags');
@@ -26,7 +26,7 @@ module.exports = (options) => {
         answers: new answers(version),
         events: new events(version),
         info: new info(version),
-        privilages: new privilages(version),
+        privileges: new privileges(version),
         revisions: new revisions(version),
         badges: new badges(version),
         tags: new tags(version),

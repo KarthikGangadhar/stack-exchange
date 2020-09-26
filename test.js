@@ -106,17 +106,17 @@
 // // });
 
 
-// // To test privilages
+// // To test privileges
 
-// let privilages_options = {
+// let privileges_options = {
 //     'site': 'stackoverflow',
 //     'key':'U4DMV*8nvpm3EOpvf69Rxw((',
 //     'access_token':'hWdvdUtE3viqDRE1LjVjxA))'
 // };
 
-// let stack_privilages = stackexchange.privilages;
+// let stack_privileges = stackexchange.privileges;
 
-// // stack_privilages.privilages(privilages_options, (response) => {
+// // stack_privileges.privileges(privileges_options, (response) => {
 // //     console.log(response);
 // // });
 
@@ -515,7 +515,7 @@
 // //     console.log(response);
 // // });
 
-// // testing me section 
+// // testing me section
 
 
 // const stack_me = stackexchange.me;
@@ -560,15 +560,15 @@
 
 // // stack_me.me_notifications(users_options, (response) => {
 // //     console.log(response);
-// // });    
+// // });
 
 // // stack_me.me_unread_notifications(users_options, (response) => {
 // //     console.log(response);
-// // });    
+// // });
 
 // // stack_me.me_unread_notifications(users_options, (response) => {
 // //     console.log(response);
-// // });    
+// // });
 
 // // stack_me.me_posts(users_options, (response) => {
 // //     console.log(response);
@@ -701,7 +701,7 @@
 // //     console.log(response);
 // // });
 
-// // inbox INDOX /2.2/inbox?key=U4DMV*8nvpm3EOpvf69Rxw((&access_token=S8Irmb83HARHUwZ1CXGvwg))&filter=default
+// // inbox INBOX /2.2/inbox?key=U4DMV*8nvpm3EOpvf69Rxw((&access_token=S8Irmb83HARHUwZ1CXGvwg))&filter=default
 // inbox_options = {
 //     'key': 'U4DMV*8nvpm3EOpvf69Rxw((',
 //     'access_token': 'ECPqOGhEOcwFHTVAQZjURg))'
