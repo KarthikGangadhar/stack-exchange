@@ -1,44 +1,46 @@
 {
-  "name": "@karthikgangadhar/stack-exchange",
-  "version": "1.0.0",
-  "description": "The stack-exchange provides a wrapper to access StackOverflow API endpoints.",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "node ./test/test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/KarthikGangadhar/stack-exchange.git"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
-  "author": "kgangadhar <karthikg1643@gmail.com> (https://github.com/karthikgangadhar)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KarthikGangadhar/stack-exchange/issues"
-  },
-  "homepage": "https://github.com/KarthikGangadhar/stack-exchange#readme",
-  "keywords": [
-    "stack-exchange",
-    "stackoverflow", 
-    "users", 
-    "me", 
-    "questions", 
-    "answers", 
-    "badges", 
-    "tags", 
-    "comments", 
-    "posts", 
-    "search", 
-    "suggested_edits", 
-    "network", 
-    "info", 
-    "privilages", 
-    "revisions",
-    "events"
-  ],
-  "engines": {
-    "node": "8.9.1",
-    "npm": "5.4.2"
-  }
+    "name": "@karthikgangadhar/stack-exchange",
+    "version": "1.0.0",
+    "description": "The stack-exchange provides a wrapper to access StackOverflow API endpoints.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "node ./test/test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/KarthikGangadhar/stack-exchange.git"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "author": "kgangadhar <karthikg1643@gmail.com> (https://github.com/karthikgangadhar)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/KarthikGangadhar/stack-exchange/issues"
+    },
+    "homepage": "https://github.com/KarthikGangadhar/stack-exchange#readme",
+    "keywords": [
+        "stack-exchange",
+        "stackoverflow",
+        "users",
+        "me",
+        "questions",
+        "answers",
+        "badges",
+        "tags",
+        "comments",
+        "posts",
+        "search",
+        "suggested_edits",
+        "network",
+        "info",
+        "privileges",
+        "revisions",
+        "events"
+    ],
+    "engines": {
+        "node": "8.9.1",
+        "npm": "5.4.2"
+    }
 }

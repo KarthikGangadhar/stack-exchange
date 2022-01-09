@@ -71,10 +71,10 @@ const Defaults = (object, ...sources) => {
     return object;
 };
 
-const GetEndpoint = (version, options, calltype) => {
+const GetEndpoint = (version, options, callType) => {
     let url = `${defaults.endpoints.BASE_URL}${version}`;
-    Defaults(options, defaults[calltype]);
-    return `${url}${defaults.endpoints[calltype]}${querystring.stringify(options)}`;
+    Defaults(options, defaults[callType]);
+    return `${url}${defaults.endpoints[callType]}${querystring.stringify(options)}`;
 };
 
 module.exports = {

@@ -266,7 +266,7 @@
         "sort": "creation",
         "site": "stackoverflow"
     },
-    "USERES_NETWORK_ACTIVITY": {
+    "USERS_NETWORK_ACTIVITY": {
         "types": "posts"
     },
     "USER_NOTIFICATIONS": {
@@ -535,7 +535,7 @@
     "INBOX": {
         "filter": "default"
     },
-    "INDOX_UNREAD": {
+    "INBOX_UNREAD": {
         "filter": "default"
     },
     "NOTIFICATIONS": {
@@ -637,7 +637,7 @@
         "COMMENTS_BY_USERS_TO_USER": "/users/%s/comments/%s?",
         "FAVORITES_ON_USERS": "/users/%s/favorites?",
         "MENTIONS_ON_USERS": "/users/%s/mentioned?",
-        "USERES_NETWORK_ACTIVITY": "/users/%s/network-activity?",
+        "USERS_NETWORK_ACTIVITY": "/users/%s/network-activity?",
         "USER_NOTIFICATIONS": "/users/%s/notifications?",
         "USER_UNREAD_NOTIFICATIONS": "/users/%s/notifications/unread?",
         "POSTS_ON_USERS": "/users/%s/posts?",
@@ -699,8 +699,8 @@
         "SIMULATE_ERRORS": "/errors/%s?",
         "CREATE_FILTER": "/filters/create?",
         "READ_FILTER": "/filters/%s?",
-        "INDOX": "/inbox?",
-        "INDOX_UNREAD": "/inbox/unread?",
+        "INBOX": "/inbox?",
+        "INBOX_UNREAD": "/inbox/unread?",
         "NOTIFICATIONS": "/notifications?",
         "UNREAD_NOTIFICATIONS": "/notifications/unread?",
         "SITES": "/sites?",
@@ -714,5 +714,5 @@
         "UNDO_ACCEPT_ANSWER": "/answers/%s/accept/undo",
         "COMMENTS_ON_ANSWERS": "/answers/%s/comments?"
     }
-    
+
 }
