@@ -31,7 +31,7 @@ You can make 300 requests without a key per day, with a key you can make 10,000 
 * [Suggested Edits section](https://www.npmjs.com/package/stack-exchange#suggested_edits-section)
 * [Network section](https://www.npmjs.com/package/stack-exchange#network-section)
 * [Info section](https://www.npmjs.com/package/stack-exchange#info-section)
-* [Privilages section](https://www.npmjs.com/package/stack-exchange#privilages-section)
+* [privileges section](https://www.npmjs.com/package/stack-exchange#privileges-section)
 * [Revisions section](https://www.npmjs.com/package/stack-exchange#revisions-section)
 * [Events section](https://www.npmjs.com/package/stack-exchange#events-section)
 
@@ -39,7 +39,7 @@ For more details about the endpoints on each section visit [table-of-content](ht
 
 ```javascript
 // You can specify the version of api you want to use by passing object with version field.
-// if version is not provided, by default api response with version 2.2 will be provided 
+// if version is not provided, by default api response with version 2.2 will be provided
 
 const stackexchange  = require("stack-exchange")({ version : "2.2" });
 
@@ -55,13 +55,13 @@ const stack_search = stackexchange.search;//for search sections endpoints
 const stack_suggested_edits = stackexchange.suggested_edits;//for suggested_edits sections endpoints
 const stack_network = stackexchange.network;//for network sections endpoints
 const stack_info = stackexchange.info; //for info sections endpoints
-const stack_privilages = stackexchange.privilages; //for privilages sections endpoints
+const stack_privileges = stackexchange.privileges; //for privileges sections endpoints
 const stack_revisions = stackexchange.revisions; //for revisions sections endpoints
 const stack_events = stackexchange.events; //for events sections endpoints
 ```
 
 ## users section
-All user methods that take an {ids} parameter have a /me equivalent method that takes an access_token instead. 
+All user methods that take an {ids} parameter have a /me equivalent method that takes an access_token instead.
 
 ```js
 
@@ -80,7 +80,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
- // using users endpoint 
+ // using users endpoint
 stack_users.users(users_options, (response) => {
     console.log(response);
 });
@@ -100,7 +100,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using users_by_ids endpoint 
+// using users_by_ids endpoint
 stack_users.users_by_ids(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -120,7 +120,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using answers_on_users endpoint 
+// using answers_on_users endpoint
 stack_users.answers_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -140,7 +140,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using badges_on_users endpoint 
+// using badges_on_users endpoint
 stack_users.badges_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -159,7 +159,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using comments_on_users endpoint 
+// using comments_on_users endpoint
 stack_users.comments_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -182,7 +182,7 @@ let user_ids = "6414102";
 // id of another user
 let toid = 1427878;
 
-// using comments_by_users_to_user endpoint 
+// using comments_by_users_to_user endpoint
 stack_users.comments_by_users_to_user(user_ids, toid , users_options, (response) => {
     console.log(response);
 });
@@ -202,7 +202,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using favorites_on_users endpoint 
+// using favorites_on_users endpoint
 stack_users.favorites_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -222,7 +222,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using mentions_on_users endpoint 
+// using mentions_on_users endpoint
 stack_users.mentions_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -242,7 +242,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using users_network_activity endpoint 
+// using users_network_activity endpoint
 stack_users.users_network_activity(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -262,7 +262,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using user_notifications endpoint 
+// using user_notifications endpoint
 stack_users.user_notifications(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -282,7 +282,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using user_unread_notifications endpoint 
+// using user_unread_notifications endpoint
 stack_users.user_unread_notifications(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -301,7 +301,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using posts_on_users endpoint 
+// using posts_on_users endpoint
 stack_users.posts_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -321,7 +321,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using privileges_on_users endpoint 
+// using privileges_on_users endpoint
 stack_users.privileges_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -341,7 +341,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using questions_on_users endpoint 
+// using questions_on_users endpoint
 stack_users.questions_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -361,7 +361,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using featured_questions_on_users endpoint 
+// using featured_questions_on_users endpoint
 stack_users.featured_questions_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -380,7 +380,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using no_answer_questions_on_users endpoint 
+// using no_answer_questions_on_users endpoint
 stack_users.no_answer_questions_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -400,7 +400,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using unaccepted_questions_on_users endpoint 
+// using unaccepted_questions_on_users endpoint
 stack_users.unaccepted_questions_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -420,7 +420,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using unanswered_questions_on_users endpoint 
+// using unanswered_questions_on_users endpoint
 stack_users.unanswered_questions_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -439,7 +439,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using reputation_on_users endpoint 
+// using reputation_on_users endpoint
 stack_users.reputation_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -459,7 +459,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using reputation_history endpoint 
+// using reputation_history endpoint
 stack_users.reputation_history(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -479,7 +479,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using full_reputation_history endpoint 
+// using full_reputation_history endpoint
 stack_users.full_reputation_history(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -499,7 +499,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using tags_on_users endpoint 
+// using tags_on_users endpoint
 stack_users.tags_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -519,7 +519,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using suggested_edits_on_users endpoint 
+// using suggested_edits_on_users endpoint
 stack_users.suggested_edits_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -543,7 +543,7 @@ let user_ids = "6414102";
 //user tags
 let tags = "nodejs";
 
-// using top_user_answers_in_tags endpoint 
+// using top_user_answers_in_tags endpoint
 stack_users.top_user_answers_in_tags(user_ids, tags,  users_options, (response) => {
     console.log(response);
 });
@@ -566,7 +566,7 @@ let user_ids = "6414102";
 //user tags
 let tags = "nodejs";
 
-// using top_user_questions_in_tags endpoint 
+// using top_user_questions_in_tags endpoint
 stack_users.top_user_questions_in_tags(user_ids, tags,  users_options, (response) => {
     console.log(response);
 });
@@ -585,7 +585,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using timeline_on_users endpoint 
+// using timeline_on_users endpoint
 stack_users.timeline_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -604,7 +604,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using top_answer_tags_on_users endpoint 
+// using top_answer_tags_on_users endpoint
 stack_users.top_answer_tags_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -624,7 +624,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using top_tags_on_users endpoint 
+// using top_tags_on_users endpoint
 stack_users.top_tags_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -644,7 +644,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using top_question_tags_on_users endpoint 
+// using top_question_tags_on_users endpoint
 stack_users.top_question_tags_on_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -661,7 +661,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using moderators endpoint 
+// using moderators endpoint
 stack_users.moderators(users_options, (response) => {
     console.log(response);
 });
@@ -677,7 +677,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using elected_moderators endpoint 
+// using elected_moderators endpoint
 stack_users.elected_moderators(users_options, (response) => {
     console.log(response);
 });
@@ -696,7 +696,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using user_inbox endpoint 
+// using user_inbox endpoint
 stack_users.user_inbox(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -714,7 +714,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using user_unread_inbox endpoint 
+// using user_unread_inbox endpoint
 stack_users.user_unread_inbox(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -734,7 +734,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using associated_users endpoint 
+// using associated_users endpoint
 stack_users.associated_users(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -753,7 +753,7 @@ let users_options = {
 // id of the user
 let user_ids = "6414102";
 
-// using merge_history endpoint 
+// using merge_history endpoint
 stack_users.merge_history(user_ids, users_options, (response) => {
     console.log(response);
 });
@@ -783,7 +783,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
- // using users endpoint 
+ // using users endpoint
 stack_me.me( users_options, (response) => {
     console.log(response);
 });
@@ -800,7 +800,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_answers endpoint 
+// using me_answers endpoint
 stack_me.me_answers( users_options, (response) => {
     console.log(response);
 });
@@ -816,7 +816,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_badges endpoint 
+// using me_badges endpoint
 stack_me.me_badges( users_options, (response) => {
     console.log(response);
 });
@@ -832,7 +832,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_comments endpoint 
+// using me_comments endpoint
 stack_me.me_comments( users_options, (response) => {
     console.log(response);
 });
@@ -853,7 +853,7 @@ let users_options = {
 let toid = 1427878;
 
 
-// using me_comments_to endpoint 
+// using me_comments_to endpoint
 stack_me.me_comments_to(toid, users_options, (response) => {
     console.log(response);
 });
@@ -870,7 +870,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_favorites endpoint 
+// using me_favorites endpoint
 stack_me.me_favorites(users_options, (response) => {
     console.log(response);
 });
@@ -887,7 +887,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_mentioned endpoint 
+// using me_mentioned endpoint
 stack_me.me_mentioned(users_options, (response) => {
     console.log(response);
 });
@@ -906,7 +906,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_network_activity endpoint 
+// using me_network_activity endpoint
 stack_me.me_network_activity(users_options, (response) => {
     console.log(response);
 });
@@ -923,10 +923,10 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_notifications endpoint 
+// using me_notifications endpoint
 stack_me.me_notifications(users_options, (response) => {
     console.log(response);
-});    
+});
 
 ```
 
@@ -940,10 +940,10 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_unread_notifications endpoint 
+// using me_unread_notifications endpoint
 stack_me.me_unread_notifications(users_options, (response) => {
     console.log(response);
-});    
+});
 
 ```
 
@@ -958,11 +958,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_posts endpoint 
+// using me_posts endpoint
 stack_me.me_posts(users_options, (response) => {
     console.log(response);
 });
-   
+
 
 ```
 
@@ -976,11 +976,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_privileges endpoint 
+// using me_privileges endpoint
 stack_me.me_privileges(users_options, (response) => {
     console.log(response);
 });
-   
+
 ```
 
 #### me_questions
@@ -993,11 +993,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_questions endpoint 
+// using me_questions endpoint
 stack_me.me_questions(users_options, (response) => {
     console.log(response);
 });
-   
+
 ```
 
 
@@ -1011,11 +1011,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_featured_questions endpoint 
+// using me_featured_questions endpoint
 stack_me.me_featured_questions(users_options, (response) => {
     console.log(response);
 });
-   
+
 ```
 
 #### me_no_answer_questions
@@ -1028,12 +1028,12 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_no_answer_questions endpoint 
+// using me_no_answer_questions endpoint
 stack_me.me_no_answer_questions(users_options, (response) => {
     console.log(response);
 });
 
-   
+
 ```
 
 
@@ -1047,11 +1047,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_unaccepted_questions endpoint 
+// using me_unaccepted_questions endpoint
 stack_me.me_unaccepted_questions(users_options, (response) => {
     console.log(response);
 });
-   
+
 ```
 
 #### me_unanswered_questions
@@ -1064,11 +1064,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_unanswered_questions endpoint 
+// using me_unanswered_questions endpoint
 stack_me.me_unanswered_questions(users_options, (response) => {
     console.log(response);
 });
-   
+
 ```
 
 #### me_reputation
@@ -1081,11 +1081,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_reputation endpoint 
+// using me_reputation endpoint
 stack_me.me_reputation(users_options, (response) => {
     console.log(response);
 });
-   
+
 ```
 
 #### me_reputation_history
@@ -1098,11 +1098,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_reputation_history endpoint 
+// using me_reputation_history endpoint
 stack_me.me_reputation_history(users_options, (response) => {
     console.log(response);
 });
-   
+
 ```
 
 #### me_full_reputation_history
@@ -1115,11 +1115,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_full_reputation_history endpoint 
+// using me_full_reputation_history endpoint
 stack_me.me_full_reputation_history(users_options, (response) => {
     console.log(response);
 });
-   
+
 ```
 
 #### me_suggested_edits
@@ -1132,11 +1132,11 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_suggested_edits endpoint 
+// using me_suggested_edits endpoint
 stack_me.me_suggested_edits(users_options, (response) => {
     console.log(response);
 });
-   
+
 ```
 
 #### me_tags
@@ -1149,10 +1149,10 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_tags endpoint 
+// using me_tags endpoint
 stack_me.me_tags(users_options, (response) => {
     console.log(response);
-});   
+});
 ```
 
 #### me_tags_top_questions
@@ -1168,10 +1168,10 @@ let users_options = {
 //user tags
 let tags = "nodejs";
 
-// using me_tags_top_questions endpoint 
+// using me_tags_top_questions endpoint
 stack_me.me_tags_top_questions(tags, users_options, (response) => {
     console.log(response);
-}); 
+});
 ```
 
 #### me_tags_top_answers
@@ -1186,10 +1186,10 @@ let users_options = {
 //user tags
 let tags = "nodejs";
 
-// using me_tags_top_answers endpoint 
+// using me_tags_top_answers endpoint
 stack_me.me_tags_top_answers(tags, users_options, (response) => {
     console.log(response);
-});  
+});
 ```
 
 #### me_top_answer_tags
@@ -1202,7 +1202,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_top_answer_tags endpoint 
+// using me_top_answer_tags endpoint
 stack_me.me_top_answer_tags( users_options, (response) => {
     console.log(response);
 });
@@ -1218,7 +1218,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_top_question_tags endpoint 
+// using me_top_question_tags endpoint
 stack_me.me_top_question_tags( users_options, (response) => {
     console.log(response);
 });
@@ -1235,7 +1235,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_timeline endpoint 
+// using me_timeline endpoint
 stack_me.me_timeline(users_options, (response) => {
     console.log(response);
 });
@@ -1251,7 +1251,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_top_tags endpoint 
+// using me_top_tags endpoint
 stack_me.me_top_tags( users_options, (response) => {
     console.log(response);
 });
@@ -1267,7 +1267,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_inbox endpoint 
+// using me_inbox endpoint
 stack_me.me_inbox( users_options, (response) => {
     console.log(response);
 });
@@ -1284,7 +1284,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_unread_inbox endpoint 
+// using me_unread_inbox endpoint
 stack_me.me_unread_inbox( users_options, (response) => {
     console.log(response);
 });
@@ -1300,7 +1300,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_associated_users endpoint 
+// using me_associated_users endpoint
 stack_me.me_associated_users(users_options, (response) => {
     console.log(response);
 });
@@ -1317,7 +1317,7 @@ let users_options = {
     "access_token": "your_token"
 }
 
-// using me_merge_history endpoint 
+// using me_merge_history endpoint
 stack_me.me_merge_history(inbox_options, (response) => {
     console.log(response);
 });
@@ -1342,37 +1342,37 @@ const stack_questions = stackexchange.questions;
 
 #### questions
  Get all questions on the site.
- 
+
  ```js
- // using questions endpoint 
+ // using questions endpoint
 stack_questions.questions(options , (response) => {
-    // response will be json 
+    // response will be json
     console.log(response);
  });
-``` 
+```
 #### questions by ids
 Get the questions identified by a set of ids.
 
  ```js
  ids = "47559184"
- // using questions_by_ids endpoint 
+ // using questions_by_ids endpoint
  stack_questions.questions_by_ids(ids , options , (response) => {
-    // response will be json 
+    // response will be json
     console.log(response);
  });
-``` 
+```
 
 
 #### answers on questions
 Get the answers to the questions identified by a set of ids.
  ```js
  id = "47596027"
- // using answers_on_questions endpoint 
+ // using answers_on_questions endpoint
  stack_questions.answers_on_questions(id, options , (response) => {
-    // response will be json 
+    // response will be json
     console.log(response);
  });
-``` 
+```
 
 #### render answers
 
@@ -1385,13 +1385,13 @@ Get the answers to the questions identified by a set of ids.
 
 // id of the question
  let id = "47596027"
- 
- // using render_answer endpoint 
+
+ // using render_answer endpoint
 stack_questions.render_answer(id, options , (response) => {
    // response returns hypothetical solution
     console.log(response);
 });
-``` 
+```
 
 #### linked questions
 Get the questions that link to the questions identified by a set of ids.
@@ -1399,13 +1399,13 @@ Get the questions that link to the questions identified by a set of ids.
  ```js
  // id of the question
  let id = "1884724";
- 
- // using answers_on_questions endpoint 
+
+ // using answers_on_questions endpoint
  stack_questions.linked_questions(id, options , (response) => {
     console.log(response);
  });
- 
-``` 
+
+```
 
 #### related questions
 Get the questions that are related to the questions identified by a set of ids.
@@ -1413,13 +1413,13 @@ Get the questions that are related to the questions identified by a set of ids.
  ```js
  // id of the question
  let id = "37878662";
- 
- // using related_questions endpoint 
+
+ // using related_questions endpoint
  stack_questions.related_questions(id, options , (response) => {
         console.log(response);
  });
- 
-``` 
+
+```
 
 
 #### questions timeline
@@ -1428,20 +1428,20 @@ Get the timelines of the questions identified by a set of ids.
  ```js
  // id of the question
  let id = "37878662";
- 
- // using questions_timeline endpoint 
+
+ // using questions_timeline endpoint
 stack_questions.questions_timeline(id, options, (response) => {
     console.log(response);
 });
- 
+
 ```
 
 #### featured questions
 Get all questions on the site with active bounties.
 
  ```js
- 
- // using featured_questions endpoint 
+
+ // using featured_questions endpoint
 stack_questions.featured_questions(options, (response) => {
       //will return featured questions
     console.log(response);
@@ -1453,8 +1453,8 @@ stack_questions.featured_questions(options, (response) => {
 Get all questions on the site with no answers.
 
  ```js
- 
- // using no_answer_questions endpoint 
+
+ // using no_answer_questions endpoint
 stack_questions.no_answer_questions( options , (response) => {
    // will return no-answer questions
     console.log(response);
@@ -1467,8 +1467,8 @@ stack_questions.no_answer_questions( options , (response) => {
 Get all questions the site considers unanswered.
 
  ```js
- 
- // using unanswered_questions endpoint 
+
+ // using unanswered_questions endpoint
 stack_questions.unanswered_questions( options , (response) => {
     //returns unanswered questions details
     console.log(response);
@@ -1479,10 +1479,10 @@ stack_questions.unanswered_questions( options , (response) => {
 
 #### unanswered questions my tags
 
-Get questions the site considers unanswered within a user's favorite or interesting tags. **auth required** This endpoint required access_token and key in options. 
+Get questions the site considers unanswered within a user's favorite or interesting tags. **auth required** This endpoint required access_token and key in options.
  ```js
 
- // using unanswered_questions_my_tags endpoint 
+ // using unanswered_questions_my_tags endpoint
 stack_questions.unanswered_questions_my_tags( options , (response) => {
     console.log(response);
  });
@@ -1490,7 +1490,7 @@ stack_questions.unanswered_questions_my_tags( options , (response) => {
 
 #### question flag options
 
-Returns valid flag options for the given question. **auth required**. This endpoint required access_token and key in options. 
+Returns valid flag options for the given question. **auth required**. This endpoint required access_token and key in options.
  ```js
 let options = {
     "key": "your_key",
@@ -1500,7 +1500,7 @@ let options = {
 
 let question_id = "37878662";
 
- // using question_flag_options endpoint 
+ // using question_flag_options endpoint
 stack_questions.question_flag_options(question_id, options, (response) => {
     console.log(response);
 });
@@ -1508,7 +1508,7 @@ stack_questions.question_flag_options(question_id, options, (response) => {
 
 #### question close options
 
-Returns valid flag options which are also close reasons for the given question. **auth required**. This endpoint required access_token and key in options. 
+Returns valid flag options which are also close reasons for the given question. **auth required**. This endpoint required access_token and key in options.
  ```js
 let options = {
     "key": "your_key",
@@ -1518,7 +1518,7 @@ let options = {
 
 let question_id = "37878662";
 
- // using question_close_options endpoint 
+ // using question_close_options endpoint
 stack_questions.question_close_options(question_id, options, (response) => {
     console.log(response);
 });
@@ -1526,7 +1526,7 @@ stack_questions.question_close_options(question_id, options, (response) => {
 
 #### comments on questions
 
-Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options. 
+Get the comments on the questions identified by a set of ids. This endpoint required access_token and key in options.
  ```js
 let options = {
     "key": "your_key",
@@ -1536,7 +1536,7 @@ let options = {
 
 let question_id = "45934757";
 
- // using comments_on_questions endpoint 
+ // using comments_on_questions endpoint
 stack_questions.comments_on_questions(question_id, options, (response) => {
     console.log(response);
 });
@@ -1554,7 +1554,7 @@ const stack_answers = stackexchange.answers;
 
 #### answers
  Get all answers on the site.
- 
+
  ```js
  // answer query options
  let options = {
@@ -1562,7 +1562,7 @@ const stack_answers = stackexchange.answers;
     "access_token": "your_token"
 }
 
- // using answers endpoint 
+ // using answers endpoint
 stack_answers.answers(answers_options, (response) => {
     console.log(response);
 });
@@ -1570,7 +1570,7 @@ stack_answers.answers(answers_options, (response) => {
 
 #### answers_by_ids
  Get answers identified by a set of ids.
- 
+
  ```js
  // query options
  let options = {
@@ -1581,7 +1581,7 @@ stack_answers.answers(answers_options, (response) => {
 //id of the answer
 let answer_id = "6414102";
 
- // using answers_by_ids endpoint 
+ // using answers_by_ids endpoint
 stack_answers.answers_by_ids(answer_id, answers_options, (response) => {
     console.log(response);
 });
@@ -1590,7 +1590,7 @@ stack_answers.answers_by_ids(answer_id, answers_options, (response) => {
 
 #### accept_answer
  Casts an accept vote on the given answer. **auth required**
- 
+
  ```js
  // query options
  let options = {
@@ -1601,7 +1601,7 @@ stack_answers.answers_by_ids(answer_id, answers_options, (response) => {
 //id of the answer
 let answer_id = "6414102";
 
- // using accept_answer endpoint 
+ // using accept_answer endpoint
 stack_answers.accept_answer(answer_id, answers_options, (response) => {
     console.log(response);
 });
@@ -1609,7 +1609,7 @@ stack_answers.accept_answer(answer_id, answers_options, (response) => {
 
 #### undo_accept_answer
  Undoes an accept vote on the given answer. **auth required**
- 
+
  ```js
  // query options
  let options = {
@@ -1620,14 +1620,14 @@ stack_answers.accept_answer(answer_id, answers_options, (response) => {
 //id of the answer
 let answer_id = "47451356";
 
- // using undo_accept_answer endpoint 
+ // using undo_accept_answer endpoint
 stack_answers.undo_accept_answer(answer_id, answers_options, (response) => {
     console.log(response);
 });
 ```
 #### comments_on_answers
  Get comments on the answers identified by a set of ids.
- 
+
  ```js
  // query options
  let options = {
@@ -1638,7 +1638,7 @@ stack_answers.undo_accept_answer(answer_id, answers_options, (response) => {
 //id of the answer
 let answer_id = "37886434";
 
- // using comments_on_answers endpoint 
+ // using comments_on_answers endpoint
 stack_answers.comments_on_answers(answer_id, answers_options, (response) => {
     console.log(response);
 });
@@ -1661,9 +1661,9 @@ const stack_badges = stackexchange.badges;
 Get all badges on the site, in alphabetical order.
 
  ```js
- // using badges endpoint 
+ // using badges endpoint
 stack_badges.badges(badges_options, (response) => {
-    // response will be json     
+    // response will be json
     console.log(response);
 });
 
@@ -1675,24 +1675,24 @@ Get the badges identified by ids.
  ```js
 // id of the badge
 let id = "222"
- // using badges_by_id endpoint 
+ // using badges_by_id endpoint
 stack_badges.badges_by_id(id, badges_options, (response) => {
-    // response will be json    
+    // response will be json
     console.log(response);
 });
 
 ```
 #### badges_by_name
  Get all non-tagged-based badges in alphabetical order.
- 
+
  ```js
- 
+
 // name of the badge
 let name = "fanatic"
 
- // using badges_by_name endpoint 
+ // using badges_by_name endpoint
 stack_badges.badges_by_name(name, badges_options, (response) => {
-    // response will be json    
+    // response will be json
     console.log(response);
 });
 
@@ -1702,14 +1702,14 @@ stack_badges.badges_by_name(name, badges_options, (response) => {
 Get badges recently awarded on the site.
 
  ```js
-//  options fields are as follows 
+//  options fields are as follows
  let options = {
         "site": "stackoverflow"
     }
 
- // using badge_recipients endpoint 
+ // using badge_recipients endpoint
 stack_badges.badge_recipients( options, (response) => {
-    // response will be json        
+    // response will be json
     console.log(response);
 });
 
@@ -1719,16 +1719,16 @@ stack_badges.badge_recipients( options, (response) => {
 Get the recent recipients of the given badges.
 
  ```js
- //  options fields are as follows 
+ //  options fields are as follows
  let options = {
         "site": "stackoverflow"
     }
 
 // id of the badge
 let id = "222"
- // using badge_recipients_by_id endpoint 
+ // using badge_recipients_by_id endpoint
 stack_badges.badge_recipients_by_id(id,  badges_options, (response) => {
-    // response will be json        
+    // response will be json
     console.log(response);
 });
 
@@ -1739,16 +1739,16 @@ stack_badges.badge_recipients_by_id(id,  badges_options, (response) => {
 Get all tagged-based badges in alphabetical order.
 
  ```js
-//  options fields are as follows 
+//  options fields are as follows
  let options = {
         "order": "desc",
         "sort": "popular",
         "site": "stackoverflow"
     }
 
- // using badge_by_tags endpoint 
+ // using badge_by_tags endpoint
 stack_badges.badge_by_tags(options, (response) => {
-    // response will be json        
+    // response will be json
     console.log(response);
 });
 
@@ -1769,7 +1769,7 @@ const stack_tags = stackexchange.tags;
 Get the tags on the site.
 
  ```js
- // using tags endpoint 
+ // using tags endpoint
 stack_tags.tags(tags_options, (response) => {
     console.log(response);
 });
@@ -1781,7 +1781,7 @@ Get tags on the site by their names.
  ```js
  //tag name for search
  let tag_name = "nodejs"
- // using tags_by_name endpoint 
+ // using tags_by_name endpoint
 stack_tags.tags_by_name(tag_name, tags_options, (response) => {
     console.log(response);
 });
@@ -1790,7 +1790,7 @@ stack_tags.tags_by_name(tag_name, tags_options, (response) => {
 Get the tags on the site that only moderators can use.
 
  ```js
- // using moderator_only_tags endpoint 
+ // using moderator_only_tags endpoint
 stack_tags.moderator_only_tags(tags_options, (response) => {
     console.log(response);
 });
@@ -1800,7 +1800,7 @@ stack_tags.moderator_only_tags(tags_options, (response) => {
 Get the tags on the site that fulfill required tag constraints.
 
  ```js
- // using require_tags endpoint 
+ // using require_tags endpoint
 stack_tags.require_tags(tags_options, (response) => {
     console.log(response);
 });
@@ -1810,7 +1810,7 @@ stack_tags.require_tags(tags_options, (response) => {
 Get all the tag synonyms on the site.
 
  ```js
- // using tag_synonyms endpoint 
+ // using tag_synonyms endpoint
 stack_tags.tag_synonyms(tags_options, (response) => {
     console.log(response);
 });
@@ -1822,7 +1822,7 @@ Get frequently asked questions in a set of tags.
  ```js
  //tag name for search
  let tag_name = "nodejs"
- // using faqs_by_tags endpoint 
+ // using faqs_by_tags endpoint
 stack_tags.faqs_by_tags(tag_name, tags_options, (response) => {
     console.log(response);
 });
@@ -1834,7 +1834,7 @@ Get related tags, based on common tag pairings.
  ```js
  //tag name for search
  let tag_name = "nodejs"
- // using related_tags endpoint 
+ // using related_tags endpoint
 stack_tags.related_tags(tag_name, tags_options, (response) => {
     console.log(response);
 });
@@ -1847,7 +1847,7 @@ Get the synonyms for a specific set of tags.
  ```js
  //tag name for search
  let tag_name = "nodejs"
- // using synonyms_by_tags endpoint 
+ // using synonyms_by_tags endpoint
 stack_tags.synonyms_by_tags(tag_name, tags_options, (response) => {
     console.log(response);
 });
@@ -1860,7 +1860,7 @@ Get the top answer posters in a specific tag, either in the last month or for al
  ```js
  //tag name for search
  let tag_name = "java"
- // using top_answerers_on_tags endpoint 
+ // using top_answerers_on_tags endpoint
 stack_tags.top_answerers_on_tags(tag_name, tags_options, (response) => {
     console.log(response);
 });
@@ -1872,7 +1872,7 @@ Get the top question askers in a specific tag, either in the last month or for a
  ```js
  //tag name for search
  let tag_name = "java"
- // using top_askers_on_tags endpoint 
+ // using top_askers_on_tags endpoint
 stack_tags.top_askers_on_tags(tag_name, tags_options, (response) => {
     console.log(response);
 });
@@ -1884,7 +1884,7 @@ Get the wiki entries for a set of tags.
  ```js
  //tag name for search
  let tag_name = "java"
- // using wikis_by_tags endpoint 
+ // using wikis_by_tags endpoint
 stack_tags.wikis_by_tags(tag_name, tags_options, (response) => {
     console.log(response);
 });
@@ -1901,7 +1901,7 @@ const stack_comments = stackexchange.comments;
 ```
 
 #### comments
-Get all comments on the site. comments_options can be empty object. 
+Get all comments on the site. comments_options can be empty object.
 
  ```js
 
@@ -1910,7 +1910,7 @@ Get all comments on the site. comments_options can be empty object.
     "access_token": "your_token"
 }
 
- // using comments endpoint 
+ // using comments endpoint
 stack_comments.comments(comments_options, (response) => {
     console.log(response);
 });
@@ -1930,7 +1930,7 @@ Get comments identified by a set of ids.
 //id of the comment
 let comment_id = "131321";
 
-// using comments_by_ids endpoint 
+// using comments_by_ids endpoint
 stack_comments.comments_by_ids(comment_id, comments_options, (response) => {
     console.log(response);
 });
@@ -1950,7 +1950,7 @@ Delete a comment identified by its id. **auth required**
 //id of the comment
 let comment_id = "12135";
 
-// using delete_comment endpoint 
+// using delete_comment endpoint
 stack_comments.delete_comment(comment_id, comments_options, (response) => {
     console.log(response);
 });
@@ -1972,7 +1972,7 @@ Edit a comment identified by its id. **auth required**. body is required in opti
 //id of the comment
 let comment_id = "12135";
 
-// using edit_comment endpoint 
+// using edit_comment endpoint
 stack_comments.edit_comment(comment_id, comments_options, (response) => {
     console.log(response);
 });
@@ -1994,7 +1994,7 @@ Casts a flag on the given comment. **auth required**. option_id is required in o
 //id of the comment
 let comment_id = "12135";
 
-// using create_comment_flag endpoint 
+// using create_comment_flag endpoint
 stack_comments.create_comment_flag(comment_id, comments_options, (response) => {
     console.log(response);
 });
@@ -2014,7 +2014,7 @@ Returns valid flag options for the given comment. **auth required**
 //id of the comment
 let comment_id = "12135";
 
-// using comment_flag_options endpoint 
+// using comment_flag_options endpoint
 stack_comments.comment_flag_options(comment_id, comments_options, (response) => {
     console.log(response);
 });
@@ -2034,7 +2034,7 @@ Casts an upvote on the given comment. **auth required**
 //id of the comment
 let comment_id = "12135";
 
-// using upvote_comment endpoint 
+// using upvote_comment endpoint
 stack_comments.upvote_comment(comment_id, comments_options, (response) => {
     console.log(response);
 });
@@ -2054,7 +2054,7 @@ Undoes an upvote on the given comment. **auth required**
 //id of the comment
 let comment_id = "12135";
 
-// using undo_upvote_comment endpoint 
+// using undo_upvote_comment endpoint
 stack_comments.undo_upvote_comment(comment_id, comments_options, (response) => {
     console.log(response);
 });
@@ -2071,7 +2071,7 @@ const stack_posts = stackexchange.posts;
 ```
 
 #### posts
-Get all posts (questions and answers) in the system. posts_options can be empty object. 
+Get all posts (questions and answers) in the system. posts_options can be empty object.
 
  ```js
 
@@ -2080,14 +2080,14 @@ Get all posts (questions and answers) in the system. posts_options can be empty 
     "access_token": "your_token"
 }
 
- // using posts endpoint 
+ // using posts endpoint
 stack_posts.posts(posts_options, (response) => {
     console.log(response);
 });
 ```
 
 #### posts_by_ids
-Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known. 
+Get all posts identified by a set of ids. Useful for when the type of post (question or answer) is not known.
 
  ```js
 
@@ -2099,14 +2099,14 @@ Get all posts identified by a set of ids. Useful for when the type of post (ques
 //id of the post
 let post_id = "45934757";
 
- // using posts_by_ids endpoint 
+ // using posts_by_ids endpoint
 stack_posts.posts_by_ids(post_id, posts_options, (response) => {
     console.log(response);
 });
 ```
 
 #### comments_on_posts
-Get comments on the posts (question or answer) identified by a set of ids. 
+Get comments on the posts (question or answer) identified by a set of ids.
 
  ```js
 
@@ -2118,7 +2118,7 @@ Get comments on the posts (question or answer) identified by a set of ids.
 //id of the post
 let post_id = "45934757";
 
- // using comments_on_posts endpoint 
+ // using comments_on_posts endpoint
 stack_posts.comments_on_posts(post_id, posts_options, (response) => {
     console.log(response);
 });
@@ -2138,7 +2138,7 @@ Create a new comment on the post identified by id. **auth required**. the commen
 //id of the post
 let post_id = "45934757";
 
- // using create_comment endpoint 
+ // using create_comment endpoint
 stack_posts.create_comment(post_id, posts_options, (response) => {
     console.log(response);
 });
@@ -2148,7 +2148,7 @@ stack_posts.create_comment(post_id, posts_options, (response) => {
 Renders a hypothetical comment on the given post.
 
  ```js
- 
+
  let posts_options = {
     "key": "your_key",
     "access_token": "your_token"
@@ -2157,7 +2157,7 @@ Renders a hypothetical comment on the given post.
 //id of the post
 let post_id = "45934757";
 
- // using render_comment endpoint 
+ // using render_comment endpoint
 stack_posts.render_comment(post_id, {}, (response) => {
     console.log(response);
 });
@@ -2167,7 +2167,7 @@ stack_posts.render_comment(post_id, {}, (response) => {
 Get revisions on the set of posts in ids.
 
  ```js
- 
+
  let posts_options = {
     "key": "your_key",
     "access_token": "your_token"
@@ -2176,7 +2176,7 @@ Get revisions on the set of posts in ids.
 //id of the post
 let post_id= 39892422;
 
- // using revisions_by_ids endpoint 
+ // using revisions_by_ids endpoint
 stack_posts.revisions_by_ids(post_id, posts_options, (response) => {
     console.log(response);
 });
@@ -2194,7 +2194,7 @@ Get suggested edits on the set of posts in ids.
 //id of the post
 let post_id= 39892422;
 
- // using posts_on_suggested_edits endpoint 
+ // using posts_on_suggested_edits endpoint
 stack_posts.posts_on_suggested_edits(post_id, posts_options, (response) => {
     console.log(response);
 });
@@ -2219,7 +2219,7 @@ Search the site for questions meeting certain criteria. search_options must cont
     "access_token": "your_token"
 }
 
- // using search endpoint 
+ // using search endpoint
 stack_search.search(search_options, (response) => {
     console.log(response);
 });
@@ -2235,14 +2235,14 @@ Search the site for questions using most of the on-site search options. for more
     "access_token": "your_token"
 }
 
- // using advanced_search endpoint 
+ // using advanced_search endpoint
 stack_search.advanced_search(search_options, (response) => {
     console.log(response);
 });
 ```
 
 #### similar
-Search the site based on similarity to a title. title must be set in search_options. 
+Search the site based on similarity to a title. title must be set in search_options.
 
  ```js
 
@@ -2252,14 +2252,14 @@ Search the site based on similarity to a title. title must be set in search_opti
     "access_token": "your_token"
 }
 
- // using similar endpoint 
+ // using similar endpoint
 stack_search.similar(search_options, (response) => {
     console.log(response);
 });
 ```
 
 #### excerpt_search
-Searches a site. For more search_options see [excerpt_search](https://api.stackexchange.com/docs/excerpt-search) endpoint of stackexchange. 
+Searches a site. For more search_options see [excerpt_search](https://api.stackexchange.com/docs/excerpt-search) endpoint of stackexchange.
 
  ```js
 
@@ -2268,7 +2268,7 @@ Searches a site. For more search_options see [excerpt_search](https://api.stacke
     "access_token": "your_token"
 }
 
- // using excerpt_search endpoint 
+ // using excerpt_search endpoint
 stack_search.excerpt_search(search_options, (response) => {
     console.log(response);
 });
@@ -2290,7 +2290,7 @@ const stack_suggested_edits = stackexchange.suggested_edits;
 Get all the suggested edits on the site. options is optional, can be an empty object
 
  ```js
- // using suggested_edits endpoint 
+ // using suggested_edits endpoint
 stack_suggested_edits.suggested_edits(suggested_edits_options, (response) => {
         console.log(response);
 });
@@ -2303,7 +2303,7 @@ Get the suggested edits identified by a set of ids. options is optional, can be 
  // id of the suggested_edit
 let suggested_edit_id = "3445738"
 
- // using suggested_edits_by_ids endpoint 
+ // using suggested_edits_by_ids endpoint
 stack_suggested_edits.suggested_edits_by_ids(suggested_edit_id, suggested_edits_options, (response) => {
     console.log(response);
 });
@@ -2330,9 +2330,9 @@ let invalidate_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
- 
- // using invalidate_access_tokens endpoint 
+
+
+ // using invalidate_access_tokens endpoint
 stack_network.invalidate_access_tokens(invalidate_options, (response) => {
     console.log(response);
 });
@@ -2348,8 +2348,8 @@ let read_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
-// using read_access_tokens endpoint 
+
+// using read_access_tokens endpoint
 stack_network.read_access_tokens( read_options, (response) => {
     console.log(response);
 });
@@ -2367,8 +2367,8 @@ let read_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
-// using application_de_authenticate endpoint 
+
+// using application_de_authenticate endpoint
 stack_network.application_de_authenticate( read_options, (response) => {
     console.log(response);
 });
@@ -2387,8 +2387,8 @@ let read_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
-// using errors endpoint 
+
+// using errors endpoint
 stack_network.errors( read_options, (response) => {
     console.log(response);
 });
@@ -2406,9 +2406,9 @@ let read_options = {
     "access_token": "your_token"
 }
 
-let error_id = "401"; 
- 
-// using simulate_errors endpoint 
+let error_id = "401";
+
+// using simulate_errors endpoint
 stack_network.simulate_errors(error_id, read_options, (response) => {
     console.log(response);
 });
@@ -2429,8 +2429,8 @@ let read_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
-// using create_filter endpoint 
+
+// using create_filter endpoint
 stack_network.create_filter(create_filter_options, (response) => {
     console.log(response);
 });
@@ -2446,10 +2446,10 @@ let read_options = {
      "key": "your_key",
     "access_token": "your_token"
 }
- 
+
 let filter = ".quota_max"
- 
-// using read_filter endpoint 
+
+// using read_filter endpoint
 stack_network.read_filter(filter, read_options, (response) => {
     console.log(response);
 });
@@ -2468,8 +2468,8 @@ let inbox_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
-// using inbox endpoint 
+
+// using inbox endpoint
 stack_network.inbox(inbox_options, (response) => {
     console.log(response);
 });
@@ -2485,8 +2485,8 @@ let inbox_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
-// using inbox_unread endpoint 
+
+// using inbox_unread endpoint
 stack_network.inbox_unread(inbox_options, (response) => {
     console.log(response);
 });
@@ -2504,8 +2504,8 @@ let inbox_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
-// using notifications endpoint 
+
+// using notifications endpoint
 stack_network.notifications(inbox_options, (response) => {
     console.log(response);
 });
@@ -2521,8 +2521,8 @@ let inbox_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
-// using unread_notifications endpoint 
+
+// using unread_notifications endpoint
 stack_network.unread_notifications(inbox_options, (response) => {
     console.log(response);
 });
@@ -2540,8 +2540,8 @@ let inbox_options = {
     "key": "your_key",
     "access_token": "your_token"
 }
- 
-// using sites endpoint 
+
+// using sites endpoint
 stack_network.sites(inbox_options, (response) => {
     console.log(response);
 });
@@ -2562,32 +2562,32 @@ const stack_info = stackexchange.info;
 Get information about the entire site.
 
  ```js
- // using info endpoint 
+ // using info endpoint
 stack_info.info(info_options, (response) => {
-    // response will be json 
+    // response will be json
     console.log(response);
 });
 ```
 
-## privilages section
+## privileges section
 
 ```js
-let privilages_options = {
+let privileges_options = {
     "site": "stackoverflow",
     "key" : "your_key"
 }
 
-//  privilages object
-const stack_privilages = stackexchange.privilages;
+//  privileges object
+const stack_privileges = stackexchange.privileges;
 ```
 
-#### privilages
+#### privileges
 Get all the privileges available on the site.
 
  ```js
- // using info endpoint 
-stack_privilages.privilages(privilages_options, (response) => {
-    // response will be json 
+ // using info endpoint
+stack_privileges.privileges(privileges_options, (response) => {
+    // response will be json
     console.log(response);
 });
 ```
@@ -2600,7 +2600,7 @@ let revisions_options = {
     "key" : "your_key"
 }
 
-// privilages object
+// privileges object
 const stack_revisions = stackexchange.revisions;
 ```
 
@@ -2608,11 +2608,11 @@ const stack_revisions = stackexchange.revisions;
 Get all revisions identified by a set of ids.
 
  ```js
- // ids will be available from posts_id endpoint, can be single or multiple seperated by comma. 
+ // ids will be available from posts_id endpoint, can be single or multiple seperated by comma.
  let ids = "BCF73AEC-7F9D-4623-8C38-66E481B52513"
- // using info endpoint 
+ // using info endpoint
 stack_revisions.revisions( ids , revisions_options, (response) => {
-    // response will be json 
+    // response will be json
     console.log(response);
 });
 ```
@@ -2634,9 +2634,9 @@ const stack_events = stackexchange.events;
 #### events
 Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required**
  ```js
- // using info endpoint 
+ // using info endpoint
 stack_events.events(event_options, (response) => {
-    // response will be json 
+    // response will be json
     console.log(response);
 });
 ```
@@ -2847,13 +2847,13 @@ The module exposes following endpoints of stackexchange api:
 |-------------|------|--------------------|
 | [info](https://www.npmjs.com/package/stack-exchange#info) | Get information about the entire site. | [info](https://api.stackexchange.com/docs/info) |
 
-* [Privilages section](https://www.npmjs.com/package/stack-exchange#privilages-section)
+* [privileges section](https://www.npmjs.com/package/stack-exchange#privileges-section)
 
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
-| [privilages](https://www.npmjs.com/package/stack-exchange#info) | Get all the privileges available on the site. | [privileges](https://api.stackexchange.com/docs/privileges) |
+| [privileges](https://www.npmjs.com/package/stack-exchange#info) | Get all the privileges available on the site. | [privileges](https://api.stackexchange.com/docs/privileges) |
 
-    
+
 * [Revisions section](https://www.npmjs.com/package/stack-exchange#revisions-section)
 
 | Endpoints | Description | See in StackExchange    |
@@ -2866,7 +2866,7 @@ The module exposes following endpoints of stackexchange api:
 | Endpoints | Description | See in StackExchange    |
 |-------------|------|--------------------|
 | [events](https://www.npmjs.com/package/stack-exchange#events) | Get recent events that have occurred on the site. Effectively a stream of new users and content. **auth required** | [events](https://api.stackexchange.com/docs/events) |
-     
+
 
 
 
